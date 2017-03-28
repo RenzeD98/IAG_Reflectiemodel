@@ -16,8 +16,8 @@ Route::get('/', function () {
 });
 
 
-Route::get('feedbackform', 'FeedbackController@index');
-Route::post('feedbackform', 'FeedbackController@create');
+Route::get('/feedback', 'FeedbackController@index');
+Route::post('/feedback', 'FeedbackController@create');
 
 
 
