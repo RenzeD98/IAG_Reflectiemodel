@@ -15,16 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-Route::get('feedbackform', 'FeedbackController@index');
-Route::post('feedbackform', 'FeedbackController@create');
-
-
-
-
-
-
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('feedbackform', 'FeedbackController@index');
+Route::post('feedbackform', 'FeedbackController@create');
