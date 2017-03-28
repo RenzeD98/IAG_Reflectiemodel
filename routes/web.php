@@ -19,5 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('feedbackform', 'FeedbackController@index');
-Route::post('feedbackform', 'FeedbackController@create');
+Route::get('/feedback', 'FeedbackController@index');
+Route::post('/feedback', 'FeedbackController@create');
+
+Route::get('/spraak', 'SpraakController@index');
+Route::post('/spraak', 'SpraakController@create');
