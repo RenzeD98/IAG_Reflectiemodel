@@ -25,5 +25,6 @@ class FeedbackController extends Controller
                 'message' => $request->input('message'),
                 'title' => $request->input('title'),
        ]);
+      return view('feedback');
     }
 }
