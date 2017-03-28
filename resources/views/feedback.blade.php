@@ -15,6 +15,8 @@
                       <h5>Hier je feedback</h5>
                       <input type="text" name="message" placeholder="hier tekst"> <br><br>
                       <button type="submit">Verzenden</button>
+
+
                     </form>
                 </div>
             </div>
