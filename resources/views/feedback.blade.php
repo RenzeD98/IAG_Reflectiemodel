@@ -8,12 +8,15 @@
                 <div class="panel-heading">Feedbackformuliertje</div>
 
                 <div class="panel-body">
-                    <form action="POST">
+                    <form method="post">
+                      <input type="hidden" name="_token" value="{{ csrf_token() }}">
                       <h5>Hier het onderwerpsnaam ofzo</h5>
-                      <input type="text" name="feedback_title" placeholder="hier titel">
+                      <input type="text" name="title" placeholder="hier titel">
                       <h5>Hier je feedback</h5>
-                      <input type="text" name="feedback_feedback" placeholder="hier text"> <br><br>
-                      <input type="submit" class="btn btn-success">
+                      <input type="text" name="message" placeholder="hier tekst"> <br><br>
+                      <button type="submit">Verzenden</button>
+
+
                     </form>
                 </div>
             </div>
