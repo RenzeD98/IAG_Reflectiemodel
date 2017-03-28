@@ -13,7 +13,7 @@
                       <input type="text" name="feedback_title" placeholder="hier titel">
                       <h5>Hier je feedback</h5>
                       <input type="text" name="feedback_feedback" placeholder="hier text"> <br><br>
-                      <input type="submit">
+                      <input type="submit" class="btn btn-success">
                     </form>
                 </div>
             </div>
