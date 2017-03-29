@@ -13,7 +13,7 @@
                       <h5>Onderwerp:</h5>
                       <input type="text" name="title" placeholder="hier titel">
                       <h5>Feedback:</h5>
-                      <textarea name="message" id="" cols="100" rows="10"></textarea><br><br>
+                      <textarea name="message" id="" cols="10" rows="10"></textarea><br><br>
                       <button type="submit">Verzenden</button>
                     </form>
                 </div>

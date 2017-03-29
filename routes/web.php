@@ -24,3 +24,5 @@ Route::post('/feedback', 'FeedbackController@create');
 
 Route::get('/spraak', 'SpraakController@index');
 Route::post('/spraak', 'SpraakController@create');
+
+Route::get('/overzicht', 'OverzichtController@index');
