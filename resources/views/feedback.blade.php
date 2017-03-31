@@ -13,8 +13,12 @@
                       <h5>Onderwerp:</h5>
                       <input type="text" name="title" placeholder="hier titel">
                       <h5>Feedback:</h5>
-                      <textarea name="message" id="" cols="10" rows="10"></textarea><br><br>
-                      <button type="submit">Verzenden</button>
+                      <textarea name="message" id="" cols="100" rows="10"></textarea><br><br>
+                      <button class="btn btn-primary" type="submit">Verzenden</button>
+                    </form>
+                    <br />
+                    <form class="" action="{{ url('/home') }}" method="get">
+                        <button type="submit" class="btn btn-primary">Terug naar Home</button>
                     </form>
                 </div>
             </div>
