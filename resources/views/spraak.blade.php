@@ -9,12 +9,16 @@
 
                 <div class="panel-body">
                     <form action="post">
-                      
+
                       <a class="btn btn-success" href="#">
                       <i class="fa fa-microphone" aria-hidden="true"></i>
                       Spraak opnemen
                       </a>
 
+                    </form>
+                    <br />
+                    <form class="" action="{{ url('/home') }}" method="get">
+                        <button type="submit" class="btn btn-primary">Terug naar Home</button>
                     </form>
                 </div>
             </div>
