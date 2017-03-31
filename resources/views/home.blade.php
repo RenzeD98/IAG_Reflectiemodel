@@ -15,6 +15,10 @@
                   <form class="" action="{{ url('/feedback') }}" method="get">
                       <button type="submit" class="btn btn-primary">Tekst Feedback</button>
                   </form>
+                  <!-- <br>
+                  <form action="{{ url('/overzicht')}}" method="get">
+                    <button type="submit" class="btn btn-primary">Overzicht van feedback</button>
+                  </form> -->
                 </div>
             </div>
         </div>
