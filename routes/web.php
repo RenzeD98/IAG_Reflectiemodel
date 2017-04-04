@@ -12,15 +12,26 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
+/** Feedback **/
 Route::get('/feedback', 'FeedbackController@index');
 Route::post('/feedback', 'FeedbackController@create');
 
+/** Profile **/
+Route::get('/profiel', 'FeedbackController@index');
+Route::patch('/profiel', 'FeedbackController@update');
+Route::post('/profiel', 'FeedbackController@create');
+
 Route::get('/spraak', 'SpraakController@index');
 Route::post('/spraak', 'SpraakController@create');
+
+
+
+
+
