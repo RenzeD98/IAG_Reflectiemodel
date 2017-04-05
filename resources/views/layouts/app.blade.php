@@ -5,18 +5,20 @@
 </head>
 <body>
     <div id="app">
-        
-        <nav class="navbar navbar-default navbar-static-top">
-            @include('includes.menu')
-        </nav>
+
+        <div id="header">
+            <nav class="navbar navbar-default navbar-static-top">
+                @include('includes.header')
+            </nav>
+        </div>
 
         <div id="content">
             @yield('content')
         </div>
 
-        <footer class="row">
-            @include('includes.footer')
-        </footer>
+        <div id="mobile-menu">
+            @include('includes.mobilemenu')
+        </div>
 
     </div>
 
