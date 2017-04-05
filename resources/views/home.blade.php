@@ -7,9 +7,9 @@
               Welkom {{ Auth::user()->firstname }} {{ Auth::user()->lastname }} 
         </div>
         <br />
-        <div class="row">
+        <div class="row row-centered">
             <a href="{{ url('feedback') }}">
-                <div class="col-xs-4 col-xs-offset-1 column">  
+                <div class="col-xs-4 col-centered column">  
                      <i class="fa fa-forward fa-5x" aria-hidden="true"></i>
                      <span class="subtitle">Feedback</span>
                 </div>
@@ -17,24 +17,23 @@
 
 
             <a href="{{ url('feedback') }}">
-                <div class="col-xs-4 col-xs-offset-1 column">  
+                <div class="col-xs-4 col-centered col-xs-offset-1 column">  
                      <i class="fa fa-repeat fa-5x" aria-hidden="true"></i>
                      <span class="subtitle">Reflecteren</span>
                 </div>
             </a>
         </div>
 
-        <div class="row">
+        <div class="row row-centered">
             <a href="{{ url('feedback') }}">
-                <div class="col-xs-4 col-xs-offset-1 column">  
+                <div class="col-xs-4 col-centered column"> 
                     <i class="fa fa-refresh fa-5x" aria-hidden="true"></i>
                     <span class="subtitle">IAG Reflectiemodel</span>
                 </div>
             </a>
 
-
             <a href="{{ url('feedback') }}">
-                <div class="col-xs-4 col-xs-offset-1 column">  
+                <div class="col-xs-4 col-centered col-xs-offset-1 column">  
                     <i class="fa fa-user fa-5x" aria-hidden="true"></i>
                     <span class="subtitle">Profiel</span>
                 </div>
