@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.mobile')
 
 @section('content')
 <div class="container home">
@@ -32,7 +32,7 @@
                 </div>
             </a>
 
-            <a href="{{ url('feedback') }}">
+            <a href="{{ url('profiel') }}">
                 <div class="col-xs-4 col-centered col-xs-offset-1 column">  
                     <i class="fa fa-user fa-5x" aria-hidden="true"></i>
                     <span class="subtitle">Profiel</span>

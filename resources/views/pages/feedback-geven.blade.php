@@ -2,13 +2,13 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+    <div class="row row-centered">
+        <div class="col-md-12">
             <div class="panel panel-default">
-                <div class="panel-heading">Spraak feedback</div>
+                <div class="panel-heading">Feedbackformulier</div>
 
                 <div class="panel-body">
-                    <form action="post">
+                    <form action="POST">
                       <h5>Hier het onderwerpsnaam ofzo</h5>
                       <input type="text" name="feedback_title" placeholder="hier titel">
                       <h5>Hier je feedback</h5>
