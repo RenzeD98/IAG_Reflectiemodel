@@ -1,9 +1,68 @@
 
 // Fonts
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
 
 // Variables
 @import "variables";
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+
+//--------------------CUSTOM CSS & FUNCTIONS--------------------------------//
+//---------------------------functions-------------------------------------//
+
+//----------------PrimaryColors-------------------------//
+$primary-color-1: #87cdd3;        //Lightblue
+$primary-color-2: #2a3a89;        //Blue
+$primary-color-3: #c6c6c6;        //Grey
+
+//----------------FunctionColors-------------------------//
+$activate-color-1: #eb6a6b;       //Red / Orange
+$activate-color-2: #b82052;       //Red
+$activate-color-3: #e29cc1;       //Pink
+
+//----------------ConfirmColors-------------------------//
+$confirm-color-1: #dcdf6c;        //Yellow
+$confirm-color-2: #68883c;        //Green
+
+//----------------Fonts--------------------------------//
+
+
+//---------------------------Mixins-------------------------------------//
+@mixin border-radius($radius){
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+
+
+//----------------------------SCSS-------------------------------------//
+h1 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 24pt;
+  font-weight: bold;
+}
+
+h2 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 19pt;
+  font-weight: bold;
+}
+
+h3 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 10pt;
+  font-weight: lighter;
+}
+
+p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14pt;
+}
+
+
