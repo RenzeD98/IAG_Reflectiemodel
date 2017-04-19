@@ -28,9 +28,6 @@ $activate-color-3: #e29cc1;       //Pink
 $confirm-color-1: #dcdf6c;        //Yellow
 $confirm-color-2: #68883c;        //Green
 
-//----------------Fonts--------------------------------//
-
-
 //---------------------------Mixins-------------------------------------//
 @mixin border-radius($radius){
   -webkit-border-radius: $radius;
