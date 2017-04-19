@@ -14,6 +14,17 @@
                       <h5>Hier je feedback</h5>
                       <input type="text" name="feedback_feedback" placeholder="hier text"> <br><br>
                       <input type="submit">
+                    <form action="post">
+
+                      <a class="btn btn-success" href="#">
+                      <i class="fa fa-microphone" aria-hidden="true"></i>
+                      Spraak opnemen
+                      </a>
+
+                    </form>
+                    <br />
+                    <form class="" action="{{ url('/home') }}" method="get">
+                        <button type="submit" class="btn btn-primary">Terug naar Home</button>
                     </form>
                 </div>
             </div>

@@ -40,7 +40,5 @@ Route::get('upload', function() {
 
 Route::post('apply/upload', 'ApplyController@upload');
 
-
-
-
+Route::get('/overzicht', 'OverzichtController@index');
 

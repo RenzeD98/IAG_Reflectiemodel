@@ -8,12 +8,17 @@
                 <div class="panel-heading">Feedback toevoegen</div>
 
                 <div class="panel-body">
-                    <form action="POST">
-                      <h5>Hier het onderwerpsnaam ofzo</h5>
-                      <input type="text" name="feedback_title" placeholder="hier titel">
-                      <h5>Hier je feedback</h5>
-                      <input type="text" name="feedback_feedback" placeholder="hier text"> <br><br>
-                      <input type="submit">
+                    <form method="post">
+                      <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                      <h5>Onderwerp:</h5>
+                      <input type="text" name="title" placeholder="hier titel">
+                      <h5>Feedback:</h5>
+                      <textarea name="message" id="" cols="100" rows="10"></textarea><br><br>
+                      <button class="btn btn-primary" type="submit">Verzenden</button>
+                    </form>
+                    <br />
+                    <form class="" action="{{ url('/home') }}" method="get">
+                        <button type="submit" class="btn btn-primary">Terug naar Home</button>
                     </form>
                 </div>
             </div>

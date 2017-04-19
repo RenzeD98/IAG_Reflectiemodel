@@ -7,6 +7,7 @@
               Welkom {{ Auth::user()->firstname }} {{ Auth::user()->lastname }} 
         </div>
         <br />
+
         <div class="row row-centered">
             <a href="{{ url('feedback') }}">
                 <div class="col-xs-4 col-centered column">  
@@ -37,9 +38,8 @@
                     <i class="fa fa-user fa-5x" aria-hidden="true"></i>
                     <span class="subtitle">Profiel</span>
                 </div>
-            </a>
-        </div>
-    </div>
+            </a>     
+      </div>
     
 </div>
 @endsection
