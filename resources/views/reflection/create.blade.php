@@ -6,7 +6,7 @@
 	    <div class="panel-heading">Reflectie toevoegen</div>
 
 	    <div class="panel-body">
-
+	        
 	    </div>
 	</div>
 </div>
