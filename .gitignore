@@ -7,3 +7,5 @@
 Homestead.json
 Homestead.yaml
 .env
+resources/assets/sass/app.scss
+resources/views/home.blade.php
