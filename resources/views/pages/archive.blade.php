@@ -6,7 +6,7 @@
 	    <div class="panel-heading">Archief overzicht</div>
 
 	    <div class="panel-body">
-	        
+
 	    </div>
 	</div>
 </div>
