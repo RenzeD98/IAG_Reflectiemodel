@@ -3,7 +3,12 @@
 @section('content')
 <div class="container profile">
     <div class="panel panel-default">
-        <div class="panel-heading">Profiel</div>
+        <div class="header">
+            <a href="{{ url('profiel') }}">
+                <img src="https://pbs.twimg.com/profile_images/689125864731242496/DGU2F799.jpg" alt="Profiel afbeelding">
+                <span class="name">{{ Auth::user()->firstname }} {{ Auth::user()->lastname }}</span>
+            </a>
+        </div>
         <div class="panel-body">
             <div class="row row-centered">
                 <div class="col-md-12">
