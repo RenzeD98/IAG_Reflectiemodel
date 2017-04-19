@@ -17,5 +17,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get('home', 'HomeController@index');
 
+//reflectie routes
+Route::get('reflection', 'ReflectionController@index');
+Route::get('reflection/create', 'ReflectionController@create');
