@@ -34,9 +34,6 @@
                     </a>
 
                     <ul class="dropdown-menu" role="menu">
-                    	
-                    	<li><a href="{{ url('feedback') }}">Feedback</a></li>
-                    	<li><a href="{{ url('spraak') }}">Spraak</a></li>
                         <li>
                             <a href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
