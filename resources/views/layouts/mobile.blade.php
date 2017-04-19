@@ -16,10 +16,10 @@
             @yield('content')
         </div>
 
-        <!--<div id="mobile-menu">
+        <div id="mobile-menu">
             @include('includes.mobilemenu')
         </div>
-        -->
+        
     </div>
 
     <!-- Scripts -->
