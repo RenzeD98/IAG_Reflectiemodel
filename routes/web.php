@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/home', 'HomeController@index');
+
 Auth::routes();
 
 /** Feedback **/
@@ -32,4 +34,11 @@ Route::post('/spraak', 'SpraakController@create');
 
 /* Upload image */
 
+Route::get('upload', function() {
+  return View::make('upload');
+});
+
+Route::post('apply/upload', 'ApplyController@upload');
+
 Route::get('/overzicht', 'OverzichtController@index');
+
