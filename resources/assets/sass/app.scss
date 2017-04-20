@@ -35,8 +35,11 @@ $confirm-color-2: #68883c;        //Green
       -ms-border-radius: $radius;
           border-radius: $radius;
 }
+//----------------------------Media Queries----------------------------//
 
-
+$break-phone: 415px;
+$break-tablet: 768px;
+$break-pc: 800px;
 
 //----------------------------SCSS-------------------------------------//
 h1 {
@@ -61,6 +64,12 @@ p {
   font-family: 'Quicksand', sans-serif;
   font-size: 14pt;
 }
+
+.mobile-menu {
+    height: 50px;
+    @media screen and (min-width: $break-phone) {
+      display: none;
+    }
 
 .row{margin-right:0px !important;margin-left:0px !important;}
 
