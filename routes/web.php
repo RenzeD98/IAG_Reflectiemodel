@@ -17,12 +17,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get('home', 'HomeController@index');
 
-Route::get('/feedback', 'FeedbackController@index');
-Route::post('/feedback', 'FeedbackController@create');
-
-Route::get('/spraak', 'SpraakController@index');
-Route::post('/spraak', 'SpraakController@create');
-
-Route::get('/overzicht', 'OverzichtController@index');
+//reflectie routes
+Route::get('reflection', 'ReflectionController@index');
+Route::get('reflection/create', 'ReflectionController@create');
