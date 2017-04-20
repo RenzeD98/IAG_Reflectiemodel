@@ -3,14 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class ReflectionController extends Controller
 {
     public function index(){
-      return view('pages\reflection');
+      $reflections = DB::table('cases')->get();
+
+      return view('reflection\reflection', compact('reflections'));
     }
 
     public function create(){
-      return view('pages\create');
+      return view('reflection\create');
     }
 }

@@ -6,17 +6,20 @@
     <div class="panel-heading">Reflectie overzicht</div>
     <div class="panel-body">
 
-        <div class="row">
           <div class="col-md-12">
             <a href="{{ url('reflection\create') }}">Toevoegen</a>
           </div>
+
+    @foreach($reflections as $reflection)
+        <div class="row" style="border: 1px #111 solid;">
           <div class="col-md-12">
-            <p>dag-maand-jaar</p>
+            <p>{{ $reflection->title }}</p>
           </div>
           <div class="col-md-12">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque atque consequuntur harum, similique, iusto consectetur quo voluptates soluta veritatis explicabo ut odit quos accusantium, suscipit sapiente iure culpa quam quidem.</p>
+            <p>{{ $reflection->message }}</p>
           </div>
         </div>
+    @endforeach
 
     </div>
   </div>
