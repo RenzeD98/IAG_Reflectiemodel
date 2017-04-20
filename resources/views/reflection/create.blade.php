@@ -6,6 +6,7 @@
     <div class="panel-heading">Reflectie toevoegen</div>
     <div class="panel-body">
 
+      <form method="POST" action="/create">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <input type="text" name="title">
         <input type="text" name="message">
