@@ -1,16 +1,25 @@
 <div class="container">
     <div class="row">
-         <div class="col-xs-4">
+         <div class="col-xs-4">  
 
          </div>
-        <div class="col-xs-4">
+
+        <div class="col-xs-4">  
             <a class="navbar-brand" href="{{ url('/') }}">
                 {{ config('app.name', 'Laravel') }}
             </a>
          </div>
-        <div class="col-xs-4">
+
+        <div class="col-xs-4">  
+
         </div>
+
     </div>
+
+
+
+    
+
     <div class="collapse navbar-collapse" id="app-navbar-collapse">
         <!-- Left Side Of Navbar -->
         <ul class="nav navbar-nav">
@@ -30,7 +39,7 @@
                     </a>
 
                     <ul class="dropdown-menu" role="menu">
-
+                    	
                     	<li><a href="{{ url('feedback') }}">Feedback</a></li>
                     	<li><a href="{{ url('spraak') }}">Spraak</a></li>
                         <li>
@@ -50,3 +59,4 @@
         </ul>
     </div>
 </div>
+

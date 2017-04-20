@@ -1,24 +1,25 @@
-<div class="mobile-menu">
-	<div class="footer">
-		    <div class="col-xs-3 column">
+<div class="container mobile-menu">
+	<div class="panel panel-default">
+		<div class="row row-centered">	
+		    <div class="col-xs-4 column">     
 	    		<a href="{{ url('home') }}">
-	    			<img class="menu-icon" src="icons/HomeIconWhite.svg" alt="">
-	    		</a>
+	    			<i class="fa fa-home fa-4x" aria-hidden="true"></i>
+	    		</a>	    	  	
 		    </div>
-		    <div class="col-xs-3 column">
+
+		    <div class="col-xs-4 column">  
 	    		<a href="{{ url('home') }}">
+	    			<i class="fa fa-home fa-4x" aria-hidden="true"></i>
+	    		</a>    	
+		    </div>
 
-					</a>
-				</div>
-				<div class="col-xs-3 column">
-					<a href="{{ url('home') }}">
-
-					</a>
-				</div>
-				<div class="col-xs-3 column">
-					<a href="{{ url('home') }}">
-						<img class="menu-icon" src="icons/MessagesIconWhiteAlt.svg" alt="">
-					</a>
-				</div>
+		    <div class="col-xs-4 column">  
+	    		<a href="{{ url('home') }}">
+	    			<i class="fa fa-home fa-4x" aria-hidden="true"></i>
+	    		</a>	      	
+		    </div>
+			   			
+		</div>
 	</div>
 </div>
+
