@@ -70,16 +70,14 @@ p {
     @media screen and (min-width: $break-phone) {
       display: none;
     }
-
+}
 .row{margin-right:0px !important;margin-left:0px !important;}
 
 .row-centered {text-align:center;}
 .col-centered {
     display:inline-block;
     float:none;
-    /* reset the text-align */
     text-align:left;
-    /* inline-block space fix */
     margin-right:-4px;
 }
 
@@ -149,9 +147,6 @@ p {
   font-size:20px;
 }
 
-
-/*** Profile styles ***/
-
 .profile .name{font-size:24px;}
 .profile .function {font-size:18px;}
 
@@ -165,13 +160,9 @@ p {
 }
 
 .login{margin-top:-23px;padding-top:40px;}
-
-.login .btn{width:100%;}
-
+.login a.btn.btn-link{color:#fff;}
 .login form input[type="email"],
-.login form input[type="password"]{
-   border:2px solid #95989A;
-}
+.login form input[type="password"]{border:2px solid #95989A;}
 .login .btn.btn-primary{
   width:100%;
   border:2px solid #95989A;
@@ -180,10 +171,7 @@ p {
   border-radius:10px;
   background-color:#2A3A89;
 }
-.login .btn.btn-primary:hover{
-  background-color:#fff;
-}
-
+.login .btn.btn-primary:hover{background-color:#fff;color:#333;}
 .login,
 .login .panel,
 .login .panel-heading,
