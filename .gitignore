@@ -7,5 +7,7 @@
 Homestead.json
 Homestead.yaml
 .env
-resources/assets/sass/app.scss
+composer.lock
 resources/views/home.blade.php
+resources/views/pages/profile.blade.php
+resources/assets/sass/app.scss
