@@ -61,3 +61,22 @@ p {
   font-family: 'Quicksand', sans-serif;
   font-size: 14pt;
 }
+.mobile-menu {
+    height: 50px;
+}
+img.menu-icon {
+    max-height: 50px;
+}
+div#mobile-menu {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.footer {
+  height: 50px;
+  background: #87CDD3;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: -webkit-center;
+}
