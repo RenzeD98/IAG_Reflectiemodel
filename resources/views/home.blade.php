@@ -22,7 +22,7 @@
             <a href="{{ url('reflectiemodel') }}">
                 <div class="col-xs-4 col-centered column"> 
                     <img src="icons/IAGModelIcon.svg" alt="Reflectie icoon">
-                    <span class="subtitle">IAG Reflectiemodel</span>
+                    <span class="subtitle">Reflectiemodel</span>
                 </div>
             </a>    
         </div>
