@@ -78,19 +78,12 @@ p {
 .col-centered {
     display:inline-block;
     float:none;
-    /* reset the text-align */
     text-align:left;
-    /* inline-block space fix */
     margin-right:-4px;
 }
 
 .panel{border:1px solid #ddd;}
 
-.intern-notification{
-  padding:10px;
-  border:1px solid #333;
-  margin-bottom:50px;
-}
 
 
 /*** Mobile Menu styles ***/
@@ -107,20 +100,21 @@ p {
 .home .column,
 .profile .column{
   border:2px solid #ddd;
-  min-height:100px;
-  margin-bottom:50px;
+  margin-bottom:30px;
   text-align: center;
   padding-top:30px;
   padding-bottom:30px;
   margin:20px;
 }
-.home .column img{width:160px;}
+.home .column img,
+.profile .column img{width:auto;}
+
 .home .column .fa:hover{color:#333;}
 .home .column .subtitle{
   display: block;
   color:#333;
   margin-top:10px;
-  font-size:20px;
+  font-size:1em;
 
 }
 
@@ -150,7 +144,6 @@ p {
   font-size:20px;
 }
 
-
 /*** Profile styles ***/
 
 .profile .name{
@@ -158,4 +151,39 @@ p {
 }
 .profile .function{
   font-size:18px;
+}
+
+.profile .name{font-size:24px;}
+.profile .function {font-size:18px;}
+
+/*** Inloggen ***/
+
+.login .header img{
+  width:100px;
+  height:100px;
+  border:2px solid #95989A;
+  background-color:#fff;
+}
+
+.login{margin-top:-23px;padding-top:40px;}
+.login a.btn.btn-link{color:#fff;}
+.login form input[type="email"],
+.login form input[type="password"]{border:2px solid #95989A;}
+.login .btn.btn-primary{
+  width:100%;
+  border:2px solid #95989A;
+  background-color:#68883C;
+  color:#fff;
+  border-radius:10px;
+  background-color:#2A3A89;
+}
+.login .btn.btn-primary:hover{background-color:#fff;color:#333;}
+.login,
+.login .panel,
+.login .panel-heading,
+.login .panel-body{
+  background-color:#87CDD3;
+  border:none;
+  color:#fff;
+  text-align:center;
 }
