@@ -104,20 +104,21 @@ p {
 .home .column,
 .profile .column{
   border:2px solid #ddd;
-  min-height:100px;
-  margin-bottom:50px;
+  margin-bottom:30px;
   text-align: center;
   padding-top:30px;
   padding-bottom:30px;
   margin:20px;
 }
-.home .column img{width:160px;}
+.home .column img,
+.profile .column img{width:auto;}
+
 .home .column .fa:hover{color:#333;}
 .home .column .subtitle{
   display: block;
   color:#333;
   margin-top:10px;
-  font-size:20px;
+  font-size:1em;
 
 }
 
