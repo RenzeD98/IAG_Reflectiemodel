@@ -6,9 +6,12 @@
     <div class="panel-heading">Reflectie overzicht</div>
     <div class="panel-body">
 
+
+        <div class="row">
           <div class="col-md-12">
             <a href="{{ url('reflection\create') }}">Toevoegen</a>
           </div>
+        </div>
 
     @foreach($reflections as $reflection)
         <div class="row" style="border: 1px #111 solid;">
