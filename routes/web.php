@@ -24,6 +24,5 @@ Route::get('/profiel', 'ProfileController@index');
 //reflectie routes
 Route::get('reflectie', 'ReflectionController@index');
 
-
-
-Route::get('/create', 'ReflectionController@create');
+Route::get('reflectie/create', 'ReflectionController@view');
+Route::post('reflectie/create', 'ReflectionController@create');
