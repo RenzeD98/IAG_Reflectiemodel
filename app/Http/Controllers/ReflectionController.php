@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Case;
+//use App\Case;
 use Illuminate\Http\Request;
 use DB;
 use App\Post;
@@ -11,7 +11,6 @@ class ReflectionController extends Controller
 { // view to reflection
     public function index(){
       $reflections = DB::table('cases')->get();
-
       return view('reflection\reflection', compact('reflections'));
     }
 
@@ -21,9 +20,7 @@ class ReflectionController extends Controller
     }
 
     public function create(Request $request){
-      //$case = new Case;
-      $obama = Case::first();
-      dd($obama);
+ //     $case = new Case;
       $case->title = $request->title;
       $case->message = $request->message;
       $case->save();

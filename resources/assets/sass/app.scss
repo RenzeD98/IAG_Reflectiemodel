@@ -44,25 +44,25 @@ $break-pc: 800px;
 //----------------------------SCSS-------------------------------------//
 h1 {
   font-family: 'Quicksand', sans-serif;
-  font-size: 24pt;
+  font-size: 24px;
   font-weight: bold;
 }
 
 h2 {
   font-family: 'Quicksand', sans-serif;
-  font-size: 19pt;
+  font-size: 19px;
   font-weight: bold;
 }
 
 h3 {
   font-family: 'Quicksand', sans-serif;
-  font-size: 10pt;
+  font-size: 10px;
   font-weight: lighter;
 }
 
 p {
   font-family: 'Quicksand', sans-serif;
-  font-size: 14pt;
+  font-size: 14px;
 }
 
 .mobile-menu {
@@ -195,3 +195,73 @@ p {
   text-align:center;
 }
 
+/***Reflecteren & feedbackgeven***/
+
+.refadd{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+
+  text-align: center;
+  background-color: green;
+  @include border-radius(100%);
+
+  font-weight: lighter;
+  font-size: 33px;
+  color: white;
+  text-decoration: none;
+
+  box-shadow: 0px 5px 10px #666;
+}
+
+.refadd:hover{
+  text-decoration: none;
+  color: white;
+}
+
+
+
+.refrow{
+  border: 1px #ccc solid;
+  margin-bottom: 25px;
+  padding: 0 4px 0 4px;
+}
+
+.refhead{
+  height: 59px;
+  border-bottom: 1px #ddd solid;
+  padding-top: 4px;
+  padding-bottomg: 4px;
+}
+
+.refhead p, .refhead img{
+  float: left;
+}
+
+p.reftime{
+  float: right;
+}
+
+.refhead p{
+  margin: 14px;
+}
+
+.refmessage p{
+  clear: both;
+  margin-top: 10px;
+}
+
+.reftag{
+  float: left;
+  background-color: #666;
+  color: white;
+  font-size: 11px;
+  margin: 0px 10px 10px 0px;
+  padding: 0 5px 0 5px;
+}
+
+.reffeedback{
+  float: right;
+}
