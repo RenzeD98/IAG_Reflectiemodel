@@ -21,7 +21,10 @@ Route::get('home', 'HomeController@index');
 
 Route::get('/profiel', 'ProfileController@index');
 
-//reflectie routes
+//reflectie
 Route::get('reflection', 'ReflectionController@index');
 
 Route::get('reflection.create', 'ReflectionController@create');
+
+//Reflectie model
+Route::get('reflectiemodel', 'ReflectiemodelController@index');
