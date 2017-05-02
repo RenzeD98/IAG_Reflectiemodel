@@ -6,7 +6,6 @@
     @foreach($reflections as $reflection)
         <div class="row">
           <div class="col-md-12 head">
-            <img class="img-circle" src="http://placehold.it/50x50" alt="">
             <p>{{ $reflection->title }}</p>
             <p class="time">{{ $reflection->updated_at}}</p>
           </div>
@@ -21,12 +20,11 @@
           </div>
             <!-- endforeach -->
 
+
           <div class="col-md-6">
-            <a href="#" class="give-feedback">Feedback geven</a>
+            <a href="#" class="feedback">Feedback inzien</a>
           </div>
         </div>
     @endforeach
-
-        <a class="add-reflection-button" href="{{ url('reflectie\create') }}">+</a>
 </div>
 @endsection
