@@ -9,12 +9,10 @@
 
   class ReflectionController extends Controller{ // view to reflection
     public function index(){
-      $reflections = Reflection::get();
+      $id = Auth::id();
+      $reflections = Reflection::where('user_id', $id)->orderBy('title', 'desc')->take(10)->get();
       //$reflections->updated_at = date("d-m-Y");
-
-    
-
-      return view('reflection.reflection', compact('reflections'));
+      return view('reflection.reflections', compact('reflections'));
     }
 
     // view to reflection/create
@@ -32,23 +30,20 @@
       $reflection->user_id = Auth::id();
       $reflection->save();
 
-      return redirect('/reflectie');
+      return redirect('/reflecties');
 
       //$request->session()->flash('alert-success', 'Successfully updated');
 
     }
 
-    public function getReflection(){
+    public function reflection(){
+
+      $reflection = Reflection::find('id', $id)->first();
 
 
-      $reflection = new Reflection;
+    
 
-      $reflection->title = $request->title;
-      $reflection->message = $request->message;
-      $reflection->user_id = Auth::id();
-      $reflection->save();
-
-      return redirect('/reflectie');
+      return view('reflection.reflection', compact('reflection'));
 
       //$request->session()->flash('alert-success', 'Successfully updated');
 
