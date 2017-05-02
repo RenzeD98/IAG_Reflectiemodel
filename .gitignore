@@ -8,6 +8,3 @@ Homestead.json
 Homestead.yaml
 .env
 composer.lock
-resources/views/home.blade.php
-resources/views/pages/profile.blade.php
-resources/assets/sass/app.scss

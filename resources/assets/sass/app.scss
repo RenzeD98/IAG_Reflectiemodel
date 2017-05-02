@@ -39,7 +39,7 @@ $confirm-color-2: #68883c;        //Green
 
 $break-phone: 415px;
 $break-tablet: 768px;
-$break-pc: 800px;
+$break-pc: 1200px;
 
 //----------------------------SCSS-------------------------------------//
 h1 {
@@ -64,9 +64,18 @@ p {
   font-family: 'Quicksand', sans-serif;
   font-size: 14px;
 }
-
-.mobile-menu {
-    height: 50px;
+//----------------------------Mobile Menu-------------------------------------//
+img.menu-icon {
+    max-height: 50px;
+}
+div#mobile-menu {
+    height: 60px;
+    padding: 5px 0px;
+    background-color: #87CDD3;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    margin-top: 50px;
     @media screen and (min-width: $break-phone) {
       display: none;
     }
@@ -78,19 +87,12 @@ p {
 .col-centered {
     display:inline-block;
     float:none;
-    /* reset the text-align */
     text-align:left;
-    /* inline-block space fix */
     margin-right:-4px;
 }
 
 .panel{border:1px solid #ddd;}
 
-.intern-notification{
-  padding:10px;
-  border:1px solid #333;
-  margin-bottom:50px;
-}
 
 
 /*** Mobile Menu styles ***/
@@ -107,20 +109,21 @@ p {
 .home .column,
 .profile .column{
   border:2px solid #ddd;
-  min-height:100px;
-  margin-bottom:50px;
+  margin-bottom:30px;
   text-align: center;
   padding-top:30px;
   padding-bottom:30px;
   margin:20px;
 }
-.home .column img{width:160px;}
+.home .column img,
+.profile .column img{width:auto;}
+
 .home .column .fa:hover{color:#333;}
 .home .column .subtitle{
   display: block;
   color:#333;
   margin-top:10px;
-  font-size:20px;
+  font-size:1em;
 
 }
 
@@ -150,8 +153,14 @@ p {
   font-size:20px;
 }
 
-
 /*** Profile styles ***/
+
+.profile .name{
+  font-size:24px;
+}
+.profile .function{
+  font-size:18px;
+}
 
 .profile .name{font-size:24px;}
 .profile .function {font-size:18px;}
@@ -166,13 +175,9 @@ p {
 }
 
 .login{margin-top:-23px;padding-top:40px;}
-
-.login .btn{width:100%;}
-
+.login a.btn.btn-link{color:#fff;}
 .login form input[type="email"],
-.login form input[type="password"]{
-   border:2px solid #95989A;
-}
+.login form input[type="password"]{border:2px solid #95989A;}
 .login .btn.btn-primary{
   width:100%;
   border:2px solid #95989A;
@@ -181,10 +186,7 @@ p {
   border-radius:10px;
   background-color:#2A3A89;
 }
-.login .btn.btn-primary:hover{
-  background-color:#fff;
-}
-
+.login .btn.btn-primary:hover{background-color:#fff;color:#333;}
 .login,
 .login .panel,
 .login .panel-heading,
@@ -265,3 +267,4 @@ p.reftime{
 .reffeedback{
   float: right;
 }
+
