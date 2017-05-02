@@ -4,29 +4,29 @@
 <div class="container reflection">
 
     @foreach($reflections as $reflection)
-        <div class="row refrow">
-          <div class="col-md-12 refhead">
+        <div class="row">
+          <div class="col-md-12 head">
             <img class="img-circle" src="http://placehold.it/50x50" alt="">
             <p>{{ $reflection->title }}</p>
-            <p class="reftime">{{ $reflection->updated_at}}</p>
+            <p class="time">{{ $reflection->updated_at}}</p>
           </div>
 
-          <div class="col-md-12 refmessage">
+          <div class="col-md-12 message">
             <p>{{ $reflection->message }}</p>
           </div>
 
             <!-- foreach -->
           <div class="col-md-6">
-            <span class="reftag">{{ $reflection->title }}</span>
+            <span class="tag">{{ $reflection->title }}</span>
           </div>
             <!-- endforeach -->
 
           <div class="col-md-6">
-            <a href="#" class="reffeedback">Feedback geven</a>
+            <a href="#" class="give-feedback">Feedback geven</a>
           </div>
         </div>
     @endforeach
 
-        <a class="refadd" href="{{ url('reflectie\create') }}">+</a>
+        <a class="add-reflection-button" href="{{ url('reflectie\create') }}">+</a>
 </div>
 @endsection
