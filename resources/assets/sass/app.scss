@@ -3,38 +3,18 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 
-// Variables
-@import "variables";
-
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
 
 
 //--------------------CUSTOM CSS & FUNCTIONS--------------------------------//
-//---------------------------functions-------------------------------------//
-
-//----------------PrimaryColors-------------------------//
-$lightblue: #87cdd3;        //Lightblue
-$blue: #2a3a89;        //Blue
-$grey: #c6c6c6;        //Grey
-
-//----------------FunctionColors-------------------------//
-$redorange: #eb6a6b;       //Red / Orange
-$red: #b82052;       //Red
-$pink: #e29cc1;       //Pink
-
-//----------------ConfirmColors-------------------------//
-$yellow: #dcdf6c;        //Yellow
-$green: #68883c;        //Green
+//---------------------------variables-------------------------------------//
+@import "variables";
 
 //---------------------------Mixins-------------------------------------//
-@mixin border-radius($radius){
-  -webkit-border-radius: $radius;
-     -moz-border-radius: $radius;
-      -ms-border-radius: $radius;
-          border-radius: $radius;
-}
+@import "mixins";
+
 //----------------------------Media Queries----------------------------//
 
 $break-phone: 415px;

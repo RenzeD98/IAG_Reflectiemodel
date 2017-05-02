@@ -26,5 +26,8 @@
           </div>
         </div>
     @endforeach
+
+    <a class="add-reflection-button" href="{{ url('reflectie\create') }}">+</a>
+
 </div>
 @endsection
