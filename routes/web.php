@@ -11,6 +11,8 @@
 |
 */
 
+
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -23,12 +25,10 @@ Route::get('/profiel', 'ProfileController@index');
 
 //reflectie routes
 Route::get('reflecties', 'ReflectionController@index');
-
-Route::get('reflectie/{$id}', 'ReflectionController@reflection');
-
+Route::get('reflectie/{id}', 'ReflectionController@reflection');
+Route::get('reflectie/{id}/edit', 'ReflectionController@update');
 Route::get('reflectie/create', 'ReflectionController@view');
 Route::post('reflectie/create', 'ReflectionController@create');
-
 
 //feedback routes
 Route::get('feedback', 'FeedbackCOntroller@index');
