@@ -15,18 +15,18 @@
 //---------------------------functions-------------------------------------//
 
 //----------------PrimaryColors-------------------------//
-$primary-color-1: #87cdd3;        //Lightblue
-$primary-color-2: #2a3a89;        //Blue
-$primary-color-3: #c6c6c6;        //Grey
+$lightblue: #87cdd3;        //Lightblue
+$blue: #2a3a89;        //Blue
+$grey: #c6c6c6;        //Grey
 
 //----------------FunctionColors-------------------------//
-$activate-color-1: #eb6a6b;       //Red / Orange
-$activate-color-2: #b82052;       //Red
-$activate-color-3: #e29cc1;       //Pink
+$redorange: #eb6a6b;       //Red / Orange
+$red: #b82052;       //Red
+$pink: #e29cc1;       //Pink
 
 //----------------ConfirmColors-------------------------//
-$confirm-color-1: #dcdf6c;        //Yellow
-$confirm-color-2: #68883c;        //Green
+$yellow: #dcdf6c;        //Yellow
+$green: #68883c;        //Green
 
 //---------------------------Mixins-------------------------------------//
 @mixin border-radius($radius){
@@ -198,38 +198,39 @@ div#mobile-menu {
 }
 
 /***Reflecteren & feedbackgeven***/
-.reflection .row{
+.reflection .row, .feedback .row{
   border: 1px #ccc solid;
   margin-bottom: 25px;
   padding: 0 4px 0 4px;
 }
 
-.reflection .row .head{
+.reflection .row .head, .feedback .row .head{
   height: 59px;
   border-bottom: 1px #ddd solid;
   padding-top: 4px;
   padding-bottomg: 4px;
 }
 
-.reflection .row .head img{
+.feedback .row .head img{
   float: left;
 }
 
-.reflection .row .head p{
+.reflection .row .head p, .feedback .row .head p{
   float: left;
   margin: 14px;
+  font-weight: bold;
 }
 
-.reflection .row .head p.time{
+.reflection .row .head p.time, .feedback .row .head p.time{
   float: right;
 }
 
-.reflection .row .message p{
+.reflection .row .message p, .feedback .row .message p{
   clear: both;
   margin-top: 10px;
 }
 
-.reflection .row .tag{
+.reflection .row .tag, .feedback .row .tag{
   float: left;
   background-color: #666;
   color: white;
@@ -238,7 +239,7 @@ div#mobile-menu {
   padding: 0 5px 0 5px;
 }
 
-.reflection .row .give-feedback{
+.reflection .row .feedback, .feedback .row .feedback{
   float: right;
 }
 
