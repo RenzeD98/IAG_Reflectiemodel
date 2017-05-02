@@ -6,7 +6,7 @@
     @foreach($reflections as $reflection)
         <div class="row refrow">
           <div class="col-md-12 refhead">
-            <img class="img-rounded" src="http://placehold.it/50x50" alt="">
+            <img class="img-circle" src="http://placehold.it/50x50" alt="">
             <p>{{ $reflection->title }}</p>
             <p class="reftime">{{ $reflection->updated_at}}</p>
           </div>
@@ -17,7 +17,6 @@
 
             <!-- foreach -->
           <div class="col-md-6">
-            <span class="reftag">{{ $reflection->title }}</span>
             <span class="reftag">{{ $reflection->title }}</span>
           </div>
             <!-- endforeach -->

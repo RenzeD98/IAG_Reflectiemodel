@@ -26,3 +26,7 @@ Route::get('reflectie', 'ReflectionController@index');
 
 Route::get('reflectie/create', 'ReflectionController@view');
 Route::post('reflectie/create', 'ReflectionController@create');
+
+
+//feedback routes
+Route::get('feedback', 'FeedbackCOntroller@index');
