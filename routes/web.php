@@ -22,7 +22,9 @@ Route::get('home', 'HomeController@index');
 Route::get('/profiel', 'ProfileController@index');
 
 //reflectie routes
-Route::get('reflectie', 'ReflectionController@index');
+Route::get('reflecties', 'ReflectionController@index');
+
+Route::get('reflectie/{$id}', 'ReflectionController@index');
 
 Route::get('reflectie/create', 'ReflectionController@view');
 Route::post('reflectie/create', 'ReflectionController@create');

@@ -1,16 +1,20 @@
 <?php
-
   namespace App\Http\Controllers;
-  use App\Case;
+
+  use Auth;
+  use App\Reflection;
   use Illuminate\Http\Request;
- //use DB;
-  //use App\Post;
+
 
 
   class ReflectionController extends Controller{ // view to reflection
     public function index(){
-      $reflections = DB::table('cases')->get();
-      return view('reflection\reflection', compact('reflections'));
+      $reflections = Reflection::get();
+      //$reflections->updated_at = date("d-m-Y");
+
+    
+
+      return view('reflection.reflection', compact('reflections'));
     }
 
     // view to reflection/create
@@ -21,20 +25,32 @@
     public function create(Request $request){
 
 
-      $reflection = new Case;
+      $reflection = new Reflection;
 
       $reflection->title = $request->title;
       $reflection->message = $request->message;
       $reflection->user_id = Auth::id();
       $reflection->save();
 
-     
+      return redirect('/reflectie');
 
-      //$request->session()->flash('alert-success', 'Successfully updated access tokens!');
-      return redirect('/home');
+      //$request->session()->flash('alert-success', 'Successfully updated');
+
+    }
+
+    public function getReflection(){
 
 
-      //$reflections = DB::table('cases')->get();
-      //return view('reflection\reflection', compact('reflections'));
+      $reflection = new Reflection;
+
+      $reflection->title = $request->title;
+      $reflection->message = $request->message;
+      $reflection->user_id = Auth::id();
+      $reflection->save();
+
+      return redirect('/reflectie');
+
+      //$request->session()->flash('alert-success', 'Successfully updated');
+
     }
 }

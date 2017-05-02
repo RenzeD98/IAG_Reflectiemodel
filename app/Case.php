@@ -1,9 +1,10 @@
 <?php
 
-	namespace App;
+namespace App;
 
-	use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Model;
 
-	class Case extends Model{
-
+class Case extends Model
+{
+    //
 }
