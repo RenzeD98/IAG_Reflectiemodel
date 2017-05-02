@@ -21,10 +21,12 @@ Route::get('home', 'HomeController@index');
 
 Route::get('/profiel', 'ProfileController@index');
 
-//reflectie
-Route::get('reflection', 'ReflectionController@index');
+//reflectie routes
+Route::get('reflectie', 'ReflectionController@index');
 
-Route::get('reflection.create', 'ReflectionController@create');
+Route::get('reflectie/create', 'ReflectionController@view');
+Route::post('reflectie/create', 'ReflectionController@create');
 
-//Reflectie model
-Route::get('reflectiemodel', 'ReflectiemodelController@index');
+
+//feedback routes
+Route::get('feedback', 'FeedbackCOntroller@index');

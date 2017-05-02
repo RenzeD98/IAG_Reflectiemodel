@@ -2,26 +2,31 @@
 
 @section('content')
 <div class="container reflection">
-  <div class="panel panel-default">
-    <div class="panel-heading">Reflectie overzicht</div>
-    <div class="panel-body">
-
-          <div class="col-md-12">
-            <a href="{{ url('reflection\create') }}">Toevoegen</a>
-          </div>
 
     @foreach($reflections as $reflection)
-        <div class="row" style="border: 1px #111 solid;">
-          <div class="col-md-12">
+        <div class="row refrow">
+          <div class="col-md-12 refhead">
+            <img class="img-circle" src="http://placehold.it/50x50" alt="">
             <p>{{ $reflection->title }}</p>
+            <p class="reftime">{{ $reflection->updated_at}}</p>
           </div>
-          <div class="col-md-12">
+
+          <div class="col-md-12 refmessage">
             <p>{{ $reflection->message }}</p>
+          </div>
+
+            <!-- foreach -->
+          <div class="col-md-6">
+            <span class="reftag">{{ $reflection->title }}</span>
+          </div>
+            <!-- endforeach -->
+
+          <div class="col-md-6">
+            <a href="#" class="reffeedback">Feedback geven</a>
           </div>
         </div>
     @endforeach
 
-    </div>
-  </div>
+        <a class="refadd" href="{{ url('reflectie\create') }}">+</a>
 </div>
 @endsection
