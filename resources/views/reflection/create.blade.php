@@ -6,9 +6,10 @@
     <div class="panel-heading">Reflectie toevoegen</div>
     <div class="panel-body">
 
-      <form method="PUT" action="{{ route('reflection.create') }}">
-        <input type="text">
-        <input type="text">
+      <form method="POST" action="/reflectie/create">
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+        <input type="text" name="title">
+        <input type="text" name="message">
         <input type="submit">
       </form>
 
