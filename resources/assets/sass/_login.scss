@@ -1,0 +1,30 @@
+//----------------------login--------------//
+.login .header img{
+  width:100px;
+  height:100px;
+  border:2px solid #95989A;
+  background-color:#fff;
+}
+
+.login{margin-top:-23px;padding-top:40px;}
+.login a.btn.btn-link{color:#fff;}
+.login form input[type="email"],
+.login form input[type="password"]{border:2px solid #95989A;}
+.login .btn.btn-primary{
+  width:100%;
+  border:2px solid #95989A;
+  background-color:#68883C;
+  color:#fff;
+  border-radius:10px;
+  background-color:#2A3A89;
+}
+.login .btn.btn-primary:hover{background-color:#fff;color:#333;}
+.login,
+.login .panel,
+.login .panel-heading,
+.login .panel-body{
+  background-color:#87CDD3;
+  border:none;
+  color:#fff;
+  text-align:center;
+}
