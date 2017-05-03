@@ -6,13 +6,7 @@ use Illuminate\Http\Request;
 
 class FeedbackController extends Controller
 {
-        public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
-    public function index()
-    {
-        return view('feedback');
+    public function index(){
+      return view('feedback.index');
     }
 }

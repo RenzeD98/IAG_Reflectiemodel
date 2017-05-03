@@ -11,27 +11,24 @@
 |
 */
 
+
+
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get('home', 'HomeController@index');
 
-/** Feedback **/
-Route::get('/feedback', 'FeedbackController@index');
-Route::post('/feedback', 'FeedbackController@create');
+Route::get('/profiel', 'ProfileController@index');
 
-/** Profile **/
-Route::get('/profiel', 'FeedbackController@index');
-Route::patch('/profiel', 'FeedbackController@update');
-Route::post('/profiel', 'FeedbackController@create');
+//reflectie routes
+Route::get('reflecties', 'ReflectionController@index');
+Route::get('reflectie/{id}', 'ReflectionController@reflection');
+Route::get('reflectie/{id}/edit', 'ReflectionController@update');
+Route::get('reflectie/create', 'ReflectionController@view');
+Route::post('reflectie/create', 'ReflectionController@create');
 
-Route::get('/spraak', 'SpraakController@index');
-Route::post('/spraak', 'SpraakController@create');
-
-
-
-
-
+//feedback routes
+Route::get('feedback', 'FeedbackCOntroller@index');
