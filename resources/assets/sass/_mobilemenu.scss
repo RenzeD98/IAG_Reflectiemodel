@@ -1,0 +1,35 @@
+// ------------------mobile menu------------------//
+img.menu-icon {
+    max-height: 50px;
+}
+div#mobile-menu {
+    height: 60px;
+    padding: 5px 0px;
+    background-color: #87CDD3;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    margin-top: 50px;
+    @media screen and (min-width: $break-phone) {
+      display: none;
+    }
+}
+
+.row{margin-right:0px !important;margin-left:0px !important;}
+
+.row-centered {text-align:center;}
+.col-centered {
+    display:inline-block;
+    float:none;
+    text-align:left;
+    margin-right:-4px;
+}
+
+.panel{border:1px solid #ddd;}
+
+#mobile-menu .fa{color:#333;}
+#mobile-menu .fa:hover{color:#3097D1;}
+
+#mobile-menu ul{padding-top:10px;padding-bottom:10px;}
+
+#mobile-menu ul li{display:inline;}
