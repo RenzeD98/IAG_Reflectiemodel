@@ -10,7 +10,7 @@
       $id = Auth::id();
       $reflections = Reflection::where('user_id', $id)->orderBy('title', 'desc')->take(10)->get();
 
-          
+
       return view('reflection.list', compact('reflections'));
     }
 
@@ -31,10 +31,8 @@
       return redirect('/reflecties');
     }
 
-
-
     public function reflection($id){
-      $reflection = Reflection::where('id', $id)->first();  
+      $reflection = Reflection::where('id', $id)->first();
 
       return view('reflection.view', compact('reflection'));
 
@@ -42,7 +40,7 @@
 
     public function update($id){
 
-      $reflection = Reflection::where('id', $id)->first();  
+      $reflection = Reflection::where('id', $id)->first();
 
       return view('reflection.update', compact('reflection'));
 
