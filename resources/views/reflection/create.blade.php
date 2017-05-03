@@ -5,9 +5,6 @@
   <div class="panel panel-default">
     <div class="panel-heading">Reflectie toevoegen</div>
     <div class="panel-body">
-
-
-
      <form method="POST" action="/reflectie/create">
       <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <div class="form-group">
@@ -25,10 +22,6 @@
         
         <button type="submit" class="btn btn-default">Verstuur</button>
       </form>
-
-
-
-
     </div>
   </div>
 </div>
