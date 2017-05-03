@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMessagesTable extends Migration
+class CreatePersonalMessages extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateMessagesTable extends Migration
      */
     public function up()
     {
-      Schema::create('messages', function (Blueprint $table) {
-          $table->increments('id')->unsigned();
-          $table->integer('user_id')->unsigned();
-          $table->string('title')->nullable();
+      Schema::create('personal_messages', function (Blueprint $table) {
+          $table->increments('id', 7)->unsigned();
+          $table->integer('user_id', 7)->unsigned();
           $table->text('message')->nullable();
           $table->boolean('read')->nullable();
           $table->timestamps();
@@ -32,6 +31,6 @@ class CreateMessagesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('messages');
+        Schema::dropIfExists('personal_messages');
     }
 }

@@ -14,12 +14,8 @@ class Cases extends Migration
     public function up()
     {
       Schema::create('cases', function (Blueprint $table) {
-          $table->increments('id')->unsigned();
-          $table->integer('user_id')->unsigned();
-          $table->string('title')->nullable();
-          $table->string('tags')->nullable();
-          $table->text('message')->nullable();
-          $table->rememberToken();
+          $table->increments('id', 7)->unsigned();
+          $table->integer('reflection_id', 7)->unsigned();
           $table->timestamps();
       });
     }
