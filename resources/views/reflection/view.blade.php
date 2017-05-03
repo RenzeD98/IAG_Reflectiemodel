@@ -19,12 +19,12 @@
         <p>{{ $reflection->message }}</p>
       </div>
 
-        
+
       <div class="col-md-6">
         <span class="tag">{{ $reflection->title }}</span>
       </div>
-       
+
     </div>
-    
+
 </div>
 @endsection
