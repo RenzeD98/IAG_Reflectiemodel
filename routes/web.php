@@ -14,7 +14,7 @@
 
 
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 });
 
 Auth::routes();
@@ -24,16 +24,11 @@ Route::get('home', 'HomeController@index');
 Route::get('/profiel', 'ProfileController@index');
 
 //reflectie routes
-Route::get('reflecties', 'ReflectionController@list');
-
-Route::get('reflectie/{id}/view', 'ReflectionController@getReflection');
-
-Route::get('reflectie/{id}/update', 'ReflectionController@updateReflection');
-Route::post('reflectie/update', 'ReflectionController@storeReflection');
-
-
-Route::get('reflectie/create', 'ReflectionController@newReflection');
-Route::post('reflectie/create', 'ReflectionController@storeReflection');
+Route::get('reflecties', 'ReflectionController@index');
+Route::get('reflectie/{id}', 'ReflectionController@reflection');
+Route::get('reflectie/{id}/edit', 'ReflectionController@update');
+Route::get('reflectie/create', 'ReflectionController@view');
+Route::post('reflectie/create', 'ReflectionController@create');
 
 //feedback routes
 Route::get('feedback', 'FeedbackCOntroller@index');

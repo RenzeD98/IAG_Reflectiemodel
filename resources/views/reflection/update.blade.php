@@ -5,7 +5,7 @@
   <div class="panel panel-default">
     <div class="panel-heading">Reflectie wijzigen</div>
     <div class="panel-body">
-     <form method="POST" action="/reflectie/update">
+     <form method="POST" action="/reflectie/create">
       <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <div class="form-group">
           <label for="title">Titel</label>
@@ -20,10 +20,12 @@
           <input type="text" class="form-control" id="tags" placeholder="Tag1, tag2, tag3" name="tags" value="{{ $reflection->tags }}">
         </div>
         
-        <input type="hidden" name="id" value="{{ $reflection->id }}">
-
         <button type="submit" class="btn btn-default">Verstuur</button>
       </form>
+
+
+
+
     </div>
   </div>
 </div>

@@ -4,7 +4,7 @@
 <div class="container reflection">
   <div class="navigation">
     <a href="/reflecties" class="give-feedback">Terug</a>
-    <a href="/reflectie/{{ $reflection->id }}/update" class="give-feedback">Wijzigen</a>
+    <a href="/reflectie/{{ $reflection->id }}/edit" class="give-feedback">Wijzigen</a>
     <a href="/reflectie/{{ $reflection->id }}/delete" class="give-feedback">Verwijderen</a>
   </div>
 
