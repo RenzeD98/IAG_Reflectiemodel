@@ -23,5 +23,7 @@ Route::get('reflectie/{id}/update', 'ReflectionController@updateReflection');
 Route::post('reflectie/update', 'ReflectionController@storeReflection');
 Route::get('reflectie/create', 'ReflectionController@newReflection');
 Route::post('reflectie/create', 'ReflectionController@storeReflection');
+
 //feedback routes
 Route::get('feedback', 'FeedbackCOntroller@index');
+Route::get('feedback/{id}/view', 'FeedbackCOntroller@getFeedback');

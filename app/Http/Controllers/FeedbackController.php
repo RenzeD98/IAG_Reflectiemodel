@@ -10,13 +10,13 @@ class FeedbackController extends Controller
 {
     public function index(){
       $id = Auth::id();
-      //$reflections = Reflection::all();
+      $reflections = Reflection::all();
 
       //$reflections = Reflection::where('user_id', $id)->orderBy('created_at', 'desc')->get();  
       
-      $reflections Reflection::where('user_id', '!=' , $id)->orWhereNull('user_id')->get()
+      //$reflections Reflection::where('user_id', '!=' , $id)->orWhereNull('user_id')->get()
     
-
+      //return view('feedback.index');
       return view('feedback.index', compact('reflections'));
     }
 
