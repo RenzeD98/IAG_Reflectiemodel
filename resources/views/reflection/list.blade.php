@@ -5,9 +5,8 @@
     @foreach($reflections as $reflection)
         <div class="row">
           <div class="col-md-12 head">
-            <img class="img-circle" src="http://placehold.it/50x50" alt="">
             <p><a href="/reflectie/{{ $reflection->id }}/view">{{ $reflection->title }}</a></p>
-            <p>{{ $reflection->created_at}}</p>
+            <p class="time">{{ $reflection->created_at}}</p>
           </div>
 
           <div class="col-md-12 message">
@@ -21,7 +20,7 @@
             <!-- endforeach -->
 
           <div class="col-md-6">
-            <a href="#" class="give-feedback">Feedback geven</a>
+            <a href="#" class="feedback">Feedback geven</a>
           </div>
         </div>
     @endforeach
