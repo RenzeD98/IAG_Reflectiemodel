@@ -1,0 +1,62 @@
+//----------------------login--------------//
+.login
+{
+  margin-top: -23px;
+  padding-top: 40px;
+  @extend .extend_login;
+
+  .panel
+  {
+  @extend .extend_login;
+
+    .header
+    {
+      img
+      {
+        width: 100px;
+        height: 100px;
+        border: 2px solid #95989A;
+        background-color: #fff;
+      }
+    }
+
+    .panel-body
+    {
+      @extend .extend_login;
+
+
+
+      form input[type="email"]
+      {
+        @extend .extend_login_form_input;
+      }
+
+      form input[type="passwprd"]
+      {
+        @extend .extend_login_form_input;
+      }
+
+      .btn-primary
+      {
+        width: 100%;
+        border: 2px solid #95989A;
+        background-color: #68883C;
+        color: #fff;
+        border-radius: 10px;
+        background-color: #2A3A89;
+      }
+
+      .btn-primary:hover
+      {
+        background-color: #fff;
+        color: #333;
+      }
+
+      .btn-link
+      {
+        color: #fff;
+      }
+    }
+  }
+}
+
