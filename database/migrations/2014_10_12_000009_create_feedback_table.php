@@ -14,14 +14,15 @@ class CreateFeedbackTable extends Migration
     public function up()
     {
       Schema::create('feedback', function (Blueprint $table) {
-          $table->increments('id', 7)->unsigned();
-          $table->integer('reflection_id', 7)->unsigned();
-          $table->string('title', 200);
+          $table->increments('id')->unsigned();
+          $table->integer('reflection_id')->unsigned();
+          $table->string('title');
           $table->text('messages');
-          $table->boolean('read')->nullable();
+          $table->boolean('read');
           $table->timestamps();
-
-          $table->foreign('reflection_id')->references('id')->on('cases');
+      });
+      Schema::table('feedback', function (Blueprint $table) {
+          $table->foreign('reflection_id')->references('id')->on('reflections');
       });
     }
 

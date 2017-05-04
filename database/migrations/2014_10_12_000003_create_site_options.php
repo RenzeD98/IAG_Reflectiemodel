@@ -14,7 +14,7 @@ class CreateSiteOptions extends Migration
     public function up()
     {
       Schema::create('site_options', function (Blueprint $table) {
-          $table->increments('id', 7)->unsigned();
+          $table->increments('id')->unsigned();
           $table->string('name');
           $table->integer('value');
           $table->timestamps();

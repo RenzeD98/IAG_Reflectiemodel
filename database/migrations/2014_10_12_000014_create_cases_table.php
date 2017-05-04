@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Cases extends Migration
+class CreateCasesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,9 +14,12 @@ class Cases extends Migration
     public function up()
     {
       Schema::create('cases', function (Blueprint $table) {
-          $table->increments('id', 7)->unsigned();
-          $table->integer('reflection_id', 7)->unsigned();
+          $table->increments('id')->unsigned();
+          $table->integer('reflection_id')->unsigned();
           $table->timestamps();
+      });
+      Schema::table('cases', function (Blueprint $table) {
+          $table->foreign('reflection_id')->references('id')->on('reflections');
       });
     }
 

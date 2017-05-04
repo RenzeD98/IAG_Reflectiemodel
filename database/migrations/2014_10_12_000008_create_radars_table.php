@@ -14,13 +14,14 @@ class CreateRadarsTable extends Migration
     public function up()
     {
       Schema::create('radars', function (Blueprint $table) {
-          $table->increments('id', 2)->unsigned();
-          $table->integer('reflection_id', 7)->unsigned();
-          $table->string('name');
-          $table->string('description');
+          $table->increments('id')->unsigned();
+          $table->integer('reflection_id')->unsigned();
+          $table->string('name')->nullable();
+          $table->string('description')->nullable();
           $table->timestamps();
-
-          $table->foreign('reflection_id')->references('id')->on('cases');
+      });
+      Schema::table('radars', function (Blueprint $table) {
+          $table->foreign('reflection_id')->references('id')->on('reflections');
       });
     }
 
