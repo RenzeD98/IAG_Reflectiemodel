@@ -6,8 +6,12 @@
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
-//--------------------CUSTOM CSS & FUNCTIONS--------------------------------//
-//*** variables ***//
+
+//---------------------------FUNCTIONS--------------------------------//
+//*** Extends ***//
+@import "extends";
+
+//*** Variables ***//
 @import "variables";
 
 //*** Mixins ***//
@@ -16,17 +20,25 @@
 //*** Media Queries ***//
 @import "mediaqueries";
 
-//*** SCSS ***//
+//*** Fonts ***//
 @import "fonts";
 
 //*** Mobile Menu ***//
 @import "mobilemenu";
 
-//*** Home & Profile styles ***//
-@import "home&profile";
+// ----------------------Pages-----------------------------//
+//*** Home ***//
+@import "pages/home";
+
+//*** Profile ***//
+@import "pages/profile";
 
 //*** Inloggen ***//
-@import "login";
+@import "pages/login";
 
-//***Reflecteren & feedbackgeven***//
-@import "Reflecteren&Feedback";
+
+//*** Reflecteren ***// <---
+@import "pages/Reflecteren";
+
+//*** Feedback ***//
+@import "pages/Feedback";

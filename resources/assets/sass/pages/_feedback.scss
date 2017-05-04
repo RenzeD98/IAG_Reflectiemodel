@@ -1,0 +1,55 @@
+//-----------------------feedback-------------//
+.feedback
+{
+  .row
+  {
+    border: 1px #ccc solid;
+    margin-bottom: 25px;
+    padding: 0 4px 0 4px;
+
+    .head
+    {
+      height: 59px;
+      border-bottom: 1px #ddd solid;
+      padding-top: 4px;
+      padding-bottomg: 4px;
+
+      img
+      {
+        float: left;
+      }
+
+      p
+      {
+        float: left;
+        margin: 14px;
+        font-weight: bold;
+      }
+
+      p.time
+      {
+        float: right;
+      }
+    }
+
+    .message p
+    {
+      clear: both;
+      margin-top: 10px
+    }
+
+    .tag
+    {
+      float: left;
+      background-color: #666;
+      color: white;
+      font-size: 11px;
+      margin: 0px 10px 10px 0px;
+      padding: 0 5px 0 5px;
+    }
+
+    .feedback{
+      float: right;
+    }
+  }
+}
