@@ -1,0 +1,69 @@
+//-----------------------reflecteren & feedback scss-------------//
+.reflection .row, .feedback .row{
+  border: 1px #ccc solid;
+  margin-bottom: 25px;
+  padding: 0 4px 0 4px;
+}
+
+.reflection .row .head, .feedback .row .head{
+  height: 59px;
+  border-bottom: 1px #ddd solid;
+  padding-top: 4px;
+  padding-bottomg: 4px;
+}
+
+.feedback .row .head img{
+  float: left;
+}
+
+.reflection .row .head p, .feedback .row .head p{
+  float: left;
+  margin: 14px;
+  font-weight: bold;
+}
+
+.reflection .row .head p.time, .feedback .row .head p.time{
+  float: right;
+}
+
+.reflection .row .message p, .feedback .row .message p{
+  clear: both;
+  margin-top: 10px;
+}
+
+.reflection .row .tag, .feedback .row .tag{
+  float: left;
+  background-color: #666;
+  color: white;
+  font-size: 11px;
+  margin: 0px 10px 10px 0px;
+  padding: 0 5px 0 5px;
+}
+
+.reflection .row .feedback, .feedback .row .feedback{
+  float: right;
+}
+
+.reflection .add-reflection-button{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+
+  text-align: center;
+  background-color: green;
+  @include border-radius(100%);
+
+  font-weight: lighter;
+  font-size: 33px;
+  color: white;
+  text-decoration: none;
+
+  box-shadow: 0px 5px 10px #666;
+}
+
+.reflection .add-reflection-button:hover{
+  text-decoration: none;
+  color: white;
+}

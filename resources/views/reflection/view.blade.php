@@ -4,7 +4,7 @@
 <div class="container reflection">
   <div class="navigation">
     <a href="/reflecties" class="give-feedback">Terug</a>
-    <a href="/reflectie/{{ $reflection->id }}/edit" class="give-feedback">Wijzigen</a>
+    <a href="/reflectie/{{ $reflection->id }}/update" class="give-feedback">Wijzigen</a>
     <a href="/reflectie/{{ $reflection->id }}/delete" class="give-feedback">Verwijderen</a>
   </div>
 
@@ -19,12 +19,12 @@
         <p>{{ $reflection->message }}</p>
       </div>
 
-        
+
       <div class="col-md-6">
         <span class="tag">{{ $reflection->title }}</span>
       </div>
-       
+
     </div>
-    
+
 </div>
 @endsection

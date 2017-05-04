@@ -5,8 +5,8 @@
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
-                <div class="header">   
-                    <img src="icons/ProfileIcon.svg " alt="Reflectie icoon">         
+                <div class="header">
+                    <img src="icons/ProfileIcon.svg " alt="Reflectie icoon">
                 </div>
 
                 <div class="panel-body">
@@ -28,7 +28,9 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Wachtwoord</label>
+                            <label for="password" class="col-md-4 control-label">
+                                Wachtwoord
+                            </label>
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control" name="password" required>
@@ -58,12 +60,9 @@
                         </div>
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
-                                 <a class="btn btn-link" href="{{ route('password.request') }}">
+                                <a class="btn btn-link" href="{{ route('password.request') }}">
                                     Wachtwoord Vergeten?
                                 </a>
-                        </div>
-                                   
-                               
                             </div>
                         </div>
                     </form>

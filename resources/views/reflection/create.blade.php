@@ -5,9 +5,6 @@
   <div class="panel panel-default">
     <div class="panel-heading">Reflectie toevoegen</div>
     <div class="panel-body">
-
-
-
      <form method="POST" action="/reflectie/create">
       <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <div class="form-group">
@@ -21,14 +18,9 @@
         <div class="form-group">
           <label for="tags">Tags, gescheiden met komma's </label>
           <input type="text" class="form-control" id="tags" placeholder="Tag1, tag2, tag3" name="tags">
-        </div>
-        
+        </div> 
         <button type="submit" class="btn btn-default">Verstuur</button>
       </form>
-
-
-
-
     </div>
   </div>
 </div>
