@@ -2,6 +2,9 @@
 
 @section('content')
 <div class="container feedback">
+   <div class="navigation">
+    <a href="/feedback" class="">Terug</a>
+  </div>
   <div class="panel panel-default list">
     <div class="panel-heading">Geef feedback</div>
     <div class="panel-body">
