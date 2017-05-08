@@ -3,6 +3,7 @@
   use Auth;
   use App\Reflection;
   use Illuminate\Http\Request;
+  
   class ReflectionController extends Controller{ // view to reflection
     
     public function list(){
