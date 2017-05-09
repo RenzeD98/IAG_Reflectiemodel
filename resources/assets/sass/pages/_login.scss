@@ -1,12 +1,14 @@
-//----------------------login--------------//
 .login
 {
   margin-top: -23px;
   padding-top: 40px;
   @extend .extend_login;
 
+  .panel{box-shadow:none !important;}
+
   .panel
   {
+    
   @extend .extend_login;
 
     .header
