@@ -15,7 +15,7 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::get('home', 'HomeController@index');
-Route::get('/profiel', 'ProfileController@index');
+
 //reflectie routes
 Route::get('reflecties', 'ReflectionController@list');
 Route::get('reflectie/{id}/view', 'ReflectionController@getReflection');
@@ -29,3 +29,10 @@ Route::get('feedback', 'FeedbackCOntroller@index');
 Route::get('feedback/{id}/view', 'FeedbackCOntroller@getFeedback');
 Route::post('feedback/create', 'FeedbackCOntroller@storeFeedback');
 Route::post('feedback/update', 'FeedbackCOntroller@storeFeedback');
+
+//profile routes
+Route::get('/profile', 'ProfileController@index');
+Route::get('/profile/settings', 'SettingsController@index');
+Route::get('/profile/mydetails', 'DetailsController@index');
+Route::get('/profile/agenda', 'AgendaController@index');
+Route::get('/profile/contacts', 'ContactsController@index');
