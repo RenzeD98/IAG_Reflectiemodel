@@ -7,23 +7,23 @@
 <!--       <img src="reflectie-model.png" alt=""> -->
 
       <div class="topleft">
-        <a href="#"><div class="custom"></div></a>
-        <a href="#"><div class="transparant"></div></a>
+        <a href="#"><img src="{{'images/custom.png'}}" alt="" class="custom"></a>
+        <a href="#"><img src="{{'images/transparant.png'}}" alt="" class="transparant"></a>
       </div>
 
       <div class="topright">
-        <a href="#"><div class="theorie"></div></a>
-        <a href="#"><div class="model"></div></a>
+        <a href="#"><img src="{{'images/theorie.png'}}" alt="" class="theorie"></a>
+        <a href="#"><img src="{{'images/model.png'}}" alt="" class="model"></a>
       </div>
 
       <div class="bottomleft">
-        <a href="#"><div class="feedback"></div></a>
-        <a href="#"><div class="methodiek"></div></a>
+        <a href="#"><img src="{{'images/feedback.png'}}" alt="" class="feedback"></a>
+        <a href="#"><img src="{{'images/methodiek.png'}}" alt="" class="methodiek"></a>
       </div>
 
       <div class="bottomright">
-        <a href="#"><div class="gerichtheid"></div></a>
-        <a href="#"><div class="strategie"></div></a>
+        <a href="#"><img src="{{'images/gerichtheid.png'}}" alt="" class="gerichtheid"></a>
+        <a href="#"><img src="{{'images/strategie.png'}}" alt="" class="strategie"></a>
       </div>
 
     </div>

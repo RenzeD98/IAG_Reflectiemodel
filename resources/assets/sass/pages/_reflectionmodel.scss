@@ -1,6 +1,6 @@
 .reflectioncontainer
 {
-  // background-image: url("reflectie-model.png");
+  background-image: url("driehoek.png");
   background-size: 100%;
   background-repeat: no-repeat;
   width: 40vw;
@@ -22,8 +22,6 @@
       height: 8vw;
       margin-top: 4vw;
       margin-right: 0.5vw;
-      // background-color: $blue;
-      background-color: rgba(78, 232, 27, .5);
     }
 
     .transparant
@@ -34,8 +32,6 @@
       float: left;
       width: 8vw;
       height: 8vw;
-      // background-color: $grey;
-      background-color: rgba(78, 232, 27, .5);
     }
   }
 
@@ -54,8 +50,6 @@
       height: 8vw;
       margin-top: 4vw;
       margin-left: 0.5vw;
-      // background-color: $red;
-      background-color: rgba(78, 232, 27, .5);
     }
 
     .model
@@ -66,8 +60,6 @@
       float: right;
       width: 8vw;
       height: 8vw;
-      // background-color: $pink;
-      background-color: rgba(78, 232, 27, .5);
     }
   }
 
@@ -86,8 +78,6 @@
       float: left;
       width: 8vw;
       height: 8vw;
-      // background-color: $yellow;
-      background-color: rgba(78, 232, 27, .5);
     }
 
     .methodiek
@@ -98,8 +88,6 @@
       float: right;
       width: 8vw;
       height: 8vw;
-      // background-color: $lightblue;
-      background-color: rgba(78, 232, 27, .5);
     }
   }
 
@@ -117,8 +105,6 @@
       float: right;
       width: 8vw;
       height: 8vw;
-      // background-color: $redorange;
-      background-color: rgba(78, 232, 27, .5);
     }
 
     .strategie
@@ -129,8 +115,6 @@
       float: left;
       width: 8vw;
       height: 8vw;
-      // background-color: green;
-      background-color: rgba(78, 232, 27, .5);
     }
   }
 }
