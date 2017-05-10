@@ -7,6 +7,7 @@ use App\Reflection;
 use App\Feedback;
 use Auth;
 use DB;
+use Session;
 
 class FeedbackController extends Controller
 {
@@ -23,14 +24,12 @@ class FeedbackController extends Controller
 
     //Specific reflection form
     public function getReflectionWithFeedback($id){
-      //dd(Reflection::findOrFail($id));
-
       $reflection = Reflection::where('id', $id)->first(); 
-
+      
+      if(empty($reflection)) return redirect('/feedback/');
+      
       $feedback = Reflection::find($id)->feedback;
 
-
-      //dd($feedback);
       //$user = DB::table('users')->where('id', $user_id)->get();
 
       return view('feedback.view', compact('reflection','feedback'));
@@ -45,6 +44,8 @@ class FeedbackController extends Controller
       $feedback->reflection_id = $request->id;
       $feedback->user_id = $user_id = Auth::id();
       $feedback->save();
+
+      Session::flash('message', 'Succesvol feedback gegeven!');
 
       return redirect('/feedback/'. $request->id . '/view/');
       

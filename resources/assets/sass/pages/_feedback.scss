@@ -82,9 +82,8 @@
   	{
 			height: 40px;
 			width: 100%;
-			border-bottom: 1px solid #ddd;
-			margin-bottom: 10px;
 			text-align: right;
+			margin-bottom:10px;
   	}
 
   	.row{
@@ -94,10 +93,14 @@
 
   	.commentItem
   	{
-	   /* border: 1px #ccc solid;*/
+	   	border: 1px #ccc solid;
 	    margin-bottom: 25px;
 	    padding: 0 4px 0 4px;
 
+	    .content
+	    {
+	    	
+	    }
     	.rating
     	{
     		min-height:100px;
@@ -105,7 +108,7 @@
 			  text-align: center;
 			  line-height: 100px;
 			  font-size:20px;
-
+			  border-right:1px solid #ddd;
     	}
     	.title{
     		font-size:15px;

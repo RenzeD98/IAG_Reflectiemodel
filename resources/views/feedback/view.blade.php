@@ -6,6 +6,10 @@
     <a href="/feedback" class="button feedback">Terug naar reflecties</a>
   </div>
 
+  @if (Session::has('message'))
+    <div class="alert alert-info">{{ Session::get('message') }}</div>
+  @endif
+
   <div class="panel panel-default">
     <div class="panel-heading">Reflectie titel</div>
     <div class="panel-body">
@@ -76,7 +80,7 @@
           </div>
           <div class="content">
             <span class="title">{{ $fb->title }}</span>
-            <p class="description">{{ $fb->message }}</p>
+            <p class="description">{{ $fb->messages }}</p>
           </div>   
       </div>
     </div>
