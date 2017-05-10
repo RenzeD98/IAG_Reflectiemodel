@@ -12,6 +12,8 @@
 Route::get('/', function () {
     return view('home');
 });
+
+//URL ALLES IN HET ENGELS
 Auth::routes();
 Route::get('home', 'HomeController@index');
 Route::get('/profiel', 'ProfileController@index');
@@ -24,3 +26,5 @@ Route::get('reflectie/create', 'ReflectionController@newReflection');
 Route::post('reflectie/create', 'ReflectionController@storeReflection');
 //feedback routes
 Route::get('feedback', 'FeedbackCOntroller@index');
+//reflectionmodel routes
+Route::get('reflectionmodel', 'ReflectionModelController@getModel');
