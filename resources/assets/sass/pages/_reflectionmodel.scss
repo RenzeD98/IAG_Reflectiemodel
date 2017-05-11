@@ -1,0 +1,120 @@
+.reflectioncontainer
+{
+  // background-image: url("triangle.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 40vw;
+  height: 40vw;
+  margin: 3vw auto 3vw auto;
+
+  .topleft
+  {
+    float: left;
+    width: 20vw;
+    height: 20vw;
+    // background-color: blue;
+
+    .custom
+    {
+      @include border-radius(100%);
+      float: right;
+      width: 8vw;
+      height: 8vw;
+      margin-top: 4vw;
+      margin-right: 0.5vw;
+    }
+
+    .transparant
+    {
+      margin-top: -1vw;
+      margin-left: 6vw;
+      @include border-radius(100%);
+      float: left;
+      width: 8vw;
+      height: 8vw;
+    }
+  }
+
+  .topright
+  {
+    float: left;
+    width: 20vw;
+    height: 20vw;
+    // background-color: green;
+
+    .theorie
+    {
+      @include border-radius(100%);
+      float: left;
+      width: 8vw;
+      height: 8vw;
+      margin-top: 4vw;
+      margin-left: 0.5vw;
+    }
+
+    .model
+    {
+      margin-top: -1vw;
+      margin-right: 6vw;
+      @include border-radius(100%);
+      float: right;
+      width: 8vw;
+      height: 8vw;
+    }
+  }
+
+  .bottomleft
+  {
+    float: left;
+    clear: both;
+    width: 20vw;
+    height: 20vw;
+    // background-color: orange;
+
+    .feedback
+    {
+      margin-left: 4.5vw;
+      @include border-radius(100%);
+      float: left;
+      width: 8vw;
+      height: 8vw;
+    }
+
+    .methodiek
+    {
+      @include border-radius(100%);
+      margin-top: -2.5vw;
+      margin-right: 0.5vw;
+      float: right;
+      width: 8vw;
+      height: 8vw;
+    }
+  }
+
+  .bottomright
+  {
+    float: left;
+    width: 20vw;
+    height: 20vw;
+    // background-color: red;
+
+    .gerichtheid
+    {
+      margin-right: 4.5vw;
+      @include border-radius(100%);
+      float: right;
+      width: 8vw;
+      height: 8vw;
+    }
+
+    .strategie
+    {
+      @include border-radius(100%);
+      margin-top: -2.5vw;
+      margin-left: 0.5vw;
+      float: left;
+      width: 8vw;
+      height: 8vw;
+    }
+  }
+}
