@@ -16,6 +16,7 @@ class CreateFeedbackTable extends Migration
       Schema::create('feedback', function (Blueprint $table) {
           $table->increments('id')->unsigned();
           $table->integer('reflection_id')->unsigned();
+          $table->integer('user_id')->unsigned();
           $table->string('title');
           $table->text('messages');
           $table->boolean('read');
