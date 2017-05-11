@@ -40,11 +40,14 @@
         <input type="hidden" name="user_id" value="{{ $reflection->user_id }}"> 
         <div class="form-group">
           <label for="title">Titel</label>
-          <input type="text" class="form-control" id="title" placeholder="Titel" name="title">
+          <input type="text" class="form-control" id="title" placeholder="Titel" name="title"
+          pattern=".{0,500}"   required title="Vul dit veld in ">
+          
         </div>
         <div class="form-group">
           <label for="reflection">Feedback:</label>
-          <textarea class="form-control" rows="5" id="reflection" name="message"></textarea>
+          <textarea class="form-control" rows="5" id="reflection" name="message"
+          pattern=".{3,3000}"   required title="Vul dit veld in"></textarea>
         </div>
         
         <button type="submit" class="button feedback" style="float:right;">Verstuur</button>
