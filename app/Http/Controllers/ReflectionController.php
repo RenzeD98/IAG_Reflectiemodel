@@ -17,6 +17,14 @@
     }
     //Store the new reflection 
     public function storeReflection(Request $request){
+
+      $this->validate($request, [
+        'title' => 'max:255',
+        'message' => 'required|min:1|max:5000',
+        'tags' => 'max:255',
+        'user_id' => 'required'
+      ]);
+
       if(!isset($request->id)){
         $reflection = new Reflection;
         $reflection->title = $request->title;
