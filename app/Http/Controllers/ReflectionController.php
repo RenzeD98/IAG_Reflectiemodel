@@ -8,7 +8,15 @@
     
     public function list(){
       $id = Auth::id();
-      $reflections = Reflection::where('user_id', $id)->orderBy('created_at', 'desc')->take(10)->get();        
+      $reflections = Reflection::where('user_id', $id)
+        ->orderBy('created_at', 'desc')
+        ->take(10)
+        ->get(); 
+
+      foreach($reflections as $reflection){
+        $reflection->tags = explode(',',$test = $reflection->tags); 
+      }
+      
       return view('reflection.list', compact('reflections'));
     }
     // New reflection form
