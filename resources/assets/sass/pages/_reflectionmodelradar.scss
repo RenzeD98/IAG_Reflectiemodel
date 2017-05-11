@@ -1,0 +1,33 @@
+.reflectionchoice
+{
+  width: 100%;
+  border: 1px solid #111;
+
+  label
+  {
+    margin: 5px;
+  }
+
+  .arrow{
+    float: right;
+    padding: 5px;
+    background-color: $red;
+    width: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+  }
+}
+
+.reflectionchoice-open
+{
+  width: 100%;
+  display: none;
+  border: 1px solid $red;
+  border-top: none;
+
+  label
+  {
+    margin: 5px;
+  }
+}
