@@ -8,23 +8,22 @@
     <a href="/reflectie/{{ $reflection->id }}/delete" class="give-feedback">Verwijderen</a>
   </div>
 
-    <div class="row">
+    <div class="row reflectionItem">
       <div class="col-md-12 head">
         <img class="img-circle" src="http://placehold.it/50x50" alt="">
-        <p>{{ $reflection->title }}</p>
-        <p class="time"></p>
+        <span>{{ $reflection->title }}</span>
+        <span class="time" style="float:right;"> {{ $reflection->created_at }} </span>
       </div>
 
       <div class="col-md-12 message">
         <p>{{ $reflection->message }}</p>
       </div>
 
-
       <div class="col-md-6">
-        <span class="tag">{{ $reflection->title }}</span>
+        @foreach($reflection->tags as $tag)
+          <span class="tag">{{ $tag }}</span>
+        @endforeach        
       </div>
-
     </div>
-
 </div>
 @endsection

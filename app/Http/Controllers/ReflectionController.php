@@ -44,7 +44,9 @@
     }
     //Specific reflection form
     public function getReflection($id){
-      $reflection = Reflection::where('id', $id)->first();  
+      $reflection = Reflection::where('id', $id)->first();
+      $reflection->tags = explode(',',$test = $reflection->tags);
+
       return view('reflection.view', compact('reflection'));
     }
     public function updateReflection($id){
