@@ -86,34 +86,44 @@
 			margin-bottom:10px;
   	}
 
-  	.row{
-  		border-bottom:1px solid #ddd;
-  		margin-bottom:10px;
-  	}
-
   	.commentItem
   	{
-	   	border: 1px #ccc solid;
-	    margin-bottom: 25px;
-	    padding: 0 4px 0 4px;
+  		border:1px solid #ddd;
+  		margin-bottom:20px;
 
 	    .content
 	    {
-	    	
+ 			padding:20px;
 	    }
     	.rating
     	{
-    		min-height:100px;
-			  vertical-align: middle;
-			  text-align: center;
-			  line-height: 100px;
-			  font-size:20px;
-			  border-right:1px solid #ddd;
+			min-height:100px;
+			vertical-align: middle;
+			text-align: center;
+			line-height: 100px;
+			font-size:20px;
+			border-right:1px solid #ddd;
     	}
-    	.title{
+    	.title
+    	{
     		font-size:15px;
     		font-weight: bold;
     	}
+
+		.date
+		{
+		  position:absolute;
+		  right:20px;
+		  top:10px;
+		  text-style:italic;
+		}
+
+		.description
+		{
+			margin-top:10px;
+			text-align:justify;
+		}
+
 
     }
   }

@@ -56,6 +56,7 @@
   <div class="panel panel-default recentFeedback">
     <div class="panel-heading">Recente feedback</div>
     <div class="panel-body">
+      <!--
       <div class="sorting">
         <form method="GET" action="/feedback/view/">      
           <span class="">Sorteren op: </span> 
@@ -67,21 +68,21 @@
           <button type="submit" class="button feedback sort">Sorteer</button>
         </form>
       </div>
-
+      -->
       @foreach($feedback as $fb)
       <div class="row commentItem">      
         <div class="col-md-1 col-xs-2 rating" >+3</div>
         <div class="col-md-11 col-xs-10 content">
-          <div class="head">     
+          <span class="title">{{ $fb->title }}</span>
+          <span class="date">{{ $fb->created_at }}</span>
+          <p class="description">{{ $fb->messages }}</p> 
+          <!--<div class="head">     
             <div class="rateComment" style="float:right;">
               <button class="rate down">-1</button>
               <button class="rate up">+1</button>
             </div>
-          </div>
-          <div class="content">
-            <span class="title">{{ $fb->title }}</span>
-            <p class="description">{{ $fb->messages }}</p>
-          </div>   
+          </div>-->
+
       </div>
     </div>
   @endforeach
