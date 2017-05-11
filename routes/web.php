@@ -27,8 +27,18 @@ Route::post('reflectie/create', 'ReflectionController@storeReflection');
 //feedback routes
 Route::get('feedback', 'FeedbackCOntroller@index');
 //Route::get('feedback/{id}/view', 'FeedbackCOntroller@getFeedback');
-Route::get('feedback/{id}/view', 'FeedbackCOntroller@getReflectionWithFeedback');
+Route::get('feedback/{id}/view', 'FeedbackController@getReflectionWithFeedback');
+Route::post('feedback/create', 'FeedbackController@storeFeedback');
+Route::post('feedback/update', 'FeedbackController@storeFeedback');
 
-
-Route::post('feedback/create', 'FeedbackCOntroller@storeFeedback');
-Route::post('feedback/update', 'FeedbackCOntroller@storeFeedback');
+//reflectionmodel routes
+Route::get('reflectionmodel', 'ReflectionModelController@getModel');
+//individuele radar routes
+Route::get('reflectionmodel/theory', 'ReflectionModelController@theory');
+Route::get('reflectionmodel/model', 'ReflectionModelController@model');
+Route::get('reflectionmodel/focus', 'ReflectionModelController@focus');
+Route::get('reflectionmodel/strategy', 'ReflectionModelController@strategy');
+Route::get('reflectionmodel/methodology', 'ReflectionModelController@methodology');
+Route::get('reflectionmodel/feedback,', 'ReflectionModelController@feedback');
+Route::get('reflectionmodel/transparent', 'ReflectionModelController@transparent');
+Route::get('reflectionmodel/custom', 'ReflectionModelController@custom');
