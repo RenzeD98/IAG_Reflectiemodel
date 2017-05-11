@@ -1,0 +1,62 @@
+/*** Sub page navigation ***/
+
+.navigation
+{
+	padding:7px;
+	border-radius:3px;
+	margin-bottom:20px;
+	background-color: $lightblue;
+
+ a
+ {
+	display: inline-block;
+	margin-right:20px;
+	color:#000;
+	font-size:15px;
+	padding:5px;
+	}
+
+	a:hover
+	{
+		text-decoration: none;
+		color: $blue; 
+	}
+
+	i
+	{
+	  margin-right:5px;
+	}
+	.edit{
+		float:right;
+	}
+	.del{
+		float:right;
+	}
+}
+
+
+  .addNewItemButton
+  {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+
+    text-align: center;
+    background-color: green;
+    @include border-radius(100%);
+
+    font-weight: lighter;
+    font-size: 33px;
+    color: white;
+    text-decoration: none;
+
+    box-shadow: 0px 5px 10px #666;
+  }
+
+  .addNewItemButton:hover
+  {
+    text-decoration: none;
+    color: white;
+  }
