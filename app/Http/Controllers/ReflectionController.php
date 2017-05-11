@@ -21,15 +21,17 @@
         $reflection = new Reflection;
         $reflection->title = $request->title;
         $reflection->message = $request->message;
+        $reflection->tags = 'tag1';
         $reflection->user_id = Auth::id();
         $reflection->save();
       }else{
         $reflection = Reflection::find($request->id);
         $reflection->title = $request->title;
         $reflection->message = $request->message;
-        
+        $reflection->tags = 'tag1';
         $reflection->save();
       }
+
       return redirect('/reflecties');
     }
     //Specific reflection form
