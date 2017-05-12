@@ -12,5 +12,9 @@ class Reflection extends Model
     {
         return $this->hasMany('App\Feedback');
     }
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
 
 }
