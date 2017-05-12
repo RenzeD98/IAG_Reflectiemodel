@@ -53,8 +53,3 @@ $("#page-loader").click(function () {
     // });
 });
 </script>
-    $(".reflectionchoice").click(function(){
-        $(".reflectionchoice-open").slideToggle("50");
-    });
-});
-

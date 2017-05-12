@@ -12,7 +12,9 @@ class ProfileController extends Controller
     }
     public function gegevens()
     {
-        return view('profile.gegevens');
+        $id = Auth::id();
+        $users = DB::table('users')->where('id', $id)->get();
+        return view('profile/mydetails', compact('users'));
     }
     public function instellingen()
     {
