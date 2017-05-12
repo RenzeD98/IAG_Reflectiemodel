@@ -18,10 +18,41 @@
         'csrfToken' => csrf_token(),
     ]) !!};
 </script>
+
 <script>
 $(document).ready(function(){
     $("#reflection-model").click(function(){
         $("#reflection-model-open").slideToggle("50");
     });
+});
+</script>
+
+<script>
+$("#page-loader").click(function () {
+    // add loading image to div
+    $("#page-loader-content").html('<img src="icons/LoadingIcon.svg">');
+
+    // run ajax request
+    $.ajax({
+      url:'http://www.skysports.com/f1/news/12433/10868775/max-verstappens-first-f1-win-at-the-2016-spanish-gp-revisited',
+      type:'GET',
+      success: function(data){
+           $('#page-loader-content').html($(data).find('#page-loader-content').html());
+      }
+    });
+    // $.ajax({
+    //     type: "GET",
+    //     dataType: dataType,
+    //     url: "http://www.skysports.com/f1/news/12433/10868775/max-verstappens-first-f1-win-at-the-2016-spanish-gp-revisited",
+    //     success: function (d) {
+    //         // replace div's content with returned data
+    //         // $('#loading').html('<img src="'+d.avatar_url+'"><br>'+d.login);
+    //         // setTimeout added to show loading
+    //         setTimeout(function () {
+    //             $("#page-loader-content").html(data);
+    //             alert( "Load was performed." );
+    //         }, 2000);
+    //     }
+    // });
 });
 </script>

@@ -11,31 +11,34 @@
       <div class="reflection-model" id="reflection-model">
           <label for="reflection-model">Bekijk het reflectiemodel</label>
       </div>
+      <hr>
+      <div class="page-loader-content">
+
+      </div>
+      <div class="" >
+          <button id="page-loader" type="button" name="button">LOAD</button>
+      </div>
       <div class="reflection-model-open" id="reflection-model-open">
         <div class="container reflectiemodel">
             <div class="reflectioncontainer">
-
-              <div class="topleft">
-                <a href="/reflectionmodel/custom"><img src="{{ URL::asset('images/custom.png') }}" alt="" class="custom"></a>
-                <a href="/reflectionmodel/transparent"><img src="{{ URL::asset('images/transparent.png') }}" alt="" class="transparant"></a>
-              </div>
-
-              <div class="topright">
-                <a href="/reflectionmodel/theory"><img src="{{ URL::asset('images/theory.png') }}" alt="" class="theorie"></a>
-                <a href="/reflectionmodel/model"><img src="{{ URL::asset('images/model.png') }}" alt="" class="model"></a>
-              </div>
-
-              <div class="bottomleft">
-                <a href="/reflectionmodel/feedback"><img src="{{ URL::asset('images/feedback.png') }}" alt="" class="feedback"></a>
-                <a href="/reflectionmodel/methodology"><img src="{{ URL::asset('images/methodology.png') }}" alt="" class="methodiek"></a>
-              </div>
-
-              <div class="bottomright">
-                <a href="/reflectionmodel/focus"><img src="{{ URL::asset('images/focus.png') }}" alt="" class="gerichtheid"></a>
-                <a href="/reflectionmodel/strategy"><img src="{{ URL::asset('images/strategy.png') }}" alt="" class="strategie"></a>
-              </div>
-
+                <div class="topleft">
+                    <a href="/reflectionmodel/custom"><img src="{{ URL::asset('images/custom.png') }}" alt="" div="page-loader" class="custom"></a>
+                    <a href="/reflectionmodel/transparent"><img src="{{ URL::asset('images/transparent.png') }}" alt=""  div="page-loader" class="transparant"></a>
+                </div>
+                <div class="topright">
+                    <a href="/reflectionmodel/theory"><img src="{{ URL::asset('images/theory.png') }}" alt=""  div="page-loader" class="theorie"></a>
+                    <a href="/reflectionmodel/model"><img src="{{ URL::asset('images/model.png') }}" alt=""  div="page-loader" class="model"></a>
+                </div>
+                <div class="bottomleft">
+                    <a href="/reflectionmodel/feedback"><img src="{{ URL::asset('images/feedback.png') }}" alt="" class="feedback"></a>
+                    <a href="/reflectionmodel/methodology"><img src="{{ URL::asset('images/methodology.png') }}" alt="" class="methodiek"></a>
+                </div>
+                <div class="bottomright">
+                    <a href="/reflectionmodel/focus"><img src="{{ URL::asset('images/focus.png') }}" alt="" class="gerichtheid"></a>
+                    <a href="/reflectionmodel/strategy"><img src="{{ URL::asset('images/strategy.png') }}" alt="" class="strategie"></a>
+                </div>
             </div>
+            <hr>
         </div>
       </div>
         <div class="form-group">
