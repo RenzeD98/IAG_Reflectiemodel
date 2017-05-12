@@ -21,6 +21,9 @@ Route::get('/profiel/gegevens', 'ProfileController@gegevens')->middleware('auth'
 Route::get('/profiel/instellingen', 'ProfileController@instellingen')->middleware('auth');
 Route::get('/profiel/agenda', 'ProfileController@agenda')->middleware('auth');
 
+//Archief routes
+Route::get('archief', 'ArchiveController@index')->middleware('auth');
+
 //reflectie routes
 Route::get('reflecties', 'ReflectionController@list')->middleware('auth');
 Route::get('reflectie/{id}/view', 'ReflectionController@getReflection')->middleware('auth');
