@@ -46,7 +46,23 @@
       width: auto;
     }
   }
+
+  input[type="text"]
+  {
+    width: 100%;
+    padding: 5px 5px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: thin;
+    border-color: #ababab;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+    text-align: -webkit-left;
+  }
+  .panel-body-profile {
+    padding: 10px; 
+    text-align: -webkit-left;
+  }
 }
-
-
-

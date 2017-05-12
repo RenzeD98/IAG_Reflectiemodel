@@ -14,6 +14,7 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+
 Route::get('home', 'HomeController@index')->middleware('auth');
 Route::get('/profiel', 'ProfileController@index')->middleware('auth');
 Route::get('/profiel/contacten', 'ProfileController@contacten')->middleware('auth');
@@ -23,7 +24,6 @@ Route::get('/profiel/agenda', 'ProfileController@agenda')->middleware('auth');
 
 //Archief routes
 Route::get('archief', 'ArchiveController@index')->middleware('auth');
-
 //reflectie routes
 Route::get('reflecties', 'ReflectionController@list')->middleware('auth');
 Route::get('reflectie/{id}/view', 'ReflectionController@getReflection')->middleware('auth');
@@ -38,6 +38,13 @@ Route::get('feedback', 'FeedbackCOntroller@index')->middleware('auth');
 Route::get('feedback/{id}/view', 'FeedbackController@getReflectionWithFeedback')->middleware('auth');
 Route::post('feedback/create', 'FeedbackController@storeFeedback')->middleware('auth');
 Route::post('feedback/update', 'FeedbackController@storeFeedback')->middleware('auth');
+
+//profile routes
+Route::get('/profile', 'ProfileController@index');
+Route::get('/profile/settings', 'SettingsController@index');
+Route::get('/profile/mydetails', 'DetailsController@index');
+Route::get('/profile/agenda', 'AgendaController@index');
+Route::get('/profile/contacts', 'ContactsController@index');
 
 //reflectionmodel routes
 Route::get('reflectionmodel', 'ReflectionModelController@getModel')->middleware('auth');
