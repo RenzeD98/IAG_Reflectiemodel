@@ -13,14 +13,14 @@
         
         <div class="row row-centered">
 
-            <a href="{{ url('reflectie') }}">
+            <a href="{{ url('/profiel/gegevens') }}">
                 <div class="col-xs-4 col-centered column">  
                      <img src="icons/FeedbackIconQuestion.svg" alt="Reflectie icoon">
                      <span class="subtitle">Mijn gegevens</span>
                 </div>
             </a>
 
-            <a href="{{ url('reflectiemodel') }}">
+            <a href="{{ url('profiel/contacten') }}">
                 <div class="col-xs-4 col-centered column"> 
                     <img src="icons/IAGModelIcon.svg" alt="Reflectie icoon">
                     <span class="subtitle">Mijn Contacten</span>
@@ -29,13 +29,13 @@
         </div>
         
         <div class="row row-centered">
-             <a href="{{ url('feedback') }}">
+             <a href="{{ url('/profiel/agenda') }}">
                 <div class="col-xs-4 col-centered col-xs-offset-1 column">  
                      <img src="icons/FeedbackIcon.svg" alt="Reflectie icoon">
                      <span class="subtitle">Mijn Agenda</span>
                 </div>
             </a>
-            <a href="{{ url('archief') }}">
+            <a href="{{ url('/profiel/Instellingen') }}">
                 <div class="col-xs-4 col-centered column"> 
                     <img src="icons/SettingsIcon.svg" alt="Reflectie icoon">
                     <span class="subtitle">Instellingen</span>

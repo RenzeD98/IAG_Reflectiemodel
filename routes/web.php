@@ -16,9 +16,9 @@ Route::get('/', function () {
 Auth::routes();
 Route::get('home', 'HomeController@index')->middleware('auth');
 Route::get('/profiel', 'ProfileController@index')->middleware('auth');
-Route::get('/profiel/contacten', 'ProfileController@contacts')->middleware('auth');
-Route::get('/profiel/appsettings', 'ProfileController@appsettings')->middleware('auth');
-Route::get('/profiel/mysettings', 'ProfileController@mysettings')->middleware('auth');
+Route::get('/profiel/contacten', 'ProfileController@contacten')->middleware('auth');
+Route::get('/profiel/gegevens', 'ProfileController@gegevens')->middleware('auth');
+Route::get('/profiel/instellingen', 'ProfileController@instellingen')->middleware('auth');
 Route::get('/profiel/agenda', 'ProfileController@agenda')->middleware('auth');
 
 //reflectie routes

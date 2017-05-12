@@ -8,14 +8,6 @@
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-<!-- 
-	Mobile Jquery styles 
-
-	https://www.w3schools.com/jquerymobile/jquerymobile_filters.asp
---> 
-<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
 <!-- Scripts -->
 <script>
