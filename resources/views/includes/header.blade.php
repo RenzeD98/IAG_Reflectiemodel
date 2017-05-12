@@ -40,6 +40,10 @@
                                          document.getElementById('logout-form').submit();">
                                 Uitloggen
                             </a>
+                            <a href="/reflecties">Mijn reflectie</a>
+                            <a href="/feedback">Feedback geven</a>
+                            <a href="/profiel">Profiel</a>
+                            <a href="/archief">Archief</a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 {{ csrf_field() }}

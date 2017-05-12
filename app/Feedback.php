@@ -10,7 +10,7 @@ class Feedback extends Model
 
 	public function reflection()
     {
-        return $this->hasOne('App\Reflection');
+        return $this->belongsTo('App\Reflection');
     }
 
     public function user()
