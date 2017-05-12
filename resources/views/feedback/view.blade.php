@@ -3,16 +3,21 @@
 @section('content')
 <div class="container feedback">
    <div class="navigation">
-    <a href="/feedback" class="">Terug</a>
+    <a href="/feedback" class="button feedback">Terug naar reflecties</a>
   </div>
-  <div class="panel panel-default list">
-    <div class="panel-heading">Geef feedback</div>
+
+  @if (Session::has('message'))
+    <div class="alert alert-info">{{ Session::get('message') }}</div>
+  @endif
+
+  <div class="panel panel-default">
+    <div class="panel-heading">Reflectie titel</div>
     <div class="panel-body">
-      <div class="row">
+      <div class="row reflectionItem">
         <div class="col-md-12 head">
           <img class="img-circle" src="http://placehold.it/50x50" alt="">
-          <span>{{ $reflection->title }}</span>
-          <span class="time">Tijd</span>
+          <span class="title">{{ $reflection->title }}</span>
+          <span class="time">Geplaatst op: 23-11-2019</span>
         </div>
 
         <div class="col-md-12 message">
@@ -42,45 +47,45 @@
           <textarea class="form-control" rows="5" id="reflection" name="message"></textarea>
         </div>
         
-        <button type="submit" class="btn btn-default" style="float:right;">Verstuur</button>
+        <button type="submit" class="button feedback" style="float:right;">Verstuur</button>
       </form>
       </div 
     </div>
   </div>
 
-  <div class="panel panel-default commentList">
-    <div class="panel-heading">Recente reacties</div>
+  <div class="panel panel-default recentFeedback">
+    <div class="panel-heading">Recente feedback</div>
     <div class="panel-body">
-      <div class="head">
-          <div class="sorting" style="float:right;">
-            <form method="GET" action="/feedback/view/">      
-              <span class="">Sorteren op: </span> 
-              <select name="sorting">
-                <option value="recent">Meest recent</option>
-                <option value="rating">Best beoordeeld</option>
-              </select>
-              <input type="hidden" name="_token" value="{{ csrf_token() }}">
-              <button type="submit" class="btn btn-default">Verstuur</button>
-            </form>
-          </div>
-        </div>
-
-      <div class="row">
-        <div class="content">
-          <div class="col-xs-1 rating" >+3</div>
-          <div class="col-xs-11 content">
-            <div class="head">
-              <span class="name">Ina Verhoeven</span>
-              <div class="rateComment" style="float:right;">
-                <button class="rate down">-1</button>
-                <button class="rate up">+1</button>
-              </div>
+      <!--
+      <div class="sorting">
+        <form method="GET" action="/feedback/view/">      
+          <span class="">Sorteren op: </span> 
+          <select name="sorting">
+            <option value="recent">Meest recent</option>
+            <option value="rating">Best beoordeeld</option>
+          </select>
+          <input type="hidden" name="_token" value="{{ csrf_token() }}">
+          <button type="submit" class="button feedback sort">Sorteer</button>
+        </form>
+      </div>
+      -->
+      @foreach($feedback as $fb)
+      <div class="row commentItem">      
+        <div class="col-md-1 col-xs-2 rating" >+3</div>
+        <div class="col-md-11 col-xs-10 content">
+          <span class="title">{{ $fb->title }}</span>
+          <span class="date">{{ $fb->created_at }}</span>
+          <p class="description">{{ $fb->messages }}</p> 
+          <!--<div class="head">     
+            <div class="rateComment" style="float:right;">
+              <button class="rate down">-1</button>
+              <button class="rate up">+1</button>
             </div>
-          <div class="content">
-            <span class="description">Beschrijving...... </span>
-          </div>   
+          </div>-->
+
       </div>
     </div>
-  </div>
+  @endforeach
+
 </div>
 @endsection

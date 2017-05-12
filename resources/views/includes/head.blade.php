@@ -14,8 +14,17 @@
 
 
 <!-- Scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
     window.Laravel = {!! json_encode([
         'csrfToken' => csrf_token(),
     ]) !!};
+</script>
+
+<script>
+$(document).ready(function(){
+    $(".reflectionchoice").click(function(){
+        $(".reflectionchoice-open").slideToggle("50");
+    });
+});
 </script>

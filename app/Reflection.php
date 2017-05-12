@@ -6,7 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Reflection extends Model
 {
-    protected $table = 'cases';
-
     protected $fillable = ['title', 'message'];
+
+    public function feedback()
+    {
+        return $this->hasMany('App\Feedback');
+    }
+
 }
