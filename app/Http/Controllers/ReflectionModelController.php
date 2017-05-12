@@ -11,6 +11,13 @@ class ReflectionModelController extends Controller
       return view('reflectionmodel.index');
     }
 
+    //individual radar return view
+
+    // public function radar(Radar $radar)
+    // {
+    //   return view('reflectionmodel.template', compact('radar'));
+    // }
+
     public function custom()
     {
       return view('reflectionmodel.custom');
@@ -43,5 +50,4 @@ class ReflectionModelController extends Controller
     {
       return view('reflectionmodel.transparent');
     }
-
 }

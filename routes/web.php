@@ -15,6 +15,7 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::get('home', 'HomeController@index');
+Route::get('/profiel', 'ProfileController@index');
 
 //reflectie routes
 Route::get('reflecties', 'ReflectionController@list');
@@ -25,22 +26,13 @@ Route::get('reflectie/create', 'ReflectionController@newReflection');
 Route::post('reflectie/create', 'ReflectionController@storeReflection');
 
 //feedback routes
-Route::get('feedback', 'FeedbackController@index');
-
-Route::get('feedback/{id}/view', 'FeedbackController@getFeedback');
-Route::post('feedback/create', 'FeedbackController@storeFeedback');
-Route::post('feedback/update', 'FeedbackController@storeFeedback');
-
-//profile routes
-Route::get('/profile', 'ProfileController@index');
-Route::get('/profile/settings', 'SettingsController@index');
-Route::get('/profile/mydetails', 'DetailsController@index');
-Route::get('/profile/agenda', 'AgendaController@index');
-Route::get('/profile/contacts', 'ContactsController@index');
+Route::get('feedback', 'FeedbackCOntroller@index');
 
 //reflectionmodel routes
 Route::get('reflectionmodel', 'ReflectionModelController@getModel');
 //individuele radar routes
+// Route::get('reflectionmodel/{radar}', 'ReflectionModelController@radar');
+
 Route::get('reflectionmodel/theory', 'ReflectionModelController@theory');
 Route::get('reflectionmodel/model', 'ReflectionModelController@model');
 Route::get('reflectionmodel/focus', 'ReflectionModelController@focus');
@@ -49,3 +41,8 @@ Route::get('reflectionmodel/methodology', 'ReflectionModelController@methodology
 Route::get('reflectionmodel/feedback,', 'ReflectionModelController@feedback');
 Route::get('reflectionmodel/transparent', 'ReflectionModelController@transparent');
 Route::get('reflectionmodel/custom', 'ReflectionModelController@custom');
+
+//feedback routes
+Route::get('feedback/{id}/view', 'FeedbackCOntroller@getFeedback');
+Route::post('feedback/create', 'FeedbackCOntroller@storeFeedback');
+Route::post('feedback/update', 'FeedbackCOntroller@storeFeedback');
