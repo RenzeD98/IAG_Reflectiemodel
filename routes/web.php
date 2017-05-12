@@ -33,6 +33,7 @@ Route::get('reflectie/create', 'ReflectionController@newReflection')->middleware
 Route::post('reflectie/create', 'ReflectionController@storeReflection')->middleware('auth');
 
 //feedback routes
+
 Route::get('feedback', 'FeedbackCOntroller@index')->middleware('auth');
 //Route::get('feedback/{id}/view', 'FeedbackCOntroller@getFeedback');
 Route::get('feedback/{id}/view', 'FeedbackController@getReflectionWithFeedback')->middleware('auth');
@@ -46,9 +47,12 @@ Route::get('/profile/mydetails', 'DetailsController@index');
 Route::get('/profile/agenda', 'AgendaController@index');
 Route::get('/profile/contacts', 'ContactsController@index');
 
+
 //reflectionmodel routes
 Route::get('reflectionmodel', 'ReflectionModelController@getModel')->middleware('auth');
 //individuele radar routes
+// Route::get('reflectionmodel/{radar}', 'ReflectionModelController@radar');
+
 Route::get('reflectionmodel/theory', 'ReflectionModelController@theory');
 Route::get('reflectionmodel/model', 'ReflectionModelController@model');
 Route::get('reflectionmodel/focus', 'ReflectionModelController@focus');
@@ -57,3 +61,4 @@ Route::get('reflectionmodel/methodology', 'ReflectionModelController@methodology
 Route::get('reflectionmodel/feedback,', 'ReflectionModelController@feedback');
 Route::get('reflectionmodel/transparent', 'ReflectionModelController@transparent');
 Route::get('reflectionmodel/custom', 'ReflectionModelController@custom');
+

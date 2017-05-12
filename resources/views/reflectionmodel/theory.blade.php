@@ -15,7 +15,6 @@
       <div class="reflectionchoice-open">
         <label for="reflectionchoice-open">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, neque minus! Officiis quisquam ipsa molestias provident expedita, fugiat sed aut. Officia atque deserunt eligendi veniam sint id voluptates labore blanditiis.</label>
       </div>
-
     </div>
 </div>
 @endsection
