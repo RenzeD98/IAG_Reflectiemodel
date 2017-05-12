@@ -89,7 +89,6 @@
               <button class="rate up">+1</button>
             </div>
           </div>-->
-
       </div>
     </div>
   @endforeach

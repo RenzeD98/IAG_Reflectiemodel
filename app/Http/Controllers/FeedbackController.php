@@ -26,6 +26,7 @@ class FeedbackController extends Controller
     public function getReflectionWithFeedback($id){
       $reflection = Reflection::with('feedback')->find($id);   
       if(empty($reflection)) return redirect('/feedback/');
+       $reflection->tags = explode(',',$test = $reflection->tags);
 
       return view('feedback.view', compact('reflection'));
     }

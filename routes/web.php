@@ -16,6 +16,11 @@ Route::get('/', function () {
 Auth::routes();
 Route::get('home', 'HomeController@index')->middleware('auth');
 Route::get('/profiel', 'ProfileController@index')->middleware('auth');
+Route::get('/profiel/contacten', 'ProfileController@contacts')->middleware('auth');
+Route::get('/profiel/appsettings', 'ProfileController@appsettings')->middleware('auth');
+Route::get('/profiel/mysettings', 'ProfileController@mysettings')->middleware('auth');
+Route::get('/profiel/agenda', 'ProfileController@agenda')->middleware('auth');
+
 //reflectie routes
 Route::get('reflecties', 'ReflectionController@list')->middleware('auth');
 Route::get('reflectie/{id}/view', 'ReflectionController@getReflection')->middleware('auth');
