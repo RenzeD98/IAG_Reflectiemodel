@@ -24,7 +24,8 @@
 <script>
 $(document).ready(function(){
     $(".reflectionchoice").click(function(){
-        $(".reflectionchoice-open").slideToggle("50");
+      $(this).next().slideToggle("fast");
+      $("i", this).toggleClass("fa-arrow-up fa-arrow-down");
     });
 });
 </script>

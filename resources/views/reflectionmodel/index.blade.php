@@ -5,37 +5,37 @@
     <div class="reflectioncontainer">
 
       <div class="topleft">
-        <a href="/reflectionmodel/custom">
+        <a href="/reflectionmodel/8">
           <img src="{{ URL::asset('images/custom.png') }}" alt="" class="custom">
         </a>
-        <a href="/reflectionmodel/transparent">
+        <a href="/reflectionmodel/7">
           <img src="{{ URL::asset('images/transparent.png') }}" alt="" class="transparant">
         </a>
       </div>
 
       <div class="topright">
-        <a href="/reflectionmodel/theory">
+        <a href="/reflectionmodel/1">
           <img src="{{ URL::asset('images/theory.png') }}" alt="" class="theorie">
         </a>
-        <a href="/reflectionmodel/model">
+        <a href="/reflectionmodel/3">
           <img src="{{ URL::asset('images/model.png') }}" alt="" class="model">
         </a>
       </div>
 
       <div class="bottomleft">
-        <a href="/reflectionmodel/feedback">
+        <a href="/reflectionmodel/6">
           <img src="{{ URL::asset('images/feedback.png') }}" alt="" class="feedback">
         </a>
-        <a href="/reflectionmodel/methodology">
+        <a href="/reflectionmodel/5">
           <img src="{{ URL::asset('images/methodology.png') }}" alt="" class="methodiek">
         </a>
       </div>
 
       <div class="bottomright">
-        <a href="/reflectionmodel/focus">
+        <a href="/reflectionmodel/2">
           <img src="{{ URL::asset('images/focus.png') }}" alt="" class="gerichtheid">
         </a>
-        <a href="/reflectionmodel/strategy">
+        <a href="/reflectionmodel/4">
           <img src="{{ URL::asset('images/strategy.png') }}" alt="" class="strategie">
         </a>
       </div>
