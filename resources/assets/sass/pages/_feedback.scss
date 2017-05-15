@@ -10,20 +10,7 @@
 		  
 		}
 
-		.button.feedback{
-		  background-color:#68893B;
-		  color:#fff;
-		  padding: 4px 12px 4px 12px;
-		  text-decoration: none;
-		  font-size:16px;
- 			border:2px solid #ddd; 
- 			/*position: relative;
-			bottom: 10px;*/
-		  
-		}
-		.button.feedback:hover{
-		  background-color:#666666;
-		}
+		
 
 		.button.feedback.sort{
 		  line-height:10px;
@@ -38,9 +25,9 @@
 
 		.head{
 			height: 59px;
-      border-bottom: 1px #ddd solid;
-      line-height: 59px;
-      vertical-align: middle;
+			border-bottom: 1px #ddd solid;
+			line-height: 59px;
+			vertical-align: middle;
 		}
 
 		.title{
@@ -59,8 +46,8 @@
 			vertical-align: middle;
 			line-height: 59px;
 		}
-    .tag
-    {
+	    .tag
+	    {
 			float: left;
 			background-color: #666;
 			color: #fff;
@@ -68,22 +55,21 @@
 			font-size: 13px;
 			margin-right:10px;
 			margin-bottom:10px;
-    }
+	    }
 
-    .feedback{
-      float: right;
-    }
+	    .feedback{
+	      float: right;
+	    }
 	}
 
-	
   .recentFeedback
   {
   	.sorting
   	{
-			height: 40px;
-			width: 100%;
-			text-align: right;
-			margin-bottom:10px;
+		height: 40px;
+		width: 100%;
+		text-align: right;
+		margin-bottom:10px;
   	}
 
   	.commentItem
