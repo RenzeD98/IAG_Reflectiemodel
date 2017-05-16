@@ -61,4 +61,3 @@ Route::get('reflectionmodel/methodology', 'ReflectionModelController@methodology
 Route::get('reflectionmodel/feedback,', 'ReflectionModelController@feedback');
 Route::get('reflectionmodel/transparent', 'ReflectionModelController@transparent');
 Route::get('reflectionmodel/custom', 'ReflectionModelController@custom');
-
