@@ -35,6 +35,14 @@
 </script>
 
 <script>
+$(".reflectionchoice").click(function(){
+      $(this).next().slideToggle("fast");
+      $("i", this).toggleClass("fa-arrow-up fa-arrow-down");
+    });
+});
+</script>
+
+<script>
     $(document).ready(function(){
         $('.back-arrow').click(function() {
             $(".ajax-content").css("display", "none");
