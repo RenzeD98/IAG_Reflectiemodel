@@ -35,7 +35,8 @@
 </script>
 
 <script>
-$(".reflectionchoice").click(function(){
+$(document).ready(function(){
+    $(".reflectionchoice").click(function(){
       $(this).next().slideToggle("fast");
       $("i", this).toggleClass("fa-arrow-up fa-arrow-down");
     });
