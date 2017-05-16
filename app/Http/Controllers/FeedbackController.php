@@ -24,19 +24,21 @@ class FeedbackController extends Controller
 
     //Specific reflection form
     public function getReflectionWithFeedback($id){
-      $reflection = Reflection::where('id', $id)->first(); 
-      
+      $reflection = Reflection::with('feedback')->find($id);   
       if(empty($reflection)) return redirect('/feedback/');
-      
-      $feedback = Reflection::find($id)->feedback;
+       $reflection->tags = explode(',',$test = $reflection->tags);
 
-      //$user = DB::table('users')->where('id', $user_id)->get();
-
-      return view('feedback.view', compact('reflection','feedback'));
+      return view('feedback.view', compact('reflection'));
     }
 
     
     public function storeFeedback(Request $request){
+
+      $this->validate($request, [
+        'title' => 'max:255',
+        'message' => 'required|min:1|max:5000'
+      ]);
+
       $feedback = new Feedback;
       $feedback->title = $request->title;
       $feedback->messages = $request->message;

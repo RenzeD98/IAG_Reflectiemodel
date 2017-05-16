@@ -3,11 +3,13 @@
 @section('content')
 <div class="container feedback">
    <div class="navigation">
-    <a href="/feedback" class="button feedback">Terug naar reflecties</a>
+    <a href="/feedback" class="button"><i class="fa fa-chevron-left" aria-hidden="true"></i>
+      Terug naar reflecties
+    </a>
   </div>
 
   @if (Session::has('message'))
-    <div class="alert alert-info">{{ Session::get('message') }}</div>
+    <div class="alert alert-success">{{ Session::get('message') }}</div>
   @endif
 
   <div class="panel panel-default">
@@ -17,7 +19,7 @@
         <div class="col-md-12 head">
           <img class="img-circle" src="http://placehold.it/50x50" alt="">
           <span class="title">{{ $reflection->title }}</span>
-          <span class="time">Geplaatst op: 23-11-2019</span>
+          <span class="date">{{ $reflection->created_at }}</span>
         </div>
 
         <div class="col-md-12 message">
@@ -25,7 +27,9 @@
         </div>
 
         <div class="col-md-6">
-          <span class="tag">Tags</span>
+          @foreach($reflection->tags as $tag)
+            <span class="tag">{{ $tag }}</span>
+          @endforeach        
         </div>
       </div>
     </div>
@@ -38,13 +42,15 @@
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <input type="hidden" name="id" value="{{ $reflection->id }}"> 
         <input type="hidden" name="user_id" value="{{ $reflection->user_id }}"> 
-        <div class="form-group">
+        <div class="form-group {{ $errors->has('title') ? ' has-error' : '' }}">
           <label for="title">Titel</label>
-          <input type="text" class="form-control" id="title" placeholder="Titel" name="title">
+          <input type="text" class="form-control" id="title" placeholder="Titel" name="title" minlength="1" maxlength="255" value="{{ old('title') }}">
+          
         </div>
-        <div class="form-group">
+        <div class="form-group {{ $errors->has('message') ? ' has-error' : '' }}">
           <label for="reflection">Feedback:</label>
-          <textarea class="form-control" rows="5" id="reflection" name="message"></textarea>
+          <textarea class="form-control" rows="5" id="reflection" name="message"
+          >{{ old('message') }}</textarea><!--minlength="1" maxlength="5000"-->
         </div>
         
         <button type="submit" class="button feedback" style="float:right;">Verstuur</button>
@@ -69,20 +75,20 @@
         </form>
       </div>
       -->
-      @foreach($feedback as $fb)
+      @foreach($reflection->feedback as $fb)
       <div class="row commentItem">      
         <div class="col-md-1 col-xs-2 rating" >+3</div>
         <div class="col-md-11 col-xs-10 content">
-          <span class="title">{{ $fb->title }}</span>
+          <span class="title">{{ $fb->title }} - </span>
+          <span class="user">{{ $fb->user->id }}</span>  
           <span class="date">{{ $fb->created_at }}</span>
-          <p class="description">{{ $fb->messages }}</p> 
+          <p class="description">{{ $fb->messages }}</p>
           <!--<div class="head">     
             <div class="rateComment" style="float:right;">
               <button class="rate down">-1</button>
               <button class="rate up">+1</button>
             </div>
           </div>-->
-
       </div>
     </div>
   @endforeach

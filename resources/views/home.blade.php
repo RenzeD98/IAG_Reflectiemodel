@@ -10,7 +10,6 @@
             </a>
             <span class="function">IAG hulpverlener</span>
         </div>
-
         <div class="row row-centered">
             <a href="{{ url('reflecties') }}">
                 <div class="col-xs-4 col-centered column">

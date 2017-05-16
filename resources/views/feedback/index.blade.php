@@ -10,7 +10,7 @@
             <div class="col-md-12 head">
               <img class="img-circle" src="http://placehold.it/50x50" alt="">
               <span>{{ $reflection->title }}</span>
-              <span class="time">123-213-21233</span>
+              <span class="time">{{ $reflection->created_at }}</span>
             </div>
 
             <div class="col-md-12 message">
@@ -22,7 +22,7 @@
             </div>
 
             <div class="col-md-6">
-              <a href="/feedback/{{ $reflection->id }}/view" class="button feedback">Feedback geven</a>
+              <a href="/feedback/{{ $reflection->id }}/view" class="button" style="float:right;">Feedback geven</a>
             </div>
           </div>
         @endforeach
