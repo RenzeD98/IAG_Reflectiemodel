@@ -17,44 +17,36 @@
 </script>
 
 <script>
+    $(document).ready(function(){
+        $("#reflection-model").click(function(){
+            $("#reflection-model-open").slideToggle("50");
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+        $("#page-loader").click(function(){
+            $(".ajax-content").css("display", "block");
+            $(".page-loader-content").html('<img class="loader_icon" src="{{ URL::asset('icons/LoadingIcon.svg') }}">');
+            $(".page-loader-content").load("http://localhost/reflectionmodel/theory .reflectiemodel");
+        });
+    });
+</script>
+
+<script>
 $(document).ready(function(){
-    $("#reflection-model").click(function(){
-        $("#reflection-model-open").slideToggle("50");
+    $(".reflectionchoice").click(function(){
+      $(this).next().slideToggle("fast");
+      $("i", this).toggleClass("fa-arrow-up fa-arrow-down");
     });
 });
 </script>
 
 <script>
-$("#page-loader").click(function () {
-    // add loading image to div
-    $("#page-loader-content").html('<img src="icons/LoadingIcon.svg">');
-
-    // run ajax request
-    $.ajax({
-      url:'http://www.skysports.com/f1/news/12433/10868775/max-verstappens-first-f1-win-at-the-2016-spanish-gp-revisited',
-      type:'GET',
-      success: function(data){
-           $('#page-loader-content').html($(data).find('#page-loader-content').html());
-      }
+    $(document).ready(function(){
+        $('.back-arrow').click(function() {
+            $(".ajax-content").css("display", "none");
+        });
     });
-    // $.ajax({
-    //     type: "GET",
-    //     dataType: dataType,
-    //     url: "http://www.skysports.com/f1/news/12433/10868775/max-verstappens-first-f1-win-at-the-2016-spanish-gp-revisited",
-    //     success: function (d) {
-    //         // replace div's content with returned data
-    //         // $('#loading').html('<img src="'+d.avatar_url+'"><br>'+d.login);
-    //         // setTimeout added to show loading
-    //         setTimeout(function () {
-    //             $("#page-loader-content").html(data);
-    //             alert( "Load was performed." );
-    //         }, 2000);
-    //     }
-    // });
-});
 </script>
-    $(".reflectionchoice").click(function(){
-        $(".reflectionchoice-open").slideToggle("50");
-    });
-});
-

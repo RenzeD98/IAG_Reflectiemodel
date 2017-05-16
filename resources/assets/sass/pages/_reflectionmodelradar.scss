@@ -2,7 +2,7 @@
 {
   width: 100%;
   border: 1px solid #111;
-
+  margin-top: 20px;
   label
   {
     margin: 5px;
@@ -26,8 +26,9 @@
   border: 1px solid $red;
   border-top: none;
 
-  label
+  p
   {
-    margin: 5px;
+    padding: 5px;
+    margin: 0px;
   }
 }

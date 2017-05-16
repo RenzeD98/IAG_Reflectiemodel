@@ -51,14 +51,4 @@ Route::get('/profile/contacts', 'ContactsController@index');
 //reflectionmodel routes
 Route::get('reflectionmodel', 'ReflectionModelController@getModel')->middleware('auth');
 //individuele radar routes
-// Route::get('reflectionmodel/{radar}', 'ReflectionModelController@radar');
-
-Route::get('reflectionmodel/theory', 'ReflectionModelController@theory');
-Route::get('reflectionmodel/model', 'ReflectionModelController@model');
-Route::get('reflectionmodel/focus', 'ReflectionModelController@focus');
-Route::get('reflectionmodel/strategy', 'ReflectionModelController@strategy');
-Route::get('reflectionmodel/methodology', 'ReflectionModelController@methodology');
-Route::get('reflectionmodel/feedback,', 'ReflectionModelController@feedback');
-Route::get('reflectionmodel/transparent', 'ReflectionModelController@transparent');
-Route::get('reflectionmodel/custom', 'ReflectionModelController@custom');
-
+Route::get('reflectionmodel/{id}', 'ReflectionModelController@radar');
