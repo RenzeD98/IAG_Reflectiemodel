@@ -27,6 +27,7 @@
 <script>
     $(document).ready(function(){
         $("#page-loader").click(function(){
+            document.getElementById("#page-loader").getAttribute("link")
             $(".ajax-content").css("display", "block");
             $(".page-loader-content").html('<img class="loader_icon" src="{{ URL::asset('icons/LoadingIcon.svg') }}">');
             $(".page-loader-content").load("http://localhost/reflectionmodel/theory .reflectiemodel");
