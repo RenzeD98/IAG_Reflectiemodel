@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
+use DB;
 
 class ProfileController extends Controller
 {
@@ -12,7 +14,9 @@ class ProfileController extends Controller
     }
     public function gegevens()
     {
-        return view('profile.gegevens');
+        $id = Auth::id();
+        $users = DB::table('users')->where('id', $id)->get();
+        return view('profile/mydetails', compact('users'));
     }
     public function instellingen()
     {

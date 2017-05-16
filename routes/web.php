@@ -52,4 +52,3 @@ Route::get('/profile/contacts', 'ContactsController@index');
 Route::get('reflectionmodel', 'ReflectionModelController@getModel')->middleware('auth');
 //individuele radar routes
 Route::get('reflectionmodel/{id}', 'ReflectionModelController@radar');
-
