@@ -8,44 +8,44 @@
                 <img src="https://pbs.twimg.com/profile_images/689125864731242496/DGU2F799.jpg" alt="Profiel afbeelding">
                 <span class="name">{{ Auth::user()->firstname }} {{ Auth::user()->lastname }}</span>
             </a>
-            <span class="function">IAG hulpverlener</span> 
+            <span class="function">IAG hulpverlener</span>
         </div>
-        
+
         <div class="row row-centered">
 
             <a href="{{ url('/profiel/gegevens') }}">
-                <div class="col-xs-4 col-centered column">  
-                     <img src="icons/FeedbackIconQuestion.svg" alt="Reflectie icoon">
+                <div class="col-xs-4 col-centered column">
+                     <img src="{{ URL::asset('icons/ProfileIcon.svg') }}" alt="Reflectie icoon">
                      <span class="subtitle">Mijn gegevens</span>
                 </div>
             </a>
 
             <a href="{{ url('profiel/contacten') }}">
-                <div class="col-xs-4 col-centered column"> 
-                    <img src="icons/IAGModelIcon.svg" alt="Reflectie icoon">
+                <div class="col-xs-4 col-centered column">
+                    <img src="{{ URL::asset('icons/ContactIcon.svg') }}" alt="Reflectie icoon">
                     <span class="subtitle">Mijn Contacten</span>
                 </div>
-            </a>      
+            </a>
         </div>
-        
+
         <div class="row row-centered">
              <a href="{{ url('/profiel/agenda') }}">
-                <div class="col-xs-4 col-centered col-xs-offset-1 column">  
-                     <img src="icons/FeedbackIcon.svg" alt="Reflectie icoon">
+                <div class="col-xs-4 col-centered col-xs-offset-1 column">
+                     <img src="{{ URL::asset('icons/AgendaIcon.svg') }}" alt="Reflectie icoon">
                      <span class="subtitle">Mijn Agenda</span>
                 </div>
             </a>
-            <a href="{{ url('/profiel/Instellingen') }}">
-                <div class="col-xs-4 col-centered column"> 
-                    <img src="icons/SettingsIcon.svg" alt="Reflectie icoon">
+            <a href="{{ url('/profiel/instellinge') }}">
+                <div class="col-xs-4 col-centered column">
+                    <img src="{{ URL::asset('icons/SettingsIcon.svg') }}" alt="Reflectie icoon">
                     <span class="subtitle">Instellingen</span>
                 </div>
             </a>
-                    
+
 
                 </div>
             </div>
-           
+
         </div>
     </div>
 </div>

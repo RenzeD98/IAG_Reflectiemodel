@@ -8399,6 +8399,111 @@ div#mobile-menu {
   display: inline;
 }
 
+div#content {
+  padding-bottom: 50px;
+}
+
+/*** Sub page navigation ***/
+
+.navigation {
+  padding: 7px;
+  border-radius: 3px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  background-color: #87cdd3;
+}
+
+.navigation a {
+  display: inline-block;
+  margin-right: 20px;
+  color: #000;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.navigation a:hover {
+  text-decoration: none;
+  color: #2a3a89;
+}
+
+.navigation i {
+  margin-right: 5px;
+}
+
+.navigation .edit {
+  float: right;
+}
+
+.navigation .del {
+  float: right;
+}
+
+.button {
+  border-radius: 4px;
+  transition: background 0.2s ease-in;
+  background-color: #68883c;
+  color: #fff !important;
+  padding: 4px 12px 4px 12px;
+  text-decoration: none;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-width: thin;
+}
+
+.button:hover {
+  background-color: #666666;
+  text-decoration: none;
+}
+
+.addNewItemButton {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  background-color: green;
+  border-radius: 100%;
+  font-weight: lighter;
+  font-size: 33px;
+  color: white;
+  text-decoration: none;
+  box-shadow: 0px 5px 10px #666;
+}
+
+.addNewItemButton:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.loader_icon {
+  margin: auto;
+  display: block;
+  max-width: 75px;
+  width: 100%;
+}
+
+.ajax-header {
+  height: 50px;
+  background: darkgray;
+  border-radius: 5px;
+  padding: 11px 10px;
+}
+
+.ajax-content {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 65px;
+  left: 0;
+  margin-bottom: 50px;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: thin;
+  background-color: white;
+}
+
 .home .header {
   background-color: #87cdd3;
   height: 200px;
@@ -8574,6 +8679,28 @@ div#mobile-menu {
 
 .reflection .row .feedback {
   float: right;
+}
+
+.reflection .add-reflection-button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  background-color: green;
+  border-radius: 100%;
+  font-weight: lighter;
+  font-size: 33px;
+  color: white;
+  text-decoration: none;
+  box-shadow: 0px 5px 10px #666;
+}
+
+.reflection .reflection .add-reflection-button:hover {
+  text-decoration: none;
+  color: white;
 }
 
 .feedback .navigation {
@@ -8773,4 +8900,34 @@ div#mobile-menu {
   float: left;
   width: 8vw;
   height: 8vw;
+}
+
+.reflectionchoice {
+  width: 100%;
+  border: 1px solid #111;
+}
+
+.reflectionchoice label {
+  margin: 5px;
+}
+
+.reflectionchoice .arrow {
+  float: right;
+  padding: 5px;
+  background-color: #b82052;
+  width: 30px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+
+.reflectionchoice-open {
+  width: 100%;
+  display: none;
+  border: 1px solid #b82052;
+  border-top: none;
+}
+
+.reflectionchoice-open label {
+  margin: 5px;
 }
