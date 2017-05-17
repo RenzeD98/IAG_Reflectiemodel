@@ -18,6 +18,7 @@
       <input type="hidden" name="_token" value="{{ csrf_token() }}">
       <div class="reflection-model" id="reflection-model">
           <label for="reflection-model">Bekijk het reflectiemodel</label>
+          <div class="arrow"><i class="fa fa-arrow-down" aria-hidden="true"></i></div>
       </div>
         <div class="reflection-model-open" id="reflection-model-open">
         <div class="container reflectiemodel">
