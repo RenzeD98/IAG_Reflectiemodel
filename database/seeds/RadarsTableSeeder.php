@@ -19,6 +19,8 @@ class RadarsTableSeeder extends Seeder
         DB::table('radars')->insert($radars);
 
         $radars = [
+          ['name' => 'Theorie', 'description' => 'Vanuit welke theorie handel ik?'],
+          ['name' => 'Model', 'description' => 'Vanuit welk model handel ik?'],
         ];
     }
 }
