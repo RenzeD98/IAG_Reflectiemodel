@@ -11,8 +11,6 @@
             <span class="function">IAG hulpverlener</span>
         </div>
         <div class="row row-centered">
-            <div class="panel panel-default">
-                <div class="panel-body-profile">
                   In het onderstaande scherm kunt u uw accountgegevens aanpassen. Omdat uw account strikt persoonlijk is, is het niet mogelijk uw voor/achternaam meer te wijzigen.
                   @foreach ($users as $User)
                     <form class="user-panel" method="post">
@@ -42,10 +40,9 @@
                             <label for="email">Mobielenummer:</label>
                             <input required type="text" name="phone" value="">
                         </div>
+                        <button type="submit" name="button" class="btn save-button"><i class="fa fa-floppy-o" aria-hidden="true"></i> Opslaan</button>
                     </form>
                     @endforeach
-                </div>
-            </div>
         </div>
     </div>
 </div>

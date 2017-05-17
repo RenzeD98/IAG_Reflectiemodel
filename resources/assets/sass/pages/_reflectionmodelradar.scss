@@ -1,14 +1,18 @@
 .reflectionchoice
 {
   width: 100%;
+  height: auto;
   border: 1px solid #111;
   margin-top: 20px;
+
   label
   {
     margin: 5px;
+    width: calc(100% - 40px);
   }
 
   .arrow{
+    position: relative;
     float: right;
     padding: 5px;
     background-color: $red;
@@ -21,6 +25,7 @@
 
 .reflectionchoice-open
 {
+  padding: 5px;
   width: 100%;
   display: none;
   border: 1px solid $red;
@@ -28,7 +33,6 @@
 
   p
   {
-    padding: 5px;
     margin: 0px;
   }
 }

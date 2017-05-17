@@ -15,13 +15,10 @@ class CreateRadarsTable extends Migration
     {
       Schema::create('radars', function (Blueprint $table) {
           $table->increments('id')->unsigned();
-          $table->integer('reflection_id')->unsigned();
           $table->string('name')->nullable();
           $table->string('description')->nullable();
+          $table->string('color');
           $table->timestamps();
-      });
-      Schema::table('radars', function (Blueprint $table) {
-          $table->foreign('reflection_id')->references('id')->on('reflections');
       });
     }
 
