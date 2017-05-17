@@ -9,16 +9,16 @@ use Illuminate\Notifications\Messages\MailMessage;
 
 class MessageReceived extends Notification
 {
-    use Queueable;
+    //use Queueable;
 
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($feedback)
     {
-        //
+        $this->feedback = $feedback;
     }
 
     /**
@@ -29,8 +29,9 @@ class MessageReceived extends Notification
      */
     public function via($notifiable)
     {
-        return ['mail'];
+        return ['database'];
     }
+
 
     /**
      * Get the mail representation of the notification.
@@ -55,7 +56,9 @@ class MessageReceived extends Notification
     public function toArray($notifiable)
     {
         return [
-            //
+            'title' => $this->feedback->title,
+            'message' => $this->feedback->messages,
+            'reflection' => $this->feedback->reflection_id,
         ];
     }
 }
