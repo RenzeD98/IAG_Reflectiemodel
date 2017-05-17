@@ -1,65 +1,70 @@
 .reflectioncontainer
 {
-  // background-image: url("triangle.png");
+  background-image: url("triangle/triangle.png");
   background-size: 100%;
   background-repeat: no-repeat;
   width: 40vw;
   height: 40vw;
-  margin: 3vw auto 3vw auto;
+  margin: 3vw auto 0 auto;
+
+  @media screen and(max-width: $break-tablet)
+  {
+    margin-top: 10vw;
+    width: 90vw;
+    height: 90vw;
+  }
 
   .topleft
   {
     float: left;
-    width: 20vw;
-    height: 20vw;
-    // background-color: blue;
+    width: 50%;
+    height: 50%;
 
     .custom
     {
       @include border-radius(100%);
       float: right;
-      width: 8vw;
-      height: 8vw;
-      margin-top: 4vw;
-      margin-right: 0.5vw;
+      width: 42.5%;
+      height: 42.5%;
+      margin-top: 20%;
+      margin-right: 1.5%;
     }
 
     .transparant
     {
-      margin-top: -1vw;
-      margin-left: 6vw;
+      margin-top: -5%;
+      margin-left: 30%;
       @include border-radius(100%);
       float: left;
-      width: 8vw;
-      height: 8vw;
+      width: 42.5%;
+      height: 42.5%;
     }
   }
 
   .topright
   {
     float: left;
-    width: 20vw;
-    height: 20vw;
-    // background-color: green;
+    width: 50%;
+    height: 50%;
 
     .theorie
     {
       @include border-radius(100%);
       float: left;
-      width: 8vw;
-      height: 8vw;
-      margin-top: 4vw;
-      margin-left: 0.5vw;
+      width: 42.5%;
+      height: 42.5%;
+      margin-top: 20%;
+      margin-left: 1.5%;
     }
 
     .model
     {
-      margin-top: -1vw;
-      margin-right: 6vw;
+      margin-top: -5%;
+      margin-right: 30%;
       @include border-radius(100%);
       float: right;
-      width: 8vw;
-      height: 8vw;
+      width: 42.5%;
+      height: 42.5%;
     }
   }
 
@@ -67,54 +72,53 @@
   {
     float: left;
     clear: both;
-    width: 20vw;
-    height: 20vw;
-    // background-color: orange;
+    width: 50%;
+    height: 50%;
 
     .feedback
     {
-      margin-left: 4.5vw;
+      margin-left: 22%;
       @include border-radius(100%);
       float: left;
-      width: 8vw;
-      height: 8vw;
+      width: 42.5%;
+      height: 42.5%;
     }
 
     .methodiek
     {
       @include border-radius(100%);
-      margin-top: -2.5vw;
-      margin-right: 0.5vw;
+      margin-top: -12.5%;
+      margin-right: 1.5%;
       float: right;
-      width: 8vw;
-      height: 8vw;
+      width: 42.5%;
+      height: 42.5%;
     }
   }
 
   .bottomright
   {
     float: left;
-    width: 20vw;
-    height: 20vw;
-    // background-color: red;
+    width: 50%;
+    height: 50%;
 
     .gerichtheid
     {
-      margin-right: 4.5vw;
+      margin-right: 22%;
       @include border-radius(100%);
       float: right;
-      width: 8vw;
-      height: 8vw;
+      width: 42.5%;
+      height: 42.5%;
     }
 
     .strategie
     {
       @include border-radius(100%);
-      margin-top: -2.5vw;
-      margin-left: 0.5vw;
+      margin-top: -12.5%;
+      margin-left: 1.5%;
       float: left;
-      width: 8vw;
-      height: 8vw;
+      width: 42.5%;
+      height: 42.5%;
     }
   }
 }
+
