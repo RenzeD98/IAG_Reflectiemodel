@@ -108,7 +108,7 @@
 
 	.row-centered {
     text-align: center;
-    padding: 15px;
+		padding: 5px 20px;
 	}
 
 	.save-button {
@@ -119,3 +119,27 @@
     border-width: thin;
     color: white;
 	}
+
+	.arrow {
+    float: right;
+	}
+
+	.col-xs-offset-2 {
+    margin-left: 10%;
+	}
+
+	.col-xs-6 {
+    	width: 45%;
+	}
+
+		#reflection-model-open {
+	    display: none;
+	}
+
+	body {
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333333;
+    background-color: #fff;
+}
