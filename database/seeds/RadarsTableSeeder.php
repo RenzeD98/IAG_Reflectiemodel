@@ -11,16 +11,62 @@ class RadarsTableSeeder extends Seeder
      */
     public function run()
     {
-        // DB::table('radars')->insert([
-        //   'name' => 'Theorie',
-        //   'description' => 'test description',
-        // ]);
+        DB::table('radars')->insert([
+        [
+            'name' => 'Theorie',
+            'description' => 'Vanuit welk theorie handel ik?',
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
+        ],
 
-        DB::table('radars')->insert($radars);
+        [
+            'name' => 'Gerichtheid',
+            'description' => 'Welke gerichttheid heb ik?',
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
+        ],
 
-        $radars = [
-          ['name' => 'Theorie', 'description' => 'Vanuit welke theorie handel ik?'],
-          ['name' => 'Model', 'description' => 'Vanuit welk model handel ik?'],
-        ];
+        [
+            'name' => 'Model',
+            'description' => 'Vanuit welk model handel ik?',
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
+        ],
+
+        [
+            'name' => 'Strategie',
+            'description' => 'Wat zet ik in?',
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
+        ],
+
+        [
+            'name' => 'Methodiek',
+            'description' => 'In welke fase bevind ik mij?',
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
+        ],
+
+        [
+            'name' => 'Feedback',
+            'description' => 'Hoe verwerk ik feedback?',
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
+        ],
+
+        [
+            'name' => 'Basisattitude',
+            'description' => ' ',
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
+        ],
+
+        [
+            'name' => '...',
+            'description' => 'En wat nog meer...',
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
+        ],
+      ]);
     }
 }

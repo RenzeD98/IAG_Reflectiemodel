@@ -13,7 +13,7 @@
           <div class="arrow"><i class="fa fa-arrow-down" aria-hidden="true"></i></div>
         </div>
         <div class="reflectionchoice-open">
-          <p for="reflectionchoice-open">{{$option->info}}</p>
+          <p for="reflectionchoice-open">{!!html_entity_decode($option->info)!!}</p>
         </div>
       @endforeach
 </div>
