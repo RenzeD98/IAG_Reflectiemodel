@@ -22,9 +22,10 @@ Route::get('/profiel/gegevens', 'ProfileController@gegevens')->middleware('auth'
 Route::get('/profiel/instellingen', 'ProfileController@instellingen')->middleware('auth');
 Route::get('/profiel/agenda', 'ProfileController@agenda')->middleware('auth');
 
-//Archief routes
+//Archive routes
 Route::get('archief', 'ArchiveController@index')->middleware('auth');
-//reflectie routes
+
+//Reflection routes
 Route::get('reflecties', 'ReflectionController@list')->middleware('auth');
 Route::get('reflectie/{id}/view', 'ReflectionController@getReflection')->middleware('auth');
 Route::get('reflectie/{id}/update', 'ReflectionController@updateReflection')->middleware('auth');
@@ -33,9 +34,7 @@ Route::get('reflectie/create', 'ReflectionController@newReflection')->middleware
 Route::post('reflectie/create', 'ReflectionController@storeReflection')->middleware('auth');
 
 //feedback routes
-
 Route::get('feedback', 'FeedbackCOntroller@index')->middleware('auth');
-//Route::get('feedback/{id}/view', 'FeedbackCOntroller@getFeedback');
 Route::get('feedback/{id}/view', 'FeedbackController@getReflectionWithFeedback')->middleware('auth');
 Route::post('feedback/create', 'FeedbackController@storeFeedback')->middleware('auth');
 Route::post('feedback/update', 'FeedbackController@storeFeedback')->middleware('auth');
@@ -50,5 +49,8 @@ Route::get('/profile/contacts', 'ContactsController@index');
 
 //reflectionmodel routes
 Route::get('reflectionmodel', 'ReflectionModelController@getModel')->middleware('auth');
-//individuele radar routes
 Route::get('reflectionmodel/{id}', 'ReflectionModelController@radar');
+
+//Notifications routes
+Route::get('/notifications', 'NotificationController@index');
+Route::get('/notification/{id}/view', 'NotificationController@view');

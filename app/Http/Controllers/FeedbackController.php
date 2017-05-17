@@ -6,11 +6,19 @@ use Illuminate\Http\Request;
 use App\Reflection;
 use App\Feedback;
 use Auth;
-use DB;
+use App\User;
 use Session;
 
+use App\Notifications\MessageReceived;
+use Notifiable;
+/*
+use Illuminate\Notifications\Notifiable;
+
+use Notifiable;
+*/
 class FeedbackController extends Controller
 {
+ 
     public function index(){
       $id = Auth::id();
       $reflections = Reflection::all();
@@ -44,8 +52,12 @@ class FeedbackController extends Controller
       $feedback->messages = $request->message;
       $feedback->read = 0;
       $feedback->reflection_id = $request->id;
-      $feedback->user_id = $user_id = Auth::id();
+      $feedback->user_id = Auth::id();
       $feedback->save();
+
+      $receiver = User::find($request->user_id);
+
+      $receiver->notify(new MessageReceived($feedback));
 
       Session::flash('message', 'Succesvol feedback gegeven!');
 

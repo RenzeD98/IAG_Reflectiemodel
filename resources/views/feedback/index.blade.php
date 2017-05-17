@@ -22,7 +22,8 @@
             </div>
 
             <div class="col-md-6">
-              <a href="/feedback/{{ $reflection->id }}/view" class="button" style="float:right;">Feedback geven</a>
+              <a href="{{ url('/feedback/' . $reflection->id .'/view') }}"  class="button" style="float:right;">Feedback geven</a>
+
             </div>
           </div>
         @endforeach
