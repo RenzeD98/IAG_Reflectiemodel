@@ -8,7 +8,6 @@
     color: #fff;
     text-align: center;
     padding-top: 20px;
-    margin-bottom: 20px;
 
     img
     {
@@ -35,11 +34,8 @@
   .column
   {
     border: 2px solid #ddd;
-    margin-bottom: 30px;
-    text-align: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    margin: 20px;
+    padding: 5px 10px;
+    border-radius: 10px;
 
     img
     {
@@ -57,12 +53,19 @@
     border-color: #ababab;
   }
 
+  .subtitle {
+    display: block;
+    color: #333;
+    margin-top: 10px;
+    font-size: 1em;
+  }
+
   .form-group {
     margin-bottom: 15px;
     text-align: -webkit-left;
   }
   .panel-body-profile {
-    padding: 10px; 
+    padding: 10px;
     text-align: -webkit-left;
   }
 }
