@@ -16,7 +16,7 @@
 					</a>
 				</div>
 				<div class="col-xs-3 column">
-					<a href="{{ url('home') }}">
+					<a href="{{ url('notifications') }}">
 						<img class="menu-icon" src="{{ URL::asset('icons/MessagesIconWhiteAlt.svg') }}" alt="">
 					</a>
 				</div>
