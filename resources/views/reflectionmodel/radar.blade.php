@@ -10,9 +10,9 @@
       @foreach($radar->radars_options as $option)
         <div class="reflectionchoice">
           <label for="reflectionchoice">{{$option->name}}</label>
-          <div class="arrow"><i class="fa fa-arrow-down" aria-hidden="true"></i></div>
+          <div class="arrow" style="background-color: {{$radar->color}};"><i class="fa fa-arrow-down" aria-hidden="true"></i></div>
         </div>
-        <div class="reflectionchoice-open">
+        <div class="reflectionchoice-open" style="border: 1px solid {{$radar->color}}; border-top: none;">
           <p for="reflectionchoice-open">{!!html_entity_decode($option->info)!!}</p>
         </div>
       @endforeach
