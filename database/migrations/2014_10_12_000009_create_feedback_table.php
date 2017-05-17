@@ -24,6 +24,7 @@ class CreateFeedbackTable extends Migration
       });
       Schema::table('feedback', function (Blueprint $table) {
           $table->foreign('reflection_id')->references('id')->on('reflections');
+          $table->foreign('user_id')->references('id')->on('users');
       });
     }
 
