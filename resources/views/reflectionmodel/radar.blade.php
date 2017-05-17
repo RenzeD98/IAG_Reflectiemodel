@@ -16,6 +16,5 @@
           <p for="reflectionchoice-open">{{$option->info}}</p>
         </div>
       @endforeach
-
 </div>
 @endsection
