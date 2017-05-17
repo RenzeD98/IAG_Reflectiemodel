@@ -188,7 +188,7 @@ class RadarsOptionsTableSeeder extends Seeder
 
           [
             'radar_id' => '4',
-            'name' => 'one-up / one-donw',
+            'name' => 'one-up / one-down',
             'info' => '
               Up<br>
               <ul>
