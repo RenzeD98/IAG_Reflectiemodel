@@ -17,6 +17,7 @@ class CreateRadarsTable extends Migration
           $table->increments('id')->unsigned();
           $table->string('name')->nullable();
           $table->string('description')->nullable();
+          $table->string('color');
           $table->timestamps();
       });
     }
