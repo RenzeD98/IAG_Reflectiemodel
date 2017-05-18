@@ -7,12 +7,15 @@
     <div class="panel-heading">Notificaties</div>
     <div class="panel-body">
       <ul class="nav nav-tabs">
-        <li class="active"><a data-toggle="tab" href="#ontvangen">Ontvangen</a></li>
-        <li><a data-toggle="tab" href="#gelezen">Gelezen</a></li>
+        <li class="active">
+          <a data-toggle="tab" href="#ontvangen">Ontvangen</a>
+        </li>
+        <li>
+          <a data-toggle="tab" href="#gelezen">Gelezen</a>
+        </li>
       </ul>
       <div class="tab-content">
         <div id="ontvangen" class="tab-pane fade in active">
-          
           @if(empty($unread))
             <span>U heeft nog geen ongelezen berichten</span>
           @else
@@ -46,8 +49,8 @@
                   <img class="img-circle" src="http://placehold.it/50x50" alt="">
                 </div>
                 <div class="col-xs-9">
-                 <a href="/feedback/{{ $ur['data']['reflection'] }}/view">
-                    <span class="title">{{ $ur['data']['title'] }}</span>
+                 <a href="/feedback/{{ $r['data']['reflection'] }}/view">
+                    <span class="title">{{ $r['data']['title'] }}</span>
                   </a>
                 </div>
               </div>   
