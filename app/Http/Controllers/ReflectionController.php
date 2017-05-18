@@ -67,4 +67,7 @@
       $reflection = Reflection::where('id', $id)->first();  
       return view('reflection.update', compact('reflection'));
     }
+    public function deleteReflection($id){
+      echo 'Working on this ';
+    }
 }

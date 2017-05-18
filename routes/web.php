@@ -32,6 +32,7 @@ Route::get('reflectie/{id}/update', 'ReflectionController@updateReflection')->mi
 Route::post('reflectie/update', 'ReflectionController@storeReflection')->middleware('auth');
 Route::get('reflectie/create', 'ReflectionController@newReflection')->middleware('auth');
 Route::post('reflectie/create', 'ReflectionController@storeReflection')->middleware('auth');
+Route::post('reflectie/delete', 'ReflectionController@deleteReflection')->middleware('auth');
 
 //feedback routes
 Route::get('feedback', 'FeedbackCOntroller@index')->middleware('auth');
