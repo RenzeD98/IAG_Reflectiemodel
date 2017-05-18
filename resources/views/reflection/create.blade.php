@@ -14,8 +14,6 @@
   <div class="panel panel-default">
     <div class="panel-heading">Reflectie toevoegen</div>
       <div class="panel-body">
-      <form method="POST" action="/reflectie/create">
-      <input type="hidden" name="_token" value="{{ csrf_token() }}">
       <div class="reflection-model" id="reflection-model">
           <label for="reflection-model">Bekijk het reflectiemodel</label>
           <div class="arrow"><i class="fa fa-arrow-down" aria-hidden="true"></i></div>
@@ -43,6 +41,8 @@
             <hr>
         </div>
       </div>
+      <form method="POST" action="/reflectie/create">
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <div class="form-group">
           <label for="title">Titel</label>
           <input type="text" class="form-control" id="title" placeholder="Titel" name="title">

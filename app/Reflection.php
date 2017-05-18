@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Reflection extends Model
 {
-    protected $fillable = ['title', 'message'];
+    protected $fillable = ['title', 'message','tags'];
 
     public function feedback()
     {

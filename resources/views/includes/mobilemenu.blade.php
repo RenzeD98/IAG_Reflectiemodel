@@ -16,8 +16,9 @@
 					</a>
 				</div>
 				<div class="col-xs-3 column">
-					<a href="{{ url('notifications') }}">
+					<a href="{{ url('notifications') }}" class="notificationIcon">
 						<img class="menu-icon" src="{{ URL::asset('icons/MessagesIconWhiteAlt.svg') }}" alt="">
+						<span class="notificationCount">{{$notificationCount}}</span>
 					</a>
 				</div>
 	</div>

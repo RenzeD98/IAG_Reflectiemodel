@@ -10,7 +10,6 @@
       $id = Auth::id();
       $reflections = Reflection::where('user_id', $id)
         ->orderBy('created_at', 'desc')
-        ->take(10)
         ->get(); 
 
       foreach($reflections as $reflection){
@@ -25,7 +24,6 @@
     }
     //Store the new reflection 
     public function storeReflection(Request $request){
-
       $this->validate($request, [
         'title' => 'max:255',
         'message' => 'required|min:1|max:5000',
@@ -37,17 +35,18 @@
         $reflection = new Reflection;
         $reflection->title = $request->title;
         $reflection->message = $request->message;
-        $reflection->tags = 'tag1';
+        $reflection->tags = $request->tags;
         $reflection->user_id = Auth::id();
         $reflection->save();
+
       }else{
         $reflection = Reflection::find($request->id);
         $reflection->title = $request->title;
         $reflection->message = $request->message;
-        $reflection->tags = 'tag1';
+        $reflection->tags = $request->tags;
         $reflection->save();
       }
-
+      
       return redirect('/reflecties');
     }
     //Specific reflection form
