@@ -54,3 +54,4 @@ Route::get('reflectionmodel/{id}', 'ReflectionModelController@radar');
 //Notifications routes
 Route::get('/notifications', 'NotificationController@index');
 Route::get('/notification/{id}/view', 'NotificationController@view');
+Route::get('/notification/{id}/markAsRead', 'NotificationController@markAsRead');

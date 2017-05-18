@@ -8467,6 +8467,22 @@ div#content {
   float: right;
 }
 
+a.notificationIcon:hover {
+  text-decoration: none;
+}
+
+.notificationCount {
+  color: red;
+  font-weight: bold;
+  border: 2px solid red;
+  font-size: 14px;
+  padding: 0px 6px 0px 6px;
+  border-radius: 50%;
+  position: relative;
+  left: 30px;
+  top: -50px;
+}
+
 .button {
   border-radius: 4px;
   -webkit-transition: background 0.2s ease-in;
@@ -9014,6 +9030,30 @@ body {
   margin: 0px;
 }
 
+@media screen and (max-width: 415px) {
+  .notification .column.markAsRead {
+    width: 170px;
+    position: relative;
+    padding: 0px;
+    right: -90px;
+    top: -15px;
+  }
+
+  .notification .notificationItem {
+    min-height: 100px;
+  }
+
+  .notification .notificationItem img {
+    position: relative;
+    top: 20px;
+  }
+
+  .notification .notificationItem.read .title {
+    position: relative;
+    top: 20px;
+  }
+}
+
 .notification .nav.nav-tabs li {
   width: 50%;
   border: 1px solid #ddd;
@@ -9031,6 +9071,8 @@ body {
   border: none !important;
   margin-right: 0px;
   border-radius: 0px;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .notification .nav-tabs > li > a:hover {
@@ -9049,7 +9091,8 @@ body {
   border-right: 1px solid #6D6D6D;
   border-left: 1px solid #6D6D6D;
   border-bottom: 1px solid #6D6D6D;
-  padding-bottom: 80px;
+  padding-bottom: 40px;
+  padding-top: 40px;
 }
 
 .notification .notificationItem {
@@ -9057,7 +9100,6 @@ body {
   line-height: 59px;
   vertical-align: middle;
   border-bottom: 1px solid #ddd;
-  margin-bottom: 14px;
 }
 
 .notification .notificationItem .title {
@@ -9071,4 +9113,3 @@ body {
   color: #333;
   font-style: italic;
 }
-

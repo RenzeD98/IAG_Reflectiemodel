@@ -4,12 +4,11 @@
 <div class="container reflection">
     @foreach($reflections as $reflection)
         <div class="row">
-
-        <div class="col-md-12 head">
-          <img class="img-circle" src="http://placehold.it/50x50" alt="">
-          <a href="/reflectie/{{ $reflection->id }}/view">{{ $reflection->title }}</a>
-          <span class="date">{{ $reflection->created_at }}</span>
-        </div>
+          <div class="col-md-12 head">
+            <img class="img-circle" src="http://placehold.it/50x50" alt="">
+            <a href="/reflectie/{{ $reflection->id }}/view">{{ $reflection->title }}</a>
+            <span class="date">{{ $reflection->created_at }}</span>
+          </div>
 
           <div class="col-md-12 message">
             <p>{{ $reflection->message }}</p>
