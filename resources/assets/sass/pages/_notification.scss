@@ -30,11 +30,13 @@
 	}
 	.nav-tabs > li > a
 	{
-	  background-color:#6d6d6d; 
-	  color:#fff;
-	  border:none !important;
-	  margin-right:0px;
-	  border-radius:0px;
+		background-color:#6d6d6d; 
+		color:#fff;
+		border:none !important;
+		margin-right:0px;
+		border-radius:0px;
+		font-weight: bold;
+		font-size: 16px;
 	}
 
 
@@ -57,7 +59,8 @@
 	  border-right:1px solid #6D6D6D;
 	  border-left:1px solid #6D6D6D;
 	  border-bottom:1px solid #6D6D6D;
-	  padding-bottom:80px;
+	  padding-bottom:40px;
+	  padding-top:40px;
 	}
 
 	.notificationItem

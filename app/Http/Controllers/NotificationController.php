@@ -31,7 +31,7 @@ class NotificationController extends Controller
 
       return view('notification.index', compact('notifications','read','unread'));
     }
-    /*
+    
     public function view()
     {
       $id = Auth::id();
@@ -43,7 +43,7 @@ class NotificationController extends Controller
 
       return view('notification.index');
     }
-    */
+
     public static function countUnread()
     {
       $user = Auth::User();

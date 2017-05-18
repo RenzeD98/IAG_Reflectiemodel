@@ -17,7 +17,6 @@
             <span>U heeft nog geen ongelezen berichten</span>
           @else
             @foreach($unread as $ur)   
-
               <div class="row notificationItem unread">
                 <div class="col-xs-3 head">
                   <img class="img-circle" src="http://placehold.it/50x50" alt="">
@@ -41,19 +40,17 @@
           @if(empty($read))
             <span>U heeft nog geen berichten</span>
           @else
-            @foreach($read as $r)
-              <a href="/feedback/{{ $r['data']['reflection'] }}/view">
-                <div class="row notificationItem read">
-                  <div class="col-xs-3 head">
-                    <img class="img-circle" src="http://placehold.it/50x50" alt="">
-                  </div>
-                  <div class="col-xs-9">
-                   <a href="/feedback/{{ $ur['data']['reflection'] }}/view">
-                      <span class="title">{{ $ur['data']['title'] }}</span>
-                    </a>
-                  </div>
+            @foreach($read as $r)    
+              <div class="row notificationItem read">
+                <div class="col-xs-3 head">
+                  <img class="img-circle" src="http://placehold.it/50x50" alt="">
                 </div>
-              </a>   
+                <div class="col-xs-9">
+                 <a href="/feedback/{{ $ur['data']['reflection'] }}/view">
+                    <span class="title">{{ $ur['data']['title'] }}</span>
+                  </a>
+                </div>
+              </div>   
             @endforeach
           @endif
         </div>
