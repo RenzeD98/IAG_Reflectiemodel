@@ -24,20 +24,20 @@
         <div class="container reflectiemodel">
             <div class="reflectioncontainer">
                 <div class="topleft">
-                    <a id="page-loader" link="/reflectionmodel/8"><img src="{{ URL::asset('images/custom.png') }}" alt="" class="custom"></a>
-                    <a id="page-loader" link="/reflectionmodel/7"><img src="{{ URL::asset('images/transparent.png') }}" alt="" class="transparant"></a>
+                    <a class="page-loader" link="/reflectionmodel/8"><img src="{{ URL::asset('images/custom.png') }}" alt="" class="custom"></a>
+                    <a class="page-loader" link="/reflectionmodel/7"><img src="{{ URL::asset('images/transparent.png') }}" alt="" class="transparant"></a>
                 </div>
                 <div class="topright">
-                    <a id="page-loader" link="/reflectionmodel/1"><img src="{{ URL::asset('images/theory.png') }}" alt="" class="theorie"></a>
-                    <a id="page-loader" link="/reflectionmodel/3"><img src="{{ URL::asset('images/model.png') }}" alt="" class="model"></a>
+                    <a class="page-loader" link="/reflectionmodel/1"><img src="{{ URL::asset('images/theory.png') }}" alt="" class="theorie"></a>
+                    <a class="page-loader" link="/reflectionmodel/3"><img src="{{ URL::asset('images/model.png') }}" alt="" class="model"></a>
                 </div>
                 <div class="bottomleft">
-                    <a id="page-loader" href="/reflectionmodel/6"><img src="{{ URL::asset('images/feedback.png') }}" alt="" class="feedback"></a>
-                    <a id="page-loader" href="/reflectionmodel/5"><img src="{{ URL::asset('images/methodology.png') }}" alt="" class="methodiek"></a>
+                    <a class="page-loader" link="/reflectionmodel/6"><img src="{{ URL::asset('images/feedback.png') }}" alt="" class="feedback"></a>
+                    <a class="page-loader" link="/reflectionmodel/5"><img src="{{ URL::asset('images/methodology.png') }}" alt="" class="methodiek"></a>
                 </div>
                 <div class="bottomright">
-                    <a id="page-loader" href="/reflectionmodel/2"><img src="{{ URL::asset('images/focus.png') }}" alt="" class="gerichtheid"></a>
-                    <a id="page-loader" href="/reflectionmodel/4"><img src="{{ URL::asset('images/strategy.png') }}" alt="" class="strategie"></a>
+                    <a class="page-loader" link="/reflectionmodel/2"><img src="{{ URL::asset('images/focus.png') }}" alt="" class="gerichtheid"></a>
+                    <a class="page-loader" link="/reflectionmodel/4"><img src="{{ URL::asset('images/strategy.png') }}" alt="" class="strategie"></a>
                 </div>
             </div>
             <hr>
