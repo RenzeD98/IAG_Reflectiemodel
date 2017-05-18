@@ -5,7 +5,7 @@
     <div class="panel panel-default">
         <div class="header">
             <a href="{{ url('profiel') }}">
-                <img src="https://pbs.twimg.com/profile_images/689125864731242496/DGU2F799.jpg" alt="Profiel afbeelding">
+                <img src="http://lumee-shop.ro/wp-content/uploads/2014/06/buddy.png" alt="Profiel afbeelding">
                 <span class="name">Welkom: {{ Auth::user()->firstname }} {{ Auth::user()->lastname }}</span>
             </a>
             <!-- <span class="function">IAG hulpverlener</span> -->

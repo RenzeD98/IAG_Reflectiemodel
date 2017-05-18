@@ -15,8 +15,8 @@
         <div class="row row-centered">
             <a href="{{ url('reflecties') }}">
                 <div class="col-xs-6 col-centerd column">
-                     <img src="icons/ReflectionsIcon.svg" alt="Reflectie icoon">
-                     <span class="subtitle">Mijn Reflectie</span>
+                     <img src="icons/GiveFeedbackIcon.svg" alt="Reflectie icoon">
+                     <span class="subtitle">Mijn Reflecties</span>
                 </div>
             </a>
             <a href="{{ url('reflectionmodel') }}">
@@ -30,14 +30,14 @@
         <div class="row row-centered">
              <a href="{{ url('feedback') }}">
                 <div class="col-xs-6 col-centerd column">
-                     <img src="icons/FeedbackIcon.svg" alt="Reflectie icoon">
-                     <span class="subtitle">Mijn feedback</span>
+                     <img src="icons/FeedbackIconQuestion.svg" alt="Reflectie icoon">
+                     <span class="subtitle">Feedback Geven</span>
                 </div>
             </a>
             <a href="{{ url('archief') }}">
                 <div class="col-xs-6 col-centerd column col-xs-offset-2">
                     <img src="icons/ArchiveIcon.svg" alt="Reflectie icoon">
-                    <span class="subtitle">Archief</span>
+                    <span class="subtitle">Mijn Archief</span>
                 </div>
             </a>
         </div>
