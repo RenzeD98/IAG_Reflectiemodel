@@ -27,7 +27,7 @@
                             <input required type="text" name="function" value="">
                         </div>
                         <div class="form-group">
-                            <label for="email">Eravaring met IAG Model:</label>
+                            <label for="email">Jaren ervaring met IAG Model:</label>
                             <input required type="text" name="experiance" value="">
                         </div>
                         <hr>
@@ -40,7 +40,7 @@
                             <label for="email">Mobielenummer:</label>
                             <input required type="text" name="phone" value="">
                         </div>
-                        <button type="submit" name="button" class="btn save-button"><i class="fa fa-floppy-o" aria-hidden="true"></i> Opslaan</button>
+                        <button type="submit" name="button" class="btn save-button button-left"><i class="fa fa-floppy-o" aria-hidden="true"></i> Opslaan</button>
                     </form>
                     @endforeach
         </div>
