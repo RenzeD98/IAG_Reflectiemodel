@@ -2,10 +2,10 @@
 
 @section('content')
   <div class="container feedback">
+    @foreach($reflections as $reflection)
     <div class="panel panel-default">
-      <div class="panel-heading">Reflectie lijst</div>
+      <div class="panel-heading">Lijst met uw gegeven feedback</div>
       <div class="panel-body">
-        @foreach($reflections as $reflection)
           <div class="row reflectionItem">
             <div class="col-md-12 head">
               <img class="img-circle" src="http://placehold.it/50x50" alt="">
