@@ -35,111 +35,107 @@
 	}
 }
 
-	.button{
-		@include border-radius(4px);
-		@include transition(0.2s);
-		background-color: $green;
-		color:#fff !important;
-		padding: 4px 12px 4px 12px;
-		text-decoration: none;
-		font-size:16px;
-		border:2px solid #ddd;
-		border-width: thin;
+.button
+{
+	@include border-radius(4px);
+	@include transition(0.2s);
+	background-color: $green;
+	color:#fff !important;
+	padding: 4px 12px 4px 12px;
+	text-decoration: none;
+	font-size:16px;
+	border:2px solid #ddd;
+	border-width: thin;
 
-	}
-	.button:hover{
-	  background-color:#666666;
-	  text-decoration:none;
-	}
+}
 
-	.addNewItemButton
-	{
-	  position: fixed;
-	  right: 20px;
-	  bottom: 20px;
-	  width: 50px;
-	  height: 50px;
-		margin-bottom: 50px;
+.button:hover
+{
+  background-color:#666666;
+  text-decoration:none;
+}
 
-	  text-align: center;
-	  background-color: green;
-	  @include border-radius(100%);
+.fa-plus-circle
+{
+position: fixed;
+right: 20px;
+bottom: 20px;
+margin-bottom: 55px;
+ font-size: 50px;
+ color: $green;
+}
 
-	  font-weight: lighter;
-	  font-size: 33px;
-	  color: white;
-	  text-decoration: none;
+.loader_icon
+{
+	margin: auto;
+	display: block;
+	max-width: 75px;
+	width: 100%;
+}
 
-	  box-shadow: 0px 5px 10px #666;
-	}
+.ajax-header
+{
+  height: 50px;
+  background: darkgray;
+  border-radius: 5px;
+	padding: 11px 10px;
+}
 
-	.addNewItemButton:hover
-	{
-	  text-decoration: none;
-	  color: white;
-	}
+.ajax-content
+{
+	display: none;
+  width: 100%;
+  position: absolute;
+  top: 65px;
+  left: 0;
+  margin-bottom: 50px;
+	border-style: solid;
+  border-radius: 5px;
+  border-width: thin;
+	background-color: white;
+}
 
-	.loader_icon {
-		margin: auto;
-		display: block;
-		max-width: 75px;
-		width: 100%;
-	}
+.row-centered
+{
+  text-align: center;
+	padding: 5px 20px;
+}
 
-	.ajax-header {
-    height: 50px;
-    background: darkgray;
-    border-radius: 5px;
-		padding: 11px 10px;
-	}
+.save-button
+{
+  background-color: #5cb85c;
+  padding: 5px 15px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: thin;
+  color: white;
+}
 
-	.ajax-content {
-		display: none;
-    width: 100%;
-    position: absolute;
-    top: 65px;
-    left: 0;
-    margin-bottom: 50px;
-		border-style: solid;
-    border-radius: 5px;
-    border-width: thin;
-		background-color: white;
-	}
+.arrow
+{
+  float: right;
+}
 
-	.row-centered {
-    text-align: center;
-		padding: 5px 20px;
-	}
+.col-xs-offset-2
+{
+  margin-left: 10%;
+}
 
-	.save-button {
-    background-color: #5cb85c;
-    padding: 5px 15px;
-    border-radius: 5px;
-    border-style: solid;
-    border-width: thin;
-    color: white;
-	}
+.col-xs-6
+{
+  	width: 45%;
+}
 
-	.arrow {
-    float: right;
-	}
+	#reflection-model-open
+  {
+    display: none;
+}
 
-	.col-xs-offset-2 {
-    margin-left: 10%;
-	}
-
-	.col-xs-6 {
-    	width: 45%;
-	}
-
-		#reflection-model-open {
-	    display: none;
-	}
-
-	body {
-    font-family: "Quicksand", sans-serif;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #333333;
-    background-color: #fff;
+body
+{
+  font-family: "Quicksand", sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333333;
+  background-color: #fff;
 }
