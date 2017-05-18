@@ -5,12 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use App\Notification;
+use Carbon\Carbon;
 
 class NotificationController extends Controller
 {
 		public function __construct()
     {
-        
+      $this->middleware('auth');
     }
 
     public function index()
@@ -30,7 +31,7 @@ class NotificationController extends Controller
 
       return view('notification.index', compact('notifications','read','unread'));
     }
-
+    
     public function view()
     {
       $id = Auth::id();
@@ -43,12 +44,27 @@ class NotificationController extends Controller
       return view('notification.index');
     }
 
-    
-    /*
-    public function delete($id) {
-      $notification = Auth::user()->notifications()->findOrFail($id);
-      $notification->delete();
-      //return back();
+    public static function countUnread()
+    {
+      $user = Auth::User();
+      $notifications = $user->notifications;
+      $unread = array();
+
+      foreach($notifications as $n){
+        if(!$n->read_at) $unread[] = $n;
+      }
+      $amount = count($unread);
+      if(empty($amount)) $amount = '';
+      return $amount;
     }
-    */
+
+    public function markAsRead($id) {
+      //$notification = Auth::user()->notifications()->findOrFail($id);
+
+      $notification = Notification::find($id);
+      $notification->read_at = Carbon::now();
+      $notification->save();
+      return back();
+    }
+    
 }

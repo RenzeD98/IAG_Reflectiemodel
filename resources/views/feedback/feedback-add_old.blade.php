@@ -6,8 +6,10 @@
         <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading">Feedback toevoegen</div>
-
                 <div class="panel-body">
+                    @if (Session::has('message'))
+                      <div class="alert alert-success">{{ Session::get('message') }}</div>
+                    @endif
                     <form method="post">
                       <input type="hidden" name="_token" value="{{ csrf_token() }}">
                       <h5>Onderwerp:</h5>

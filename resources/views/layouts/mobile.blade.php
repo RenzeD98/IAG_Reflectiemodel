@@ -5,7 +5,6 @@
 </head>
 <body>
     <div id="app">
-
         <div id="header">
             <nav class="navbar navbar-default navbar-static-top">
                 @include('includes.header')
