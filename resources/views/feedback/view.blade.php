@@ -4,7 +4,7 @@
 <div class="container feedback">
    <div class="navigation">
     <a href="/feedback" class="button"><i class="fa fa-chevron-left" aria-hidden="true"></i>
-      Terug naar reflecties
+      Terug naar Mijn Reflecties
     </a>
   </div>
 
@@ -29,7 +29,7 @@
         <div class="col-md-6">
           @foreach($reflection->tags as $tag)
             <span class="tag">{{ $tag }}</span>
-          @endforeach        
+          @endforeach
         </div>
       </div>
     </div>
@@ -40,22 +40,22 @@
     <div class="panel-body">
       <form method="POST" action="/feedback/create">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-        <input type="hidden" name="id" value="{{ $reflection->id }}"> 
-        <input type="hidden" name="user_id" value="{{ $reflection->user_id }}"> 
+        <input type="hidden" name="id" value="{{ $reflection->id }}">
+        <input type="hidden" name="user_id" value="{{ $reflection->user_id }}">
         <div class="form-group {{ $errors->has('title') ? ' has-error' : '' }}">
           <label for="title">Titel</label>
           <input type="text" class="form-control" id="title" placeholder="Titel" name="title" minlength="1" maxlength="255" value="{{ old('title') }}">
-          
+
         </div>
         <div class="form-group {{ $errors->has('message') ? ' has-error' : '' }}">
           <label for="reflection">Feedback:</label>
           <textarea class="form-control" rows="5" id="reflection" name="message"
           >{{ old('message') }}</textarea><!--minlength="1" maxlength="5000"-->
         </div>
-        
+
         <button type="submit" class="button feedback" style="float:right;">Verstuur</button>
       </form>
-      </div 
+      </div
     </div>
   </div>
 
@@ -64,8 +64,8 @@
     <div class="panel-body">
       <!--
       <div class="sorting">
-        <form method="GET" action="/feedback/view/">      
-          <span class="">Sorteren op: </span> 
+        <form method="GET" action="/feedback/view/">
+          <span class="">Sorteren op: </span>
           <select name="sorting">
             <option value="recent">Meest recent</option>
             <option value="rating">Best beoordeeld</option>
@@ -76,14 +76,14 @@
       </div>
       -->
       @foreach($reflection->feedback as $fb)
-      <div class="row commentItem">      
+      <div class="row commentItem">
         <div class="col-md-1 col-xs-2 rating" >+3</div>
         <div class="col-md-11 col-xs-10 content">
           <span class="title">{{ $fb->title }} - </span>
-          <span class="user">{{ $fb->user->id }}</span>  
+          <span class="user">{{ $fb->user->id }}</span>
           <span class="date">{{ $fb->created_at }}</span>
           <p class="description">{{ $fb->messages }}</p>
-          <!--<div class="head">     
+          <!--<div class="head">
             <div class="rateComment" style="float:right;">
               <button class="rate down">-1</button>
               <button class="rate up">+1</button>

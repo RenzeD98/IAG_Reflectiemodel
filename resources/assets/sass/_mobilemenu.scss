@@ -37,3 +37,14 @@ div#mobile-menu {
 div#content {
     padding-bottom: 50px;
 }
+
+@media screen and(max-width: $break-phone)
+{
+  #header{
+    display: none;
+  }
+  #content {
+    padding-bottom: 50px;
+    margin-top: 15px;
+  }
+}
