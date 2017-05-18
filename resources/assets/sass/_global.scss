@@ -88,7 +88,7 @@
 
 	.ajax-header {
     height: 50px;
-    background: darkgray;
+    background: #f5f5f5;
     border-radius: 5px;
 		padding: 11px 10px;
 	}
@@ -120,16 +120,20 @@
     color: white;
 	}
 
+	.button-left {
+		float: left;
+	}
+
 	.arrow {
     float: right;
 	}
 
 	.col-xs-offset-2 {
-    margin-left: 10%;
+    margin-left: 5%;
 	}
 
 	.col-xs-6 {
-    	width: 45%;
+    	width: 47%;
 	}
 
 		#reflection-model-open {
