@@ -2,36 +2,20 @@
 
 @section('content')
 <div class="container feedback">
-   <div class="navigation">
-    <a href="/feedback" class="button"><i class="fa fa-chevron-left" aria-hidden="true"></i>
-      Terug naar Mijn Reflecties
-    </a>
-  </div>
-
   @if (Session::has('message'))
     <div class="alert alert-success">{{ Session::get('message') }}</div>
   @endif
-
   <div class="panel panel-default">
-    <div class="panel-heading">Reflectie titel</div>
+    <div class="panel-heading title">{{ $reflection->title }}
+      <span class="date">{{ $reflection->created_at }}</span>
+    </div>
     <div class="panel-body">
-      <div class="row reflectionItem">
-        <div class="col-md-12 head">
-          <img class="img-circle" src="http://placehold.it/50x50" alt="">
-          <span class="title">{{ $reflection->title }}</span>
-          <span class="date">{{ $reflection->created_at }}</span>
-        </div>
-
-        <div class="col-md-12 message">
+        <div class="message">
           <p>{{ $reflection->message }}</p>
         </div>
-
-        <div class="col-md-6">
           @foreach($reflection->tags as $tag)
             <span class="tag">{{ $tag }}</span>
           @endforeach
-        </div>
-      </div>
     </div>
   </div>
 
@@ -43,9 +27,8 @@
         <input type="hidden" name="id" value="{{ $reflection->id }}">
         <input type="hidden" name="user_id" value="{{ $reflection->user_id }}">
         <div class="form-group {{ $errors->has('title') ? ' has-error' : '' }}">
-          <label for="title">Titel</label>
+          <label for="title">Titel:</label>
           <input type="text" class="form-control" id="title" placeholder="Titel" name="title" minlength="1" maxlength="255" value="{{ old('title') }}">
-
         </div>
         <div class="form-group {{ $errors->has('message') ? ' has-error' : '' }}">
           <label for="reflection">Feedback:</label>
@@ -53,9 +36,9 @@
           >{{ old('message') }}</textarea><!--minlength="1" maxlength="5000"-->
         </div>
 
-        <button type="submit" class="button feedback" style="float:right;">Verstuur</button>
+        <button type="submit" class="btn save-button" style="float:right;"><i class="fa fa-floppy-o" aria-hidden="true"></i> Verstuur</button>
       </form>
-      </div
+      </div>
     </div>
   </div>
 
@@ -92,6 +75,5 @@
       </div>
     </div>
   @endforeach
-
 </div>
 @endsection
