@@ -28,7 +28,6 @@ class NotificationController extends Controller
           $read[] = $n;
         }
       }
-
       return view('notification.index', compact('notifications','read','unread'));
     }
     
