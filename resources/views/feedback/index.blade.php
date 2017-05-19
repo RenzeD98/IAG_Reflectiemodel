@@ -1,33 +1,23 @@
 @extends('layouts.mobile')
 
 @section('content')
-  <div class="container feedback">
+  <div class="container">
     @foreach($reflections as $reflection)
-    <div class="panel panel-default">
-      <div class="panel-heading">Lijst met uw gegeven feedback</div>
-      <div class="panel-body">
-          <div class="row reflectionItem">
-            <div class="col-md-12 head">
-              <img class="img-circle" src="http://placehold.it/50x50" alt="">
-              <span>{{ $reflection->title }}</span>
-              <span class="time">{{ $reflection->created_at }}</span>
-            </div>
-
-            <div class="col-md-12 message">
-              <p>{{ $reflection->message }}</p>
-            </div>
-
-            <div class="col-md-6">
-              <span class="tag">tag</span>
-            </div>
-
-            <div class="col-md-6">
-              <a href="{{ url('/feedback/' . $reflection->id .'/view') }}"  class="button" style="float:right;">Feedback geven</a>
-
-            </div>
+    <div class="panel panel-default feedback">
+          <div class="panel-heading title">
+            <span class="title">{{ $reflection->title }}</span>
+            <span class="date">{{ $reflection->created_at }}</span>
           </div>
-        @endforeach
+          <div class="panel-body">
+              <div class="message">
+                <p>{{ $reflection->message }}</p>
+              </div>
+                  <span class="tag">Test Tag</span>
+              <a href="{{ url('/feedback/' . $reflection->id .'/view') }}">
+              <button type="submit" class="btn save-button" style="float:right;"><i class="fa fa-pencil" aria-hidden="true"></i> Schrijf Feedback</button>
+              </a>
+          </div>
       </div>
-    </div>
+    @endforeach
   </div>
 @endsection

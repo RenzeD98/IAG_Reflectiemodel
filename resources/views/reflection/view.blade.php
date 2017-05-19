@@ -27,7 +27,7 @@
       <div class="col-md-6">
         @foreach($reflection->tags as $tag)
           <span class="tag">{{ $tag }}</span>
-        @endforeach        
+        @endforeach
       </div>
     </div>
 </div>
