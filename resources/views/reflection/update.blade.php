@@ -5,8 +5,12 @@
   <div class="panel panel-default">
     <div class="panel-heading">Reflectie wijzigen</div>
     <div class="panel-body">
-     <form method="POST" action="/reflectie/create">
-      <input type="hidden" name="_token" value="{{ csrf_token() }}">
+     <form method="POST" action="/reflectie/update">
+        @if (Session::has('message'))
+          <div class="alert alert-success">{{ Session::get('message') }}</div>
+        @endif
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+        <input type="hidden" name="id" value="{{ $reflection->id }}">
         <div class="form-group">
           <label for="title">Titel</label>
           <input type="text" class="form-control" id="title" placeholder="Titel" name="title" value="{{ $reflection->title }}">
@@ -20,12 +24,8 @@
           <input type="text" class="form-control" id="tags" placeholder="Tag1, tag2, tag3" name="tags" value="{{ $reflection->tags }}">
         </div>
         
-        <button type="submit" class="btn btn-default">Verstuur</button>
+        <button type="submit" class="btn button update" style="float:right;">update</button>
       </form>
-
-
-
-
     </div>
   </div>
 </div>

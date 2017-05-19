@@ -16,24 +16,25 @@
 	font-size:15px;
 	padding:5px;
 	}
-
-	a:hover
-	{
-		text-decoration: none;
-		color: $blue;
-	}
-
-	i
-	{
-	  margin-right:5px;
-	}
-	.edit{
-		float:right;
-	}
-	.del{
-		float:right;
-	}
+	a:hover{text-decoration: none;color: $blue;}
+	i{margin-right:5px;}
+	.edit{float:right;}
+	.del{float:right;}
 }
+	a.notificationIcon:hover{text-decoration: none;}
+
+	.notificationCount{
+	  color: red;
+	  font-weight: bold;
+	  border:2px solid red;
+	  font-size:14px;
+	  padding:0px 6px 0px 6px;
+	  border-radius:50%;
+	  position: relative;
+	  left:30px;
+	  top:-50px;
+
+	}
 
 .button
 {
