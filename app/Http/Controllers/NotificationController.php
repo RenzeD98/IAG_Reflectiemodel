@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
-use App\Notification;
+use Notification;
 use Carbon\Carbon;
+use User;
 
 class NotificationController extends Controller
 {
@@ -45,16 +46,23 @@ class NotificationController extends Controller
 
     public static function countUnread()
     {
-      $user = Auth::User();
-      $notifications = $user->notifications;
-      $unread = array();
+      if (Auth::check())
+      {
+        $user = Auth::User();
+        $notifications = $user->notifications;
 
-      foreach($notifications as $n){
-        if(!$n->read_at) $unread[] = $n;
+        $unread = array();
+
+        foreach($notifications as $n){
+          if(!$n->read_at) $unread[] = $n;
+        }
+
+        $amount = count($unread);
+        if($amount > 0) return $amount;    
+
       }
-      $amount = count($unread);
-      if(empty($amount)) $amount = '';
-      return $amount;
+
+      return 0;
     }
 
     public function markAsRead($id) {
