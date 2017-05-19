@@ -1,60 +1,89 @@
 .notification
 {		
+	//Mark as read notifications
+	@media screen and (max-width: 415px) {
+	  .column.markAsRead
+	  {
+	    width:170px;
+	    position:relative;
+	    padding:0px;
+	    right:-90px;
+	    top:-15px;
+	  }
+	 
+	  .notificationItem{min-height: 100px;} 
+	  .notificationItem img {position:relative;top:20px;}
+	  .notificationItem.read .title{position: relative;top:20px;}
+	}
 
-	.nav.nav-tabs li{
+	.nav.nav-tabs li
+	{
 	  width:50%;
 	  border:1px solid #ddd;
 	  border:none !important;
 	}
 
-	.nav-tabs > li.active > a{
+	.nav-tabs > li.active > a
+	{
 	  background-color:#fff !important;
 	  color:#333 !important;
 	}
-	.nav-tabs > li > a{
-	  background-color:#6d6d6d; 
-	  color:#fff;
-	  border:none !important;
-	  margin-right:0px;
-	  border-radius:0px;
+	.nav-tabs > li > a
+	{
+		background-color:#6d6d6d; 
+		color:#fff;
+		border:none !important;
+		margin-right:0px;
+		border-radius:0px;
+		font-weight: bold;
+		font-size: 16px;
 	}
 
 
-	.nav-tabs > li > a:hover{
+	.nav-tabs > li > a:hover
+	{
 	  background-color:#6d6d6d !important; 
 	  color:#fff !important;
 	  cursor:pointer;
 	}
 
-	.nav.nav-tabs{
+	.nav.nav-tabs
+	{
 	  border-top:1px solid #6D6D6D;
 	  border-left:1px solid #6D6D6D;
 	  border-right:1px solid #6D6D6D;
 	}
 
-	.tab-content{
+	.tab-content
+	{
 	  border-right:1px solid #6D6D6D;
 	  border-left:1px solid #6D6D6D;
 	  border-bottom:1px solid #6D6D6D;
-	  padding-bottom:80px;
+	  padding-bottom:40px;
+	  padding-top:10px;
 	}
 
-	.notificationItem{
+	.notificationItem
+	{
 	  height:59px;
 	  line-height: 59px;
 	  vertical-align: middle;
 	  border-bottom:1px solid #ddd;
-	  margin-bottom:14px;
 
-	  .title{
+	  .title
+	  {
 		  text-align: left;
 		  color:#333;
 		  font-size:16px;
 		}
-		.date{
+		.date
+		{
 		  text-align: right;
 		  color:#333;
 		  font-style:italic;
 		}
+	}
+	.notificationItem:last-child{
+  		margin-bottom:0px !important;
 	}
 }

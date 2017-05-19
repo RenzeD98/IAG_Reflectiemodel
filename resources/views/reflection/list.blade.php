@@ -3,6 +3,7 @@
 @section('content')
 <div class="container reflection">
     @foreach($reflections as $reflection)
+
     <div class="panel panel-default feedback">
           <div class="panel-heading title">
             <a href="/reflectie/{{ $reflection->id }}/view">{{ $reflection->title }}</a>

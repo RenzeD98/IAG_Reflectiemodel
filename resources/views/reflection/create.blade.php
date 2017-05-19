@@ -4,7 +4,7 @@
 <div class="ajax-content">
   <div class="ajax-header">
       <div class="back-arrow">
-          <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
+          <i class="fa fa-arrow-left fa-2x" aria-hidden="true" ></i>
       </div>
   </div>
   <div class="page-loader-content"></div>
@@ -14,14 +14,17 @@
   <div class="panel panel-default">
     <div class="panel-heading">Reflectie toevoegen</div>
       <div class="panel-body">
-      <form method="POST" action="/reflectie/create">
-      <input type="hidden" name="_token" value="{{ csrf_token() }}">
-      <div class="reflection-model" id="reflection-model">
-          <label for="reflection-model">Bekijk het reflectiemodel</label>
-          <div class="arrow"><i class="fa fa-arrow-down" aria-hidden="true"></i></div>
-      </div>
+        @if (Session::has('message'))
+          <div class="alert alert-success">{{ Session::get('message') }}</div>
+        @endif
+        <div class="reflection-model" id="reflection-model">
+            <label for="reflection-model">Bekijk het reflectiemodel</label>
+            <div class="arrow">
+              <i class="fa fa-arrow-down" aria-hidden="true"></i>
+            </div>
+        </div>
         <div class="reflection-model-open" id="reflection-model-open">
-        <div class="container reflectiemodel">
+          <div class="container reflectiemodel">
             <div class="reflectioncontainer">
                 <div class="topleft">
                     <a class="page-loader" link="/reflectionmodel/8"><img src="{{ URL::asset('images/custom.png') }}" alt="" class="custom"></a>
@@ -43,19 +46,25 @@
             <hr>
         </div>
       </div>
+
+      <form method="POST" action="/reflectie/create">
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+        <div class="form-group {{ $errors->has('title') ? ' has-error' : '' }}">
+          <label for="title">Titel*</label>
+          <input type="text" class="form-control" id="title" placeholder="Titel" name="title" value="{{ old('title') }}">
+        </div>
+         <div class="form-group  {{ $errors->has('message') ? ' has-error' : '' }}">
+          <label for="reflection">Reflectie*</label>
+          <textarea class="form-control" rows="5" id="reflection" name="message" placeholder="Uw reflectie">
+            {{ old('message') }}
+          </textarea>
+        </div>
         <div class="form-group">
-          <label for="title">Titel</label>
-          <input type="text" class="form-control" id="title" placeholder="Titel" name="title">
+          <label for="tags">Tags, gescheiden met komma's</label>
+          <input type="text" class="form-control" id="tags" placeholder="Tag1, tag2, tag3" name="tags" value="{{ old('tags') }}">
         </div>
-         <div class="form-group">
-          <label for="reflection">Reflectie:</label>
-          <textarea class="form-control" rows="5" id="reflection" name="message"></textarea>
-        </div>
-        <div class="form-group">
-          <label for="tags">Tags, gescheiden met komma's </label>
-          <input type="text" class="form-control" id="tags" placeholder="Tag1, tag2, tag3" name="tags">
-        </div>
-        <button type="submit" class="btn save-button"><i class="fa fa-floppy-o" aria-hidden="true"></i> Verstuur</button>
+
+        <button type="submit" class="btn button save-button" style="float:right;"><i class="fa fa-floppy-o" aria-hidden="true"></i> Verstuur</button>
       </form>
     </div>
   </div>

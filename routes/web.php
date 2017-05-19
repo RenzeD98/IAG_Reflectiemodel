@@ -32,6 +32,7 @@ Route::get('reflectie/{id}/update', 'ReflectionController@updateReflection')->mi
 Route::post('reflectie/update', 'ReflectionController@storeReflection')->middleware('auth');
 Route::get('reflectie/create', 'ReflectionController@newReflection')->middleware('auth');
 Route::post('reflectie/create', 'ReflectionController@storeReflection')->middleware('auth');
+Route::post('reflectie/delete', 'ReflectionController@deleteReflection')->middleware('auth');
 
 //feedback routes
 Route::get('feedback', 'FeedbackCOntroller@index')->middleware('auth');
@@ -54,3 +55,4 @@ Route::get('reflectionmodel/{id}', 'ReflectionModelController@radar');
 //Notifications routes
 Route::get('/notifications', 'NotificationController@index');
 Route::get('/notification/{id}/view', 'NotificationController@view');
+Route::get('/notification/{id}/markAsRead', 'NotificationController@markAsRead');
