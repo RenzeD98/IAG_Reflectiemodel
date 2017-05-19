@@ -6,19 +6,18 @@
 	    		</a>
 		    </div>
 		    <div class="col-xs-3 column">
-	    		<a href="{{ url('home') }}">
-
-					</a>
+	    		<a href="{{ url('home') }}"></a>
 				</div>
 				<div class="col-xs-3 column">
-					<a href="{{ url('home') }}">
-
-					</a>
+					<a href="{{ url('home') }}"></a>
 				</div>
 				<div class="col-xs-3 column">
 					<a href="{{ url('notifications') }}" class="notificationIcon">
-						<img class="menu-icon" src="{{ URL::asset('icons/MessagesIconWhiteAlt.svg') }}" alt="">
-						<span class="notificationCount">{{$notificationCount}}</span>
+						<img class="menu-icon" 
+						src="{{ URL::asset('icons/MessagesIconWhiteAlt.svg') }}" alt="">
+						@if(!empty($notificationCount))
+							<span class="notificationCount">{{$notificationCount}}</span>
+						@endif
 					</a>
 				</div>
 	</div>

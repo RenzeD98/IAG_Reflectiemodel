@@ -11,39 +11,43 @@
       <!--<span class="function">IAG hulpverlener</span>-->
     </div>
     <div class="panel panel-body">
+      @if (Session::has('message'))
+        <div class="alert alert-success">{{ Session::get('message') }}</div>
+      @endif
       <div class="row row-centered">
-        In het onderstaande scherm kunt u uw accountgegevens aanpassen. Omdat uw account strikt persoonlijk is, is het niet mogelijk uw voor/achternaam meer te wijzigen.
-        @foreach ($users as $User)
-          <form class="user-panel" method="post">
-            <div class="form-group">
-              <label for="email">Voornaam:</label>
-              <input required disabled type="text" name="firstname" value="{{$User->firstname}}">
+        Hier kunt u uw accountgegevens aanpassen. Uw account gegevens zijn strikt persoonlijk. Het niet mogelijk om uw voor/achternaam te wijzigen.
+        <form method="post" action="mydetails">
+          <input type="hidden" name="_token" value="{{ csrf_token() }}">
+
+            <div class="form-group {{ $errors->has('firstname') ? ' has-error' : '' }}">
+              <label for="firstname">Voornaam:</label>
+              <input required disabled type="text" name="firstname" id="firstname" value="{{$user->firstname}}">
             </div>
-            <div class="form-group">
-                <label for="email">Achternaam:</label>
-                <input required disabled type="text" name="lastname" value="{{$User->lastname}}">
+            <div class="form-group {{ $errors->has('lastname') ? ' has-error' : '' }}">
+                <label for="lastname">Achternaam:</label>
+                <input required disabled type="text" name="lastname" value="{{$user->lastname}}">
             </div>
-            <div class="form-group">
-                <label for="email">Functie:</label>
-                <input required type="text" name="function" value="">
+            <div class="form-group {{ $errors->has('function') ? ' has-error' : '' }}">
+                <label for="function">Functie:</label>
+                <input  type="text" name="function" id="function" value="">
             </div>
-            <div class="form-group">
-                <label for="email">Jaren ervaring met IAG Model:</label>
-                <input required type="text" name="experiance" value="">
+            <div class="form-group {{ $errors->has('experience') ? ' has-error' : '' }}">
+                <label for="experience">Jaren ervaring met IAG Model:</label>
+                <input  type="text" name="experience" id="experience" value="">
             </div>
             <hr>
-            <span class="span-heading">Privegegevens:</span>
-            <div class="form-group">
+            <legend>Privegegevens:</legend>
+            <div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
                 <label for="email">E-Mail:</label>
-                <input required type="text" name="email" value="">
+                <input  type="text" name="email" id="email" value="">
             </div>
-            <div class="form-group">
-                <label for="email">Mobielenummer:</label>
-                <input required type="text" name="phone" value="">
+            <div class="form-group {{ $errors->has('phone') ? ' has-error' : '' }}">
+                <label for="phone">Mobielenummer:</label>
+                <input  type="text" name="phone" value="" id="phone">
             </div>
             <button type="submit" class="btn button save-button" style="float:right;"><i class="fa fa-floppy-o" aria-hidden="true"></i> Opslaan</button>
-          </form>
-          @endforeach
+        
+        </form>
         </div>
       </div>
     </div>
