@@ -35,6 +35,7 @@ class MyDetailsController extends Controller
       'function'    => 'max:255',
     ]);*/
 		
+    var_dump($request->firstname);
 
     $id = Auth::id();
     $user = User::find($id);
