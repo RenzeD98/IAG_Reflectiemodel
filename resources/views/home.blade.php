@@ -5,7 +5,7 @@
     <div class="panel panel-default">
         <div class="header">
             <a href="{{ url('profile') }}">
-                <img src="https://pbs.twimg.com/profile_images/689125864731242496/DGU2F799.jpg" alt="Profiel afbeelding">
+                <!-- <img src="https://pbs.twimg.com/profile_images/689125864731242496/DGU2F799.jpg" alt="Profiel afbeelding"> -->
                 <!-- <span class="name">Welkom: {{ Auth::user()->firstname }} {{ Auth::user()->lastname }}</span> -->
                 <span class="name">Mijn Profiel</span>
             </a>
