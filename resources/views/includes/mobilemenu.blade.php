@@ -15,7 +15,7 @@
 					<a href="{{ url('notifications') }}" class="notificationIcon">
 						<img class="menu-icon" 
 						src="{{ URL::asset('icons/MessagesIconWhiteAlt.svg') }}" alt="">
-						@if(!empty($notificationCount))
+						@if($notificationCount > 0))
 							<span class="notificationCount">{{$notificationCount}}</span>
 						@endif
 					</a>
