@@ -401,7 +401,7 @@ class RadarsOptionsTableSeeder extends Seeder
 
           [
             'radar_id' => '6',
-            'name' => 'Negatief',
+            'name' => 'Werkt niet',
             'info' => 'Als iets niet werkt: leer ervan en doe iets anders.',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
@@ -409,7 +409,7 @@ class RadarsOptionsTableSeeder extends Seeder
 
           [
             'radar_id' => '6',
-            'name' => 'Positief',
+            'name' => 'Werkt wel',
             'info' => 'Als iets wel of beter werkt: doe er meer van.',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
@@ -417,7 +417,7 @@ class RadarsOptionsTableSeeder extends Seeder
 
           [
             'radar_id' => '6',
-            'name' => 'Leer van een ander',
+            'name' => 'Werkt nog beter',
             'info' => 'Als iets blijkt te werken: leer het van/aan iemand anders.',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
