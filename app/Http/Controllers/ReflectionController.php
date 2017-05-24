@@ -4,19 +4,23 @@
   use App\Reflection;
   use Illuminate\Http\Request;
   use Session;
-  
+
   class ReflectionController extends Controller{ // view to reflection
-    
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function list(){
       $id = Auth::id();
       $reflections = Reflection::where('user_id', $id)
         ->orderBy('created_at', 'desc')
-        ->get(); 
+        ->get();
 
       foreach($reflections as $reflection){
-        $reflection->tags = explode(',',$test = $reflection->tags); 
+        $reflection->tags = explode(',',$test = $reflection->tags);
       }
-      
+
       return view('reflection.list', compact('reflections'));
     }
 
@@ -25,7 +29,7 @@
       return view('reflection.create');
     }
 
-    //Store the new reflection 
+    //Store the new reflection
     public function storeReflection(Request $request){
 
       $this->validate($request, [
@@ -64,7 +68,7 @@
     }
     //Update reflection View
     public function updateReflection($id){
-      $reflection = Reflection::where('id', $id)->first();  
+      $reflection = Reflection::where('id', $id)->first();
       return view('reflection.update', compact('reflection'));
     }
     public function deleteReflection($id){

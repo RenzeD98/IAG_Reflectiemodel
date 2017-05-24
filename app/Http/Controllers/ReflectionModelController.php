@@ -7,6 +7,11 @@ use App\Radar;
 
 class ReflectionModelController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function getModel()
     {
       return view('reflectionmodel.index');
