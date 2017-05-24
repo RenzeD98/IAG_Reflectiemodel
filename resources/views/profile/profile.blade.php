@@ -4,10 +4,8 @@
 <div class="container profile">
   <div class="panel panel-default">
     <div class="header">
-        <a href="{{ url('profile') }}">
-            <img src="http://lumee-shop.ro/wp-content/uploads/2014/06/buddy.png" alt="Profiel afbeelding">
+            <!-- <img src="http://lumee-shop.ro/wp-content/uploads/2014/06/buddy.png" alt="Profiel afbeelding"> -->
             <span class="name">Welkom: {{ Auth::user()->firstname }} {{ Auth::user()->lastname }}</span>
-        </a>
         <!-- <span class="function">IAG hulpverlener</span> -->
     </div>
 
