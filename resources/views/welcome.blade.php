@@ -5,24 +5,35 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>IAG Direct</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:700" rel="stylesheet">
 
         <!-- Styles -->
         <style>
             html, body {
                 background-color: #fff;
                 color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
+                font-family:'Quicksand', sans-serif;
                 height: 100vh;
                 margin: 0;
             }
 
             .full-height {
                 height: 100vh;
+            }
+
+            button.btn {
+                font-family: 'Quicksand', sans-serif;
+                border-color: #6d6d6d;
+                color: #6d6d6d;
+                font-size: 24px;
+                background-color: white;
+                border-style: solid;
+                border-width: medium;
+                border-radius: 10px;
+                padding: 5px 40px;
             }
 
             .flex-center {
@@ -43,52 +54,26 @@
 
             .content {
                 text-align: center;
+                width: 30em;
             }
 
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
         </style>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Inloggen</a>
-                        <a href="{{ url('/register') }}">Registreren</a>
-                    @endif
-                </div>
-            @endif
-
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+                <div class="logo">
+                    <img src="{{ URL::asset('images/IAG_direct_Logo.svg') }}" alt="">
                 </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                @if (Route::has('login'))
+                    <div class="button-home">
+                        @if (Auth::check())
+                            <a href="{{ url('/home') }}"><button type="button" class="btn">Ga naar Home</button></a>
+                        @else
+                            <a href="{{ url('/login') }}"><button type="button" class="btn">Inloggen</button></a>
+                        @endif
+                    </div>
+                @endif
             </div>
         </div>
     </body>
