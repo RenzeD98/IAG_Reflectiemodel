@@ -19,12 +19,21 @@
         <span class="date">{{ $reflection->created_at->format('d m Y')}}</span>
       </div>
       <div class="panel-body">
-          <div class="message">
-            <p>{{ $reflection->message }}</p>
-          </div>
-            @foreach($reflection->tags as $tag)
-              <span class="tag">{{ $tag }}</span>
-            @endforeach
+        <div class="message">
+          <p>
+            {{ str_limit($reflection->message, $limit = 180, $end = '...') }}
+          </p>
+        </div>
+
+        <div class="col-md-8">
+          @foreach($reflection->tags as $tag)
+            <span class="tag">{{ $tag }}</span>
+          @endforeach
+        </div>
+
+        <div class="col-md-4">
+          <a href="" class="button">Bekijken</a>
+        </div>
       </div>
     </div>
   @endforeach
