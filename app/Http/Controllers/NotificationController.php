@@ -53,7 +53,7 @@ class NotificationController extends Controller
 
     public function markAsRead($id) {
       $notification = Auth::user()->notifications()->findOrFail($id);
-      $notification = Notification::find($id);
+      //$notification = Notification::find($id);
       $notification->read_at = Carbon::now();
       $notification->save();
 

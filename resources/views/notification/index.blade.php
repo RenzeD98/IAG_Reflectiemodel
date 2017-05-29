@@ -17,7 +17,11 @@
       <div class="tab-content">
         <div id="ontvangen" class="tab-pane fade in active">
           @if(empty($unread))
-            <span>U heeft nog geen ongelezen berichten ontvangen</span>
+            <div class="row">
+              <div class="col-xs-12">
+                <p>U heeft nog geen berichten ontvangen</p>
+              </div>
+            </div>
           @else
             @foreach($unread as $ur)   
               <div class="row notificationItem unread">
@@ -37,7 +41,11 @@
 
         <div id="gelezen" class="tab-pane fade">
           @if(empty($read))
-            <span>U heeft nog geen berichten ontvangen</span>
+            <div class="row">
+              <div class="col-xs-12">
+                <p>U heeft nog geen berichten ontvangen</p>
+              </div>
+            </div>
           @else
             @foreach($read as $r)    
               <div class="row notificationItem read">
