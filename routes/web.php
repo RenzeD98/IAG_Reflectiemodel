@@ -15,9 +15,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', function () {
-    return view('home');
-});
+Route::get('/home', 'Homecontroller@index');
 
 //profile routes
 Route::get('/profile', 'ProfileController@index');
@@ -28,28 +26,31 @@ Route::get('/profile/agenda', 'AgendaController@index');
 Route::get('/profile/contacts', 'ContactsController@index');
 
 //Archive routes
-Route::get('archief', 'ArchiveController@index')->middleware('auth');
+Route::get('archief', 'ArchiveController@index');
 
 //Reflection routes
-Route::get('reflecties', 'ReflectionController@list')->middleware('auth');
-Route::get('reflectie/{id}/view', 'ReflectionController@getReflection')->middleware('auth');
-Route::get('reflectie/{id}/update', 'ReflectionController@updateReflection')->middleware('auth');
-Route::post('reflectie/update', 'ReflectionController@storeReflection')->middleware('auth');
-Route::get('reflectie/create', 'ReflectionController@newReflection')->middleware('auth');
-Route::post('reflectie/create', 'ReflectionController@storeReflection')->middleware('auth');
-Route::post('reflectie/delete', 'ReflectionController@deleteReflection')->middleware('auth');
+Route::get('reflecties', 'ReflectionController@list');
+Route::get('reflectie/{id}/view', 'ReflectionController@getReflection');
+Route::get('reflectie/{id}/update', 'ReflectionController@updateReflection');
+Route::post('reflectie/update', 'ReflectionController@storeReflection');
+Route::get('reflectie/create', 'ReflectionController@newReflection');
+Route::post('reflectie/create', 'ReflectionController@storeReflection');
+Route::post('reflectie/delete', 'ReflectionController@deleteReflection');
 
 //feedback routes
-Route::get('feedback', 'FeedbackCOntroller@index')->middleware('auth');
-Route::get('feedback/{id}/view', 'FeedbackController@getReflectionWithFeedback')->middleware('auth');
-Route::post('feedback/create', 'FeedbackController@storeFeedback')->middleware('auth');
-Route::post('feedback/update', 'FeedbackController@storeFeedback')->middleware('auth');
+Route::get('feedback', 'FeedbackCOntroller@index');
+Route::get('feedback/{id}/view', 'FeedbackController@getReflectionWithFeedback');
+Route::post('feedback/create', 'FeedbackController@storeFeedback');
+Route::post('feedback/update', 'FeedbackController@storeFeedback');
 
 //reflectionmodel routes
-Route::get('reflectionmodel', 'ReflectionModelController@getModel')->middleware('auth');
+Route::get('reflectionmodel', 'ReflectionModelController@getModel');
 Route::get('reflectionmodel/{id}', 'ReflectionModelController@radar');
 
 //Notifications routes
 Route::get('/notifications', 'NotificationController@index');
 Route::get('/notification/{id}/view', 'NotificationController@view');
 Route::get('/notification/{id}/markAsRead', 'NotificationController@markAsRead');
+
+//Admin routes
+Route::get('/admin', 'AdminController@index');

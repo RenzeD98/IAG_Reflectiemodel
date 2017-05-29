@@ -63,7 +63,7 @@ class RadarsTableSeeder extends Seeder
         [
             'name' => 'Basisattitude',
             'description' => ' ',
-            'color' => '#FFFFFF',
+            'color' => '#8e8e8e',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ],
