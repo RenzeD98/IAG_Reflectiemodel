@@ -33,18 +33,6 @@ class NotificationController extends Controller
       return view('notification.index', compact('notifications','read','unread','sender'));
     }
 
-    // public function view()
-    // {
-    //   $id = Auth::id();
-    //   $notifications = Notification::where('user_id', $id)
-    // 	->orderBy('created_at', 'desc')->get();
-			
-
-    //   //return view('notifications.index', compact('notifications'));
-
-    //   return view('notification.index');
-    // }
-
     public static function countUnread()
     {
       if (Auth::check())
@@ -57,24 +45,31 @@ class NotificationController extends Controller
         foreach($notifications as $n){
           if(!$n->read_at) $unread[] = $n;
         }
-
         $amount = count($unread);
         if($amount > 0) return $amount;    
-
       }
-
       return 0;
     }
 
     public function markAsRead($id) {
-      //$notification = Auth::user()->notifications()->findOrFail($id);
-
+      $notification = Auth::user()->notifications()->findOrFail($id);
       $notification = Notification::find($id);
-      //dd($notification);
       $notification->read_at = Carbon::now();
       $notification->save();
 
-      //return view('notification.index');
+      return view('notification.index');
     }
+
+    // public function view()
+    // {
+    //   $id = Auth::id();
+    //   $notifications = Notification::where('user_id', $id)
+    //  ->orderBy('created_at', 'desc')->get();
+      
+
+    //   //return view('notifications.index', compact('notifications'));
+
+    //   return view('notification.index');
+    // }
 
 }
