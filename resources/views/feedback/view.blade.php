@@ -40,7 +40,6 @@
       </form>
       </div>
     </div>
-  </div>
 
   <div class="panel panel-default recentFeedback">
     <div class="panel-heading">Recente feedback</div>
@@ -75,5 +74,6 @@
       </div>
     </div>
   @endforeach
+</div>
 </div>
 @endsection
