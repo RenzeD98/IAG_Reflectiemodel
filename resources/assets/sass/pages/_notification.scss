@@ -8,37 +8,35 @@
 	
 	.markAsRead{text-align: right;}
 
-	.nav.nav-tabs li
-	{
-	  width:50%;
-	  border:1px solid #ddd;
-	  border:none !important;
-	}
+	.nav-tabs{border-bottom:0px;}
+	.nav.nav-tabs li{width:50%;}
+	// .nav.nav-tabs li:last-child
+	// {
+	// 	border:none !important;
+	// }
 
 	.nav-tabs > li.active > a
 	{
 	  background-color:#fff !important;
 	  color:#333 !important;
+	  border-bottom:none !important;
+	  border-right:1px solid #6D6D6D;
 	}
 	.nav-tabs > li > a
 	{
 		background-color: #87CDD3;
 		color:#fff;
-		border:none !important;
 		margin-right:0px;
 		border-radius:0px;
 		font-weight: bold;
 		font-size: 16px;
+		border-right:1px solid #6D6D6D;
+	  border-bottom:1px solid #6D6D6D;
 	}
 
 
-	.nav-tabs > li > a:hover
-	{
-	  background-color: #87CDD3 !important;
-	  color:#fff !important;
-	  cursor:pointer;
-	}
-
+	.nav-tabs > li > a:hover{cursor:pointer;color:#333;}
+	.nav-tabs > li:hover{border-color:#6D6D6D !important;}
 	.nav.nav-tabs
 	{
 	  border-top:1px solid #6D6D6D;
@@ -50,8 +48,7 @@
 	{
 	  border-right:1px solid #6D6D6D;
 	  border-left:1px solid #6D6D6D;
-	  border-bottom:1px solid #6D6D6D;
-	  
+	  border-bottom:1px solid #6D6D6D; 
 	  padding-top:10px;
 	}
 
@@ -70,6 +67,7 @@
 		  color:#333;
 		  font-size:16px;
 		}
+
 		.date
 		{
 		  text-align: right;
