@@ -35,11 +35,12 @@ class FeedbackController extends Controller
 
     public function getReflectionWithFeedback($id)
     {
+      $user = Auth::user();
       $reflection = Reflection::with('feedback')->find($id);
       if(empty($reflection)) return redirect('/feedback/');
         $reflection->tags = explode(',',$test = $reflection->tags);
 
-      return view('feedback.view', compact('reflection'));
+      return view('feedback.view', compact('reflection','user'));
     }
 
     public function storeFeedback(Request $request)
