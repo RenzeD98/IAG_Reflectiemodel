@@ -6,9 +6,6 @@
       <div class="panel-heading">Notificatie titel</div>
       <div class="panel-body">
           <div class="row notificatie">
-            <div class="col-xs-12 head text-center">
-              <img class="img-circle" src="http://placehold.it/50x50" alt="">
-            </div>
 
             <div class="col-xs-12 text-center">
               <span class="title">Feedback: Jeffrey</span>

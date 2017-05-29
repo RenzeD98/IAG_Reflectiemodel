@@ -1,20 +1,12 @@
 .notification
 {		
-	//Mark as read notifications
-	@media screen and (max-width: 415px) {
-	  .column.markAsRead
-	  {
-	    width:170px;
-	    position:relative;
-	    padding:0px;
-	    right:-90px;
-	    top:-15px;
-	  }
-	 
-	  .notificationItem{min-height: 100px;} 
-	  .notificationItem img {position:relative;top:20px;}
-	  .notificationItem.read .title{position: relative;top:20px;}
+
+	@media screen and(max-width: $break-tablet)
+	{
+		.markAsRead{text-align: left !important}
 	}
+	
+	.markAsRead{text-align: right;}
 
 	.nav.nav-tabs li
 	{
@@ -30,7 +22,7 @@
 	}
 	.nav-tabs > li > a
 	{
-		background-color:#6d6d6d; 
+		background-color: #87CDD3;
 		color:#fff;
 		border:none !important;
 		margin-right:0px;
@@ -42,7 +34,7 @@
 
 	.nav-tabs > li > a:hover
 	{
-	  background-color:#6d6d6d !important; 
+	  background-color: #87CDD3 !important;
 	  color:#fff !important;
 	  cursor:pointer;
 	}
@@ -59,16 +51,18 @@
 	  border-right:1px solid #6D6D6D;
 	  border-left:1px solid #6D6D6D;
 	  border-bottom:1px solid #6D6D6D;
-	  padding-bottom:40px;
+	  
 	  padding-top:10px;
 	}
 
 	.notificationItem
 	{
-	  height:59px;
-	  line-height: 59px;
-	  vertical-align: middle;
-	  border-bottom:1px solid #ddd;
+		border-bottom:1px solid #ddd;
+		padding-bottom:10px;
+		line-height:50px;
+		min-height:50px;
+		vertical-align:middle;
+		margin-bottom:10px;
 
 	  .title
 	  {
