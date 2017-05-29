@@ -16,7 +16,7 @@
     <div class="panel panel-default feedback">
       <div class="panel-heading title">
         <a href="/reflectie/{{ $reflection->id }}/view">{{ $reflection->title }}</a>
-        <span class="date">{{ $reflection->created_at }}</span>
+        <span class="date">{{ $reflection->created_at->format('d m Y')}}</span>
       </div>
       <div class="panel-body">
           <div class="message">
