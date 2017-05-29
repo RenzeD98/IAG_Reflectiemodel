@@ -31,12 +31,12 @@ class NotificationController extends Controller
       }
       return view('notification.index', compact('notifications','read','unread'));
     }
-    
+
     public function view()
     {
       $id = Auth::id();
       /*$notifications = Notification::where('user_id', $id)
-    	->orderBy('created_at', 'desc')->get(); 
+    	->orderBy('created_at', 'desc')->get();
 			*/
 
       //return view('notifications.index', compact('notifications'));
@@ -73,5 +73,5 @@ class NotificationController extends Controller
       $notification->save();
       return back();
     }
-    
+
 }

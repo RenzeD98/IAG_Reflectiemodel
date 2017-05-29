@@ -6,9 +6,9 @@
         <div class="header">
             <a href="{{ url('profiel') }}">
                 <img src="https://pbs.twimg.com/profile_images/689125864731242496/DGU2F799.jpg" alt="Profiel afbeelding">
-                <span class="name">{{ Auth::user()->firstname }} {{ Auth::user()->lastname }}</span>
+                <!-- <span class="name">{{ Auth::user()->firstname }} {{ Auth::user()->lastname }}</span> -->
             </a>
-            <span class="function">IAG hulpverlener</span> 
+            <span class="function">IAG hulpverlener</span>
         </div>
         <div class="contactList">
           <form class="ui-filterable">
