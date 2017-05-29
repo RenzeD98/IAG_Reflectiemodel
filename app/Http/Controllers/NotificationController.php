@@ -69,9 +69,11 @@ class NotificationController extends Controller
       //$notification = Auth::user()->notifications()->findOrFail($id);
 
       $notification = Notification::find($id);
+      //dd($notification);
       $notification->read_at = Carbon::now();
       $notification->save();
-      return back();
+
+      //return view('notification.index');
     }
     
 }

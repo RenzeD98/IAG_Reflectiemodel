@@ -4,8 +4,8 @@
   <div class="container">
     @foreach($reflections as $reflection)
     <div class="panel panel-default feedback">
-          <div class="panel-heading title">
-            <span class="title">{{ $reflection->title }}</span>
+          <div class="panel-heading title ">
+            <span class="title">Reflectie door {{ $user->firstname }} - {{ $reflection->title }}</span>
             <span class="date">{{ $reflection->created_at }}</span>
           </div>
           <div class="panel-body">
