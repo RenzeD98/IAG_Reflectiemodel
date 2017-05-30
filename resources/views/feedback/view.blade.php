@@ -7,7 +7,9 @@
   @endif
   <div class="panel panel-default">
     <div class="panel-heading title">{{ $reflection->title }}
-      <span class="date">Geplaats op: {{ $reflection->created_at->format('d m Y')}}</span>
+      <span class="date">
+        Geplaats op: {{ $reflection->created_at->format('d m Y')}}
+      </span>
     </div>
     <div class="panel-body">
         <div class="message">
