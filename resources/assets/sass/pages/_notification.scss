@@ -1,74 +1,65 @@
 .notification
 {		
-	//Mark as read notifications
-	@media screen and (max-width: 415px) {
-	  .column.markAsRead
-	  {
-	    width:170px;
-	    position:relative;
-	    padding:0px;
-	    right:-90px;
-	    top:-15px;
-	  }
-	 
-	  .notificationItem{min-height: 100px;} 
-	  .notificationItem img {position:relative;top:20px;}
-	  .notificationItem.read .title{position: relative;top:20px;}
-	}
 
-	.nav.nav-tabs li
+	@media screen and(max-width: $break-tablet)
 	{
-	  width:50%;
-	  border:1px solid #ddd;
-	  border:none !important;
+		.markAsRead{text-align: left !important}
 	}
+	
+	.markAsRead{text-align: right;}
+
+	.nav-tabs{border-bottom:0px;}
+	.nav.nav-tabs li{width:50%;}
+	// .nav.nav-tabs li:last-child
+	// {
+	// 	border:none !important;
+	// }
 
 	.nav-tabs > li.active > a
 	{
 	  background-color:#fff !important;
 	  color:#333 !important;
+	  border-bottom:none !important;
+	  border-right:1px solid #ddd;
 	}
 	.nav-tabs > li > a
 	{
-		background-color:#6d6d6d; 
+		background-color: #87CDD3;
 		color:#fff;
-		border:none !important;
 		margin-right:0px;
 		border-radius:0px;
 		font-weight: bold;
 		font-size: 16px;
+		border-right:1px solid #ddd;
+	  border-bottom:1px solid #ddd;
 	}
 
 
-	.nav-tabs > li > a:hover
-	{
-	  background-color:#6d6d6d !important; 
-	  color:#fff !important;
-	  cursor:pointer;
-	}
-
+	.nav-tabs > li > a:hover{cursor:pointer;color:#333;}
+	.nav-tabs > li:hover{border-color:#6D6D6D !important;}
 	.nav.nav-tabs
 	{
-	  border-top:1px solid #6D6D6D;
-	  border-left:1px solid #6D6D6D;
-	  border-right:1px solid #6D6D6D;
+	  border-top:1px solid #ddd;
+	  border-left:1px solid #ddd;
+	  border-right:1px solid #ddd;
 	}
 
 	.tab-content
 	{
-	  border-right:1px solid #6D6D6D;
-	  border-left:1px solid #6D6D6D;
-	  border-bottom:1px solid #6D6D6D;
-	  padding-bottom:40px;
+	  border-right:1px solid #ddd;
+	  border-left:1px solid #ddd;
+	  border-bottom:1px solid #ddd; 
 	  padding-top:10px;
 	}
 
 	.notificationItem
 	{
-	  height:59px;
-	  line-height: 59px;
-	  vertical-align: middle;
-	  border-bottom:1px solid #ddd;
+		border-bottom:1px solid #ddd;
+		padding-bottom:10px;
+		line-height:50px;
+		min-height:50px;
+		vertical-align:middle;
+		margin-bottom:10px;
 
 	  .title
 	  {
@@ -76,6 +67,7 @@
 		  color:#333;
 		  font-size:16px;
 		}
+
 		.date
 		{
 		  text-align: right;
