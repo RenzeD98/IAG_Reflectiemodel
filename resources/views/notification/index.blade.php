@@ -17,40 +17,42 @@
       <div class="tab-content">
         <div id="ontvangen" class="tab-pane fade in active">
           @if(empty($unread))
-            <span>U heeft nog geen ongelezen berichten</span>
+            <div class="row">
+              <div class="col-xs-12">
+                <p>U heeft nog geen berichten ontvangen</p>
+              </div>
+            </div>
           @else
             @foreach($unread as $ur)   
               <div class="row notificationItem unread">
-                <div class="col-xs-3 head">
-                  <img class="img-circle" src="http://placehold.it/50x50" alt="">
+                <div class="col-md-6">
+                  <a href="/feedback/{{ $ur['data']['reflection'] }}/view">
+                    {{-- <span class="title">{{ $ur['data']['title'] }} - Van {{ $sender->firstname }}</span> --}}
+                    <span class="title">Feedback ontvangen van {{ $sender->firstname }}</span>
+                  </a>
                 </div>
-                  <div class="col-xs-6">
-                    <a href="/feedback/{{ $ur['data']['reflection'] }}/view">
-                      <span class="title">{{ $ur['data']['title'] }}</span>
-                    </a>
-                  </div>
-                  <div class="col-xs-3 column markAsRead">
-                    <a href="/notification/{{$ur->id}}/markAsRead" class="">
-                      <span>Markeren als gelezen</span>
-                    </a>
-                  </div>
+                <div class="col-md-6 markAsRead">
+                  <a href="/notification/{{$ur->id}}/markAsRead" class="button">Gelezen</a>
                 </div>
+              </div>
             @endforeach
           @endif
         </div>
 
         <div id="gelezen" class="tab-pane fade">
           @if(empty($read))
-            <span>U heeft nog geen berichten</span>
+            <div class="row">
+              <div class="col-xs-12">
+                <p>U heeft nog geen berichten ontvangen</p>
+              </div>
+            </div>
           @else
             @foreach($read as $r)    
               <div class="row notificationItem read">
-                <div class="col-xs-3 head">
-                  <img class="img-circle" src="http://placehold.it/50x50" alt="">
-                </div>
-                <div class="col-xs-9">
-                 <a href="/feedback/{{ $r['data']['reflection'] }}/view">
-                    <span class="title">{{ $r['data']['title'] }}</span>
+                <div class="col-md-12">
+                  <a href="/feedback/{{ $ur['data']['reflection'] }}/view">
+                    {{-- <span class="title">{{ $ur['data']['title'] }} - Van {{ $sender->firstname }}</span> --}}
+                    <span class="title">Feedback ontvangen van {{ $sender->firstname }}</span>
                   </a>
                 </div>
               </div>   

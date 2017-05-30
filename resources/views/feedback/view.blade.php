@@ -7,7 +7,7 @@
   @endif
   <div class="panel panel-default">
     <div class="panel-heading title">{{ $reflection->title }}
-      <span class="date">{{ $reflection->created_at }}</span>
+      <span class="date">Geplaats op: {{ $reflection->created_at->format('d m Y')}}</span>
     </div>
     <div class="panel-body">
         <div class="message">
@@ -41,39 +41,24 @@
       </div>
     </div>
 
-  <div class="panel panel-default recentFeedback">
-    <div class="panel-heading">Recente feedback</div>
-    <div class="panel-body">
-      <!--
-      <div class="sorting">
-        <form method="GET" action="/feedback/view/">
-          <span class="">Sorteren op: </span>
-          <select name="sorting">
-            <option value="recent">Meest recent</option>
-            <option value="rating">Best beoordeeld</option>
-          </select>
-          <input type="hidden" name="_token" value="{{ csrf_token() }}">
-          <button type="submit" class="button feedback sort">Sorteer</button>
-        </form>
-      </div>
-      -->
-      @foreach($reflection->feedback as $fb)
-      <div class="row commentItem">
-        <div class="col-md-1 col-xs-2 rating" >+3</div>
-        <div class="col-md-11 col-xs-10 content">
-          <span class="title">{{ $fb->title }} - </span>
-          <span class="user">{{ $fb->user->id }}</span>
-          <span class="date">{{ $fb->created_at }}</span>
-          <p class="description">{{ $fb->messages }}</p>
-          <!--<div class="head">
-            <div class="rateComment" style="float:right;">
-              <button class="rate down">-1</button>
-              <button class="rate up">+1</button>
+    <div class="panel panel-default recentFeedback">
+      <div class="panel-heading">Recente feedback</div>
+      <div class="panel-body">
+        @foreach($reflection->feedback as $fb)
+        <div class="row commentItem">
+          <div class="content">
+            <div class="col-xs-8 ">
+             <span class="title">{{ $fb->title }} - Feedback van: 
+              <span class="user">{{ $user->firstname }}</span>
+              </span>
             </div>
-          </div>-->
+            <div class="col-xs-4 date">
+              Geplaatst op: {{ $reflection->created_at->format('d m Y')}}
+            </div> 
+            <div class="col-md-12 description"><p>{{ $fb->messages }}</p></div>  
+        </div>
       </div>
-    </div>
-  @endforeach
-</div>
+    @endforeach
+  </div>
 </div>
 @endsection
