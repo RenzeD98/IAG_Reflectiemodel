@@ -66,12 +66,14 @@
 
 .fa-plus-circle
 {
-	position: fixed;
-	right: 20px;
-	bottom: 20px;
-	font-size: 50px;
-	color: $green;
-	background-color:#fff;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  margin-bottom: 55px;
+  font-size: 50px;
+  color: $green;
+  background-color: white;
+  @include border-radius(100%);
 }
 
 .loader_icon
@@ -145,3 +147,38 @@
 
 .date {float: right;}
 
+body
+{
+  font-family: "Quicksand", sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333333;
+  background-color: #fff;
+}
+
+.alert
+{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 300px;
+    z-index: 1000;
+
+    @include animation(1s);
+    @include animation-delay(3s);
+
+}
+
+@-webkit-keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}

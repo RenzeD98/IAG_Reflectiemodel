@@ -25,8 +25,7 @@
         <ul class="nav navbar-nav navbar-right">
             <!-- Authentication Links -->
             @if (Auth::guest())
-                <li><a href="{{ route('login') }}">Inloggen</a></li>
-                <li><a href="{{ route('register') }}">Registreren</a></li>
+            <!-- show nothing -->
             @else
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -42,7 +41,7 @@
                             </a>
                             <a href="/reflecties">Mijn reflectie</a>
                             <a href="/feedback">Feedback geven</a>
-                            <a href="/profiel">Profiel</a>
+                            <a href="/profile">Profiel</a>
                             <a href="/archief">Archief</a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

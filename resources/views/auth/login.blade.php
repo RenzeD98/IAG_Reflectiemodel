@@ -5,9 +5,6 @@
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
-                <div class="header">
-                    <img src="icons/ProfileIcon.svg " alt="Reflectie icoon">
-                </div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
@@ -56,7 +53,7 @@
                                 <button type="submit" class="btn btn-primary">Inloggen</button>
                             </div>
                         </div>
-                        
+
                         <div class="form-group">
                             <div class="col-md-4 col-md-offset-4">
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
