@@ -1,26 +1,6 @@
 /*** Sub page navigation ***/
 
-.navigation
-{
-	padding:7px;
-	border-radius:3px;
-	@include border-radius(4px);
-	margin-bottom:20px;
-	background-color: $lightblue;
 
- a
- {
-	display: inline-block;
-	margin-right:20px;
-	color:#000;
-	font-size:15px;
-	padding:5px;
-	}
-	a:hover{text-decoration: none;color: $blue;}
-	i{margin-right:5px;}
-	.edit{float:right;}
-	.del{float:right;}
-}
 	a.notificationIcon:hover{text-decoration: none;}
 
 	.notificationCount{
