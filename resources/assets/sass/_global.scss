@@ -84,7 +84,7 @@
 	width: 100%;
 }
 
-.ajax-header 
+.ajax-header
 {
   height: 50px;
   background: #f5f5f5;
@@ -181,4 +181,9 @@ body
 @keyframes fadeOut {
     from {opacity: 1;}
     to {opacity: 0;}
+}
+
+#backbutton
+{
+  height: 50px;
 }
