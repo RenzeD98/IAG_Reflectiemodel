@@ -36,7 +36,7 @@
                      <span class="subtitle">Feedback Geven</span>
                 </div>
             </a>
-            <a href="{{ url('archief') }}">
+            <a href="{{ url('archive') }}">
                 <div class="col-xs-6 col-centerd column col-xs-offset-2">
                     <img src="icons/ArchiveIcon.svg" alt="Reflectie icoon">
                     <span class="subtitle">Mijn Archief</span>
