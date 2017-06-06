@@ -27,7 +27,7 @@ Route::get('/profile/contacts', 'ContactsController@index');
 
 //Archive routes
 Route::get('archive', 'ArchiveController@index');
-Route::get('archive/test', 'ArchiveController@test');
+Route::get('archive/search', 'ArchiveController@search');
 
 //Reflection routes
 Route::get('reflecties', 'ReflectionController@list');
