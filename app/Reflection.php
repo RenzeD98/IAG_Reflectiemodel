@@ -11,8 +11,9 @@ class Reflection extends Model
   
     public function feedback()
     {
-        return $this->hasMany('App\Feedback');
+        return $this->hasMany('App\Feedback')->orderBy('created_at', 'desc');
     }
+    
     public function user()
     {
         return $this->belongsTo('App\User');

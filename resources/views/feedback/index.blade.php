@@ -16,8 +16,9 @@
     <div class="panel panel-default feedback">
       <div class="panel-heading ">
         <div class="col-md-8 title">
+          <a href="{{ url('/feedback/' . $reflection->id .'/view') }}">
          Reflectie door 
-          {{ $user->firstname }} - {{ $reflection->title }}
+          {{ $user->firstname }} - {{ $reflection->title }}</a>
         </div>
         <div class="col-md-4 date">
           {{ $reflection->created_at->format('d m Y')}}

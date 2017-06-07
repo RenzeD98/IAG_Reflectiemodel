@@ -1,5 +1,4 @@
 @extends('layouts.mobile')
-
 @section('content')
 
 <div class="container notification">
@@ -50,7 +49,7 @@
             @foreach($read as $r)    
               <div class="row notificationItem read">
                 <div class="col-md-12">
-                  <a href="/feedback/{{ $ur['data']['reflection'] }}/view">
+                  <a href="/feedback/{{ $r['data']['reflection'] }}/view">
                     {{-- <span class="title">{{ $ur['data']['title'] }} - Van {{ $sender->firstname }}</span> --}}
                     <span class="title">Feedback ontvangen van {{ $sender->firstname }}</span>
                   </a>
@@ -60,7 +59,6 @@
           @endif
         </div>
       </div>
-      
     </div>
   </div>
 </div>

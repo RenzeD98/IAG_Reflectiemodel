@@ -57,7 +57,9 @@ class NotificationController extends Controller
       $notification->read_at = Carbon::now();
       $notification->save();
 
-      return view('notification.index');
+      return redirect('/notifications');
+
+      //return view('notification.index');
     }
 
     // public function view()

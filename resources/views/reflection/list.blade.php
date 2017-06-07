@@ -16,7 +16,7 @@
     <div class="panel panel-default feedback">
       <div class="panel-heading title">
         <a href="/reflectie/{{ $reflection->id }}/view">{{ $reflection->title }}</a>
-        <span class="date">{{ $reflection->created_at->format('d m Y')}}</span>
+        <span class="date">Geplaatst op: {{ $reflection->created_at->format('d m Y')}}</span>
       </div>
       <div class="panel-body">
         <div class="message">
@@ -25,14 +25,14 @@
           </p>
         </div>
 
-        <div class="col-md-8">
+        <div class="col-md-8 tags">
           @foreach($reflection->tags as $tag)
             <span class="tag">{{ $tag }}</span>
           @endforeach
         </div>
 
         <div class="col-md-4">
-          <a href="" class="button">Bekijken</a>
+          <a href="/reflectie/{{$reflection->id}}/view" class="button" style="">Bekijken</a>
         </div>
       </div>
     </div>
