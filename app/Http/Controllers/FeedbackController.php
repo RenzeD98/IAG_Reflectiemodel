@@ -10,6 +10,8 @@ use App\User;
 use Session;
 
 use App\Notifications\MessageReceived;
+use App\Notifications\FeedbackPushNotify;
+use NotificationChannels\WebPush\HasPushSubscriptions;
 use Notifiable;
 /*
 use Illuminate\Notifications\Notifiable;
@@ -18,6 +20,8 @@ use Notifiable;
 */
 class FeedbackController extends Controller
 {
+    use HasPushSubscriptions;
+
     public function __construct()
     {
         $this->middleware('auth');
@@ -26,11 +30,7 @@ class FeedbackController extends Controller
     public function index(){
       $id = Auth::id();
       $reflections = Reflection::all();
-      //$reflections = Reflection::where('user_id', $id)->orderBy('created_at', 'desc')->get();
 
-      //$reflections Reflection::where('user_id', '!=' , $id)->orWhereNull('user_id')->get()
-
-      //return view('feedback.index');
       return view('feedback.index', compact('reflections'));
     }
 
@@ -68,4 +68,5 @@ class FeedbackController extends Controller
       return redirect('/feedback/'. $request->id . '/view/');
 
     }
+
 }
