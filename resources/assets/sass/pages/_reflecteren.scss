@@ -1,8 +1,36 @@
 //-----------------------reflecteren-------------//
 .reflection
 {
+
+  .emptyState img
+  {
+    max-width:400px;
+  }
+
+  .emptyState .title
+  {
+    font-size:22px;
+    color:#333;
+    font-weight: normal;
+    display: block;
+    margin-top:30px;
+  }
+  .emptyState .title strong
+  {
+    font-weight: bold;
+  }
+
   @media screen and(max-width: $break-phone)
   {
+    .emptyState img
+    {
+      max-width:auto;
+      width: 60vw;
+      height: 60vw;
+      margin:auto;
+      //margin: 3vw auto 0 auto;
+    }
+
     .button
     {
       float:none;

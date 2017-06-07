@@ -1,59 +1,34 @@
-/*** Sub page navigation ***/
-
-
-	a.notificationIcon:hover{text-decoration: none;}
-
-	.notificationCount{
-	  color: #fff;
-		background: #EB6A6B;
-	  font-weight: bold;
-	  border:2px solid #B82052;
-	  font-size:14px;
-	  padding:0px 6px 0px 6px;
-	  border-radius:20px;
-	  position: relative;
-	  left:35px;
-	  top:-50px;
-
-	}
-
-.button
-{
-	@include border-radius(4px);
-	@include transition(0.2s);
-	background-color: $green;
-	color:#fff !important;
-	padding: 4px 12px 4px 12px;
-	text-decoration: none;
-	font-size:16px;
-	border:2px solid #ddd;
-	border-width: thin;
-}
-
-.button:hover
-{
-  background-color:#666666;
-  text-decoration:none;
-}
-
 @media screen and(max-width: $break-phone)
 {
-	.fa-plus-circle
+	#header
 	{
-		margin-bottom: 55px;
+		display: none !important;
 	}
 }
 
-.fa-plus-circle
+@media screen and(max-width: $break-tablet)
 {
-	position: fixed;
-	right: 20px;
-	bottom: 20px;
-	font-size: 50px;
-	color: $green;
-	background-color:#fff;
+	#header
+	{
+		display: none !important;
+	}
 }
 
+a.notificationIcon:hover{text-decoration: none;}
+
+.notificationCount{
+  color: #fff;
+	background: #EB6A6B;
+  font-weight: bold;
+  border:2px solid #B82052;
+  font-size:14px;
+  padding:0px 6px 0px 6px;
+  border-radius:20px;
+  position: relative;
+  left:35px;
+  top:-50px;
+
+}
 .loader_icon
 {
 	margin: auto;
@@ -90,6 +65,45 @@
 	padding: 5px 20px;
 }
 
+.button
+{
+	@include border-radius(4px);
+	@include transition(0.2s);
+	background-color: $green;
+	color:#fff !important;
+	padding: 4px 12px 4px 12px;
+	text-decoration: none;
+	font-size:16px;
+	border:2px solid #ddd;
+	border-width: thin;
+}
+
+.button:hover
+{
+  background-color:#666666;
+  text-decoration:none;
+}
+//Home and feedback
+.go-button.btn
+{
+	font-family: 'Quicksand', sans-serif;
+	border-color: #6d6d6d;
+	color: #6d6d6d;
+	font-size: 24px;
+	background-color: white;
+	border-style: solid;
+	border-width: medium;
+	border-radius: 10px;
+	padding: 5px 40px;
+	font-weight: bold;
+}
+
+.go-button.btn:hover
+{
+	color:#86CED5;
+	cursor:pointer;
+}
+
 .save-button
 {
   background-color: #5cb85c;
@@ -122,6 +136,27 @@
 #reflection-model-open{display: none;}
 
 .title{font-weight: bold;font-weight: 400;}
+.subtitle{font-weight: italic !important; font-size:14px !important;}
 
 .date {float: right;}
+
+
+// @media screen and(max-width: $break-phone)
+// {
+// 	.fa-plus-circle
+// 	{
+// 		margin-bottom: 55px;
+// 	}
+// }
+
+// .fa-plus-circle
+// {
+// 	position: fixed;
+// 	right: 20px;
+// 	bottom: 20px;
+// 	font-size: 50px;
+// 	color: $green;
+// 	background-color:#fff;
+// }
+
 

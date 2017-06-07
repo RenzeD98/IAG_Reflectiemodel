@@ -5,9 +5,11 @@
    @if($reflections->isEmpty())
     <div class="panel panel-default feedback">
       <div class="panel-body">
-        <div style="text-align: center">
-          <h1>Je hebt nog geen reflectie aangemaakt</h1>
-          <a href="{{ url('reflectie/create') }}">Klik hier om een reflectie te schrijven</a>
+        <div style="text-align: center" class="emptyState">
+          <span class="title">Schrijf je <strong>eerste</strong> reflectie</span>
+          <a href="{{ url('reflectie/create') }}">
+            <img src="{{ URL::asset('images/add-reflection.png') }}" alt="Voeg een reflectie toe">
+          </a>
         </div>
       </div>
     </div>
@@ -37,8 +39,8 @@
       </div>
     </div>
   @endforeach
-  <a href="{{ url('reflectie/create') }}">
+ {{--  <a href="{{ url('reflectie/create') }}" class="add-reflection">
     <i class="fa fa-plus-circle" aria-hidden="true"></i>
-  </a>
+  </a> --}}
 </div>
 @endsection
