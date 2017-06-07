@@ -1,0 +1,27 @@
+.archive
+{
+
+	.reflection
+	{
+	  border-bottom:1px solid #ddd;
+	  padding-top:10px;
+	  padding-bottom:20px;
+	  margin-top:10px;
+	}
+	.reflection a
+	{
+	  font-size:16px;
+	}
+
+	.reflection .date
+	{
+	  text-align: right;
+	  margin-top:-5px;
+	  margin-right:5px;  
+	}
+
+	.reflection .message
+	{
+	  text-align: justify;
+	}
+}

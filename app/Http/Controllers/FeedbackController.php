@@ -8,7 +8,6 @@ use App\Feedback;
 use Auth;
 use App\User;
 use Session;
-
 use App\Notifications\MessageReceived;
 use App\Notifications\FeedbackPushNotify;
 use NotificationChannels\WebPush\HasPushSubscriptions;
@@ -27,25 +26,30 @@ class FeedbackController extends Controller
         $this->middleware('auth');
     }
 
-    public function index(){
+    public function index()
+    {
       $id = Auth::id();
-      $reflections = Reflection::all();
 
-      return view('feedback.index', compact('reflections'));
+      $user = Auth::user();
+      $reflections = Reflection::where('user_id', '!=' ,$id)
+        ->orWhereNull('user_id')
+        ->orderBy('created_at', 'desc')
+        ->get();
+      return view('feedback.index', compact('reflections','user'));
     }
 
-    //Specific reflection form
-    public function getReflectionWithFeedback($id){
+    public function getReflectionWithFeedback($id)
+    {
+      $user = Auth::user();
       $reflection = Reflection::with('feedback')->find($id);
       if(empty($reflection)) return redirect('/feedback/');
-       $reflection->tags = explode(',',$test = $reflection->tags);
+        $reflection->tags = explode(',',$test = $reflection->tags);
 
-      return view('feedback.view', compact('reflection'));
+      return view('feedback.view', compact('reflection','user'));
     }
 
-
-    public function storeFeedback(Request $request){
-
+    public function storeFeedback(Request $request)
+    {
       $this->validate($request, [
         'title' => 'max:255',
         'message' => 'required|min:1|max:5000'
@@ -66,7 +70,6 @@ class FeedbackController extends Controller
       Session::flash('message', 'Succesvol feedback gegeven!');
 
       return redirect('/feedback/'. $request->id . '/view/');
-
     }
-
 }
+
