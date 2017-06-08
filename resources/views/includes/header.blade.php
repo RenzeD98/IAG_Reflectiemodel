@@ -18,11 +18,15 @@
     <div class="collapse navbar-collapse" id="app-navbar-collapse">
         <!-- Left Side Of Navbar -->
         <ul class="nav navbar-nav">
+          @if (Auth::guest())
+          <!-- show nothing -->
+          @else
           <li><a href="/reflecties">Mijn reflectie</a></li>
           <li><a href="/feedback">Feedback geven</a></li>
           <li><a href="/profile">Profiel</a></li>
           <li><a href="/archive">Archief</a></li>
         </ul>
+        @endif
 
         <!-- Right Side Of Navbar -->
         <ul class="nav navbar-nav navbar-right">
