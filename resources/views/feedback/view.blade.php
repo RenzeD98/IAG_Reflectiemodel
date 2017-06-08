@@ -21,7 +21,35 @@
     </div>
   </div>
 
-  <div class="panel panel-default feedbackForm">
+    <div class="panel panel-default recentFeedback">
+      <div class="panel-heading">Recente feedback</div>
+      <div class="panel-body">
+        @if($reflection->feedback->isEmpty())
+          <div class="emptyState" style="text-align: center;">
+            <span class="title">
+              Er is nog <strong>geen</strong> feedback geschreven
+            </span>
+
+          </div>
+        @endif
+        @foreach($reflection->feedback as $fb)
+        <div class="row commentItem">
+          <div class="content">
+            <div class="col-xs-8 ">
+             <span class="title">{{ $fb->title }} - Feedback van: 
+              <span class="user">{{ $user->firstname }}</span>
+              </span>
+            </div>
+            <div class="col-xs-4 date">
+              Geplaatst op: {{ $reflection->created_at->format('d m Y')}}
+            </div> 
+            <div class="col-md-12 description"><p>{{ $fb->messages }}</p></div>  
+        </div>
+      </div>
+    @endforeach
+  </div>
+</div>
+    <div class="panel panel-default feedbackForm" id="feedbackForm">
     <div class="panel-heading">Feedback geven op reflectie</div>
     <div class="panel-body">
       <form method="POST" action="/feedback/create">
@@ -42,25 +70,5 @@
       </form>
       </div>
     </div>
-
-    <div class="panel panel-default recentFeedback">
-      <div class="panel-heading">Recente feedback</div>
-      <div class="panel-body">
-        @foreach($reflection->feedback as $fb)
-        <div class="row commentItem">
-          <div class="content">
-            <div class="col-xs-8 ">
-             <span class="title">{{ $fb->title }} - Feedback van: 
-              <span class="user">{{ $user->firstname }}</span>
-              </span>
-            </div>
-            <div class="col-xs-4 date">
-              Geplaatst op: {{ $reflection->created_at->format('d m Y')}}
-            </div> 
-            <div class="col-md-12 description"><p>{{ $fb->messages }}</p></div>  
-        </div>
-      </div>
-    @endforeach
-  </div>
 </div>
 @endsection
