@@ -1,14 +1,25 @@
 .login
 {
-  margin-top: -23px;
-  padding-top: 40px;
   @extend .extend_login;
+    position: absolute;
+    clear: both;
+    height: 101.2vh;
+    width: 100%;
+    margin-top: -23px;
+    overflow: hidden;
 
-  .panel{box-shadow:none !important;}
+    align-items: center;
+    display: flex;
+    justify-content: center;
 
   .panel
   {
-    
+    box-shadow:none !important;
+  }
+
+  .panel
+  {
+
   @extend .extend_login;
 
     .header
@@ -26,37 +37,42 @@
     {
       @extend .extend_login;
 
+      margin: auto;
 
+      form{
 
-      form input[type="email"]
-      {
-        @extend .extend_login_form_input;
-      }
+        width: 55vw;
 
-      form input[type="passwprd"]
-      {
-        @extend .extend_login_form_input;
-      }
+        form input[type="email"]
+        {
+          @extend .extend_login_form_input;
+        }
 
-      .btn-primary
-      {
-        width: 100%;
-        border: 2px solid #95989A;
-        background-color: #68883C;
-        color: #fff;
-        border-radius: 10px;
-        background-color: #2A3A89;
-      }
+        form input[type="passwprd"]
+        {
+          @extend .extend_login_form_input;
+        }
 
-      .btn-primary:hover
-      {
-        background-color: #fff;
-        color: #333;
-      }
+        .btn-primary
+        {
+          width: 100%;
+          border: 2px solid #95989A;
+          background-color: #68883C;
+          color: #fff;
+          border-radius: 10px;
+          background-color: #2A3A89;
+        }
 
-      .btn-link
-      {
-        color: #fff;
+        .btn-primary:hover
+        {
+          background-color: #fff;
+          color: #333;
+        }
+
+        .btn-link
+        {
+          color: #fff;
+        }
       }
     }
   }
