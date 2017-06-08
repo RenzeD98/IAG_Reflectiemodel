@@ -37,7 +37,7 @@ a.notificationIcon:hover{text-decoration: none;}
 	width: 100%;
 }
 
-.ajax-header 
+.ajax-header
 {
   height: 50px;
   background: #f5f5f5;
@@ -141,22 +141,18 @@ a.notificationIcon:hover{text-decoration: none;}
 .date {float: right;}
 
 
-// @media screen and(max-width: $break-phone)
-// {
-// 	.fa-plus-circle
-// 	{
-// 		margin-bottom: 55px;
-// 	}
-// }
-
-// .fa-plus-circle
-// {
-// 	position: fixed;
-// 	right: 20px;
-// 	bottom: 20px;
-// 	font-size: 50px;
-// 	color: $green;
-// 	background-color:#fff;
-// }
-
-
+.header-logo {
+	height: 90px;
+	margin: -20px 0px;
+}
+.navbar-default {
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+    height: 75px;
+	  font-weight: 700;
+}
+.navbar-nav > li > a {
+    /* padding-top: 15px; */
+    /* padding-bottom: 15px; */
+    line-height: 45px;
+}
