@@ -27,13 +27,6 @@
     width: 50%;
     height: 50%;
 
-    .derdepositie-een
-    {
-      float: right;
-      height: 15%;
-      width: 20%;
-    }
-
     .custom
     {
       @include border-radius(100%);
@@ -41,7 +34,7 @@
       width: 42.5%;
       height: 42.5%;
       margin-top: 20%;
-      margin-right: -18.5%;
+      margin-right: 1.5%;
     }
 
     .transparant
@@ -61,13 +54,6 @@
     width: 50%;
     height: 50%;
 
-    .derdepositie-twee
-    {
-      float: left;
-      height: 15%;
-      width: 20%;
-    }
-
     .theorie
     {
       @include border-radius(100%);
@@ -75,7 +61,7 @@
       width: 42.5%;
       height: 42.5%;
       margin-top: 20%;
-      margin-left: -18.5%;
+      margin-left: 1.5%;
     }
 
     .model
@@ -96,17 +82,8 @@
     width: 50%;
     height: 50%;
 
-    .eerstepositie
-    {
-      margin-top: 58%;
-      float: left;
-      height: 15%;
-      width: 40%;
-    }
-
     .feedback
     {
-      margin-top: -73%;
       margin-left: 22%;
       @include border-radius(100%);
       float: left;
@@ -117,7 +94,7 @@
     .methodiek
     {
       @include border-radius(100%);
-      margin-top: -43%;
+      margin-top: -12.5%;
       margin-right: 1.5%;
       float: right;
       width: 42.5%;
@@ -131,17 +108,8 @@
     width: 50%;
     height: 50%;
 
-    .tweedepositie
-    {
-      margin-top: 58%;
-      float: right;
-      height: 15%;
-      width: 40%;
-    }
-
     .gerichtheid
     {
-      margin-top: -73%;
       margin-right: 22%;
       @include border-radius(100%);
       float: right;
@@ -152,7 +120,7 @@
     .strategie
     {
       @include border-radius(100%);
-      margin-top: -43%;
+      margin-top: -12.5%;
       margin-left: 1.5%;
       float: left;
       width: 42.5%;
