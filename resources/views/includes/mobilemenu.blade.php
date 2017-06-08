@@ -1,16 +1,16 @@
 <div class="mobile-menu">
 	<div class="footer">
-		    <div class="col-xs-3 column">
+		    <div class="col-xs-4 column">
 					<a onclick="goBack()">
 	    			<img class="menu-icon" id="backbutton" src="{{ URL::asset('icons/BackIcon.svg') }}" alt="">
 	    		</a>
 		    </div>
-		    <div class="col-xs-6 column">
+		    <div class="col-xs-4 column">
 	    		<a href="{{ url('home') }}">
 	    			<img class="menu-icon" src="{{ URL::asset('icons/HomeIconWhite.svg') }}" alt="">
 	    		</a>
 				</div>
-				<div class="col-xs-3 column">
+				<div class="col-xs-4 column">
 					<a href="{{ url('notifications') }}" class="notificationIcon">
 						<img class="menu-icon"
 						src="{{ URL::asset('icons/MessagesIconWhiteAlt.svg') }}" alt="">
