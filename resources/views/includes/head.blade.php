@@ -51,3 +51,13 @@ $(document).ready(function(){
         });
     });
 </script>
+
+<script>
+        function goBack()
+        {
+            if(window.location.pathname !== '/home') {
+                window.history.back();
+            }
+        }
+
+</script>
