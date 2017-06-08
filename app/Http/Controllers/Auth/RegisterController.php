@@ -12,7 +12,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Auth\Events\Registered;
 use Session;
-use Illuminate\Foundation\Auth\ResetsPasswords;
 
 class RegisterController extends Controller
 {
@@ -28,7 +27,7 @@ class RegisterController extends Controller
     */
 
     //use RegistersUsers;
-    use ResetsPasswords;
+
     /**
      * Where to redirect users after registration.
      *
@@ -77,9 +76,9 @@ class RegisterController extends Controller
             'email' => $data['email'],
         ]);
 
-        return PasswordSet::create([
-            'email' => $data['email'],
-        ]);
+        // return PasswordSet::create([
+        //     'email' => $data['email'],
+        // ]);
     }
 
 
@@ -128,7 +127,6 @@ class RegisterController extends Controller
         protected function registered(Request $request, $user)
         {
             //stuurt mail
-            // $user->notify(new SetPassword());
-
+            $user->notify(new SetPassword());
         }
 }
