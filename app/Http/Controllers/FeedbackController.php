@@ -17,6 +17,7 @@ use Notifiable;
 */
 class FeedbackController extends Controller
 {
+
     public function __construct()
     {
         $this->middleware('auth');
@@ -25,6 +26,7 @@ class FeedbackController extends Controller
     public function index()
     {
       $id = Auth::id();
+
       $user = Auth::user();
       $reflections = Reflection::where('user_id', '!=' ,$id)
         ->orWhereNull('user_id')

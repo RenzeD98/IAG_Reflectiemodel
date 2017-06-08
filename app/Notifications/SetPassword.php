@@ -3,13 +3,14 @@
 namespace App\Notifications;
 
 use Illuminate\Bus\Queueable;
+use App\User;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 
 class SetPassword extends Notification
 {
-    use Queueable;
+    //use Queueable;
 
     /**
      * Create a new notification instance.
@@ -41,9 +42,10 @@ class SetPassword extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->line('The introduction to the notification.')
-                    ->action('Notification Action', url('/'))
-                    ->line('Thank you for using our application!');
+                    ->subject('Maak een wachtwoord aan')
+                    ->line('In deze mail wordt u verzoekt een wachtwoord aan te maken voor het account op IAG Direct')
+                    ->action('Maak een wachtwoord', url('/password/reset'))
+                    ->line('Bedankt voor het gebruiken van IAG Direct!');
     }
 
     /**

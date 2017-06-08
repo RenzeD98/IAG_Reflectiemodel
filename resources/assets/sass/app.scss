@@ -1,4 +1,3 @@
-
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600');
 @import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700');
@@ -27,25 +26,23 @@
 @import "global";
 
 // ----------------------Pages-----------------------------//
-//*** Home ***//
+
 @import "pages/home";
 
-//*** Profile ***//
 @import "pages/profile";
 
-//*** Inloggen ***//
 @import "pages/login";
 
-//*** Reflecteren ***//
 @import "pages/reflecteren";
 
-//*** Feedback ***//
 @import "pages/feedback";
 
-// *** Reflectionmodel ***//
+@import "pages/archive";
+
+@import "pages/notification";
+
 @import "pages/reflectionmodel";
 
-// *** Refelctionmodel Induvidual Radar *** //
 @import "pages/reflectionmodelradar";
 
 @import "pages/notification";

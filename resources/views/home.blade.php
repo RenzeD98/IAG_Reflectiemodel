@@ -5,13 +5,10 @@
     <div class="panel panel-default">
         <div class="header">
             <a href="{{ url('profile') }}">
-                <!-- <img src="https://pbs.twimg.com/profile_images/689125864731242496/DGU2F799.jpg" alt="Profiel afbeelding"> -->
                 @if(Auth::check())
-                <!-- <span class="name">Welkom: {{ Auth::user()->firstname }} {{ Auth::user()->lastname }}</span> -->
+                <span class="name">Welkom: {{ Auth::user()->firstname }} {{ Auth::user()->lastname }}</span>
                 @endif
-                <span class="name">Mijn Profiel</span>
             </a>
-            <!-- <span class="function">IAG hulpverlener</span> -->
         </div>
 
         <div class="row row-centered">
@@ -36,7 +33,7 @@
                      <span class="subtitle">Feedback Geven</span>
                 </div>
             </a>
-            <a href="{{ url('archief') }}">
+            <a href="{{ url('archive') }}">
                 <div class="col-xs-6 col-centerd column col-xs-offset-2">
                     <img src="icons/ArchiveIcon.svg" alt="Reflectie icoon">
                     <span class="subtitle">Mijn Archief</span>
