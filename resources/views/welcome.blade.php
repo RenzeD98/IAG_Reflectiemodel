@@ -4,11 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>IAG Direct</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Quicksand:700" rel="stylesheet">
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <title>{{ config('app.name', 'Laravel') }}</title>
 
         <!-- Styles -->
         <style>
@@ -22,18 +19,6 @@
 
             .full-height {
                 height: 100vh;
-            }
-
-            button.btn {
-                font-family: 'Quicksand', sans-serif;
-                border-color: #6d6d6d;
-                color: #6d6d6d;
-                font-size: 24px;
-                background-color: white;
-                border-style: solid;
-                border-width: medium;
-                border-radius: 10px;
-                padding: 5px 40px;
             }
 
             .flex-center {
@@ -68,9 +53,9 @@
                 @if (Route::has('login'))
                     <div class="button-home">
                         @if (Auth::check())
-                            <a href="{{ url('/home') }}"><button type="button" class="btn">Ga naar Home</button></a>
+                            <a href="{{ url('/home') }}"><button type="button" class="go-button btn">Ga naar Home</button></a>
                         @else
-                            <a href="{{ url('/login') }}"><button type="button" class="btn">Inloggen</button></a>
+                            <a href="{{ url('/login') }}"><button type="button" class="go-button btn">Inloggen</button></a>
                         @endif
                     </div>
                 @endif

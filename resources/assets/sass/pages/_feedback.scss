@@ -1,7 +1,36 @@
 .feedback
 {
+	.emptyState img
+	{
+    max-width:400px;
+  }
+
+
+
+  .emptyState .title
+  {
+    font-size:22px;
+    color:#333;
+    font-weight: normal;
+    display: block;
+    margin-top:30px;
+    margin-bottom:20px;
+  }
+  .emptyState .title strong
+  {
+    font-weight: bold;
+  }
+
 	  @media screen and(max-width: $break-tablet)
 	  {
+			.emptyState img
+			{
+				max-width:auto;
+				width: 60vw;
+				height: 60vw;
+				margin:auto;
+				//margin: 3vw auto 0 auto;
+			}
 	  	.date
 	  	{
 				float:none !important;
@@ -40,7 +69,7 @@
 			vertical-align: middle;
 		}
 
-		.title{font-weight: bold;}
+		.title{font-weight:bold;color:#23527c;}
 
 		.time
 		{	

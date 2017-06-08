@@ -5,9 +5,14 @@
   @if($reflections->isEmpty())
     <div class="panel panel-default feedback">
       <div class="panel-body">
-        <div style="text-align: center">
-          <h1>Er zijn geen reflecties gevonden</h1>
-          <a href="/home">Klik hier om terug te gaan</a>
+        <div style="text-align: center" class="emptyState">
+          <span class="title">
+            Er zijn nog <strong>geen</strong> andere reflecties gevonden
+          </span>
+          <a href="http://localhost/home">
+            <button type="button" class="go-button btn">Ga naar Home</button>
+          </a>
+    
         </div>
       </div>
     </div>
@@ -21,7 +26,7 @@
           {{ $user->firstname }} - {{ $reflection->title }}</a>
         </div>
         <div class="col-md-4 date">
-          {{ $reflection->created_at->format('d m Y')}}
+          Geplaats op: {{ $reflection->created_at->format('d m Y')}}
         </div>
       </div>
       <div class="panel-body">
@@ -29,7 +34,9 @@
           <p>{{ str_limit($reflection->message, $limit = 180, $end = '...') }}
           </p>
         </div>
-        <span class="tag">Test Tag</span>
+
+        <span class="tag">Moet nog worden geautomatiseerd!!</span>
+
         <a href="{{ url('/feedback/' . $reflection->id .'/view') }}" class="btn save-button" style="float:right">
         <i class="fa fa-pencil" aria-hidden="true"></i> Schrijf Feedback
         </a>
