@@ -4,7 +4,7 @@
 <div class="container home">
     <div class="panel panel-default">
         <div class="header">
-            <a href="{{ url('profile') }}">
+            <a href="{{ url('profile/mydetails') }}">
                 <!-- <img src="https://pbs.twimg.com/profile_images/689125864731242496/DGU2F799.jpg" alt="Profiel afbeelding"> -->
                 @if(Auth::check())
                 <!-- <span class="name">Welkom: {{ Auth::user()->firstname }} {{ Auth::user()->lastname }}</span> -->
