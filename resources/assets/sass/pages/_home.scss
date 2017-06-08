@@ -35,6 +35,12 @@
       width: auto;
     }
 
+    img:hover
+    {
+     -webkit-filter: sepia(100);
+     filter: sepia(100);
+    }
+
     .subtitle
     {
       display: block;
