@@ -23,25 +23,14 @@ class NotificationController extends Controller
       $unread = array();
 
       foreach($notifications as $n){
+        $sender = Auth::User($n->notifiable_id);
         if(!$n->read_at){
           $unread[] = $n;
         }else{
           $read[] = $n;
         }
       }
-      return view('notification.index', compact('notifications','read','unread'));
-    }
-
-    public function view()
-    {
-      $id = Auth::id();
-      /*$notifications = Notification::where('user_id', $id)
-    	->orderBy('created_at', 'desc')->get();
-			*/
-
-      //return view('notifications.index', compact('notifications'));
-
-      return view('notification.index');
+      return view('notification.index', compact('notifications','read','unread','sender'));
     }
 
     public static function countUnread()
@@ -56,22 +45,33 @@ class NotificationController extends Controller
         foreach($notifications as $n){
           if(!$n->read_at) $unread[] = $n;
         }
-
         $amount = count($unread);
         if($amount > 0) return $amount;    
-
       }
-
       return 0;
     }
 
     public function markAsRead($id) {
-      //$notification = Auth::user()->notifications()->findOrFail($id);
-
-      $notification = Notification::find($id);
+      $notification = Auth::user()->notifications()->findOrFail($id);
+      //$notification = Notification::find($id);
       $notification->read_at = Carbon::now();
       $notification->save();
-      return back();
+
+      return redirect('/notifications');
+
+      //return view('notification.index');
     }
+
+    // public function view()
+    // {
+    //   $id = Auth::id();
+    //   $notifications = Notification::where('user_id', $id)
+    //  ->orderBy('created_at', 'desc')->get();
+      
+
+    //   //return view('notifications.index', compact('notifications'));
+
+    //   return view('notification.index');
+    // }
 
 }

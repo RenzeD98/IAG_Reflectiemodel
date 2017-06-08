@@ -1,71 +1,42 @@
-/*** Sub page navigation ***/
-
-.navigation
+@media screen and(max-width: $break-phone)
 {
-	padding:7px;
-	border-radius:3px;
-	@include border-radius(4px);
-	margin-bottom:20px;
-	background-color: $lightblue;
-
- a
- {
-	display: inline-block;
-	margin-right:20px;
-	color:#000;
-	font-size:15px;
-	padding:5px;
+	#header
+	{
+		display: none !important;
 	}
-	a:hover{text-decoration: none;color: $blue;}
-	i{margin-right:5px;}
-	.edit{float:right;}
-	.del{float:right;}
 }
-	a.notificationIcon:hover{text-decoration: none;}
 
-	.notificationCount{
-	  color: #fff;
-		background: #EB6A6B;
-	  font-weight: bold;
-	  border:2px solid #B82052;
-	  font-size:14px;
-	  padding:0px 6px 0px 6px;
-	  border-radius:20px;
-	  position: relative;
-	  left:35px;
-	  top:-50px;
-
+@media screen and(max-width: $break-tablet)
+{
+	#header
+	{
+		display: none !important;
 	}
-
-.button
-{
-	@include border-radius(4px);
-	@include transition(0.2s);
-	background-color: $green;
-	color:#fff !important;
-	padding: 4px 12px 4px 12px;
-	text-decoration: none;
-	font-size:16px;
-	border:2px solid #ddd;
-	border-width: thin;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  margin-bottom: 55px;
+  font-size: 50px;
+  color: $green;
+  background-color: white;
+  @include border-radius(100%);
 }
 
-.button:hover
-{
-  background-color:#666666;
-  text-decoration:none;
-}
+a.notificationIcon:hover{text-decoration: none;}
 
-.fa-plus-circle
-{
-position: fixed;
-right: 20px;
-bottom: 20px;
-margin-bottom: 55px;
- font-size: 50px;
- color: $green;
-}
+.notificationCount{
+  color: #fff;
+	background: #EB6A6B;
+  font-weight: bold;
+  border:2px solid #B82052;
+  font-size:14px;
+  padding:0px 6px 0px 6px;
+  border-radius:20px;
+  position: relative;
+  left:35px;
+  top:-50px;
 
+}
 .loader_icon
 {
 	margin: auto;
@@ -74,12 +45,13 @@ margin-bottom: 55px;
 	width: 100%;
 }
 
-	.ajax-header {
-    height: 50px;
-    background: #f5f5f5;
-    border-radius: 5px;
-		padding: 11px 10px;
-	}
+.ajax-header
+{
+  height: 50px;
+  background: #f5f5f5;
+  border-radius: 5px;
+	padding: 11px 10px;
+}
 
 .ajax-content
 {
@@ -99,6 +71,45 @@ margin-bottom: 55px;
 {
   text-align: center;
 	padding: 5px 20px;
+}
+
+.button
+{
+	@include border-radius(4px);
+	@include transition(0.2s);
+	background-color: $green;
+	color:#fff !important;
+	padding: 4px 12px 4px 12px;
+	text-decoration: none;
+	font-size:16px;
+	border:2px solid #ddd;
+	border-width: thin;
+}
+
+.button:hover
+{
+  background-color:#666666;
+  text-decoration:none;
+}
+//Home and feedback
+.go-button.btn
+{
+	font-family: 'Quicksand', sans-serif;
+	border-color: #6d6d6d;
+	color: #6d6d6d;
+	font-size: 24px;
+	background-color: white;
+	border-style: solid;
+	border-width: medium;
+	border-radius: 10px;
+	padding: 5px 40px;
+	font-weight: bold;
+}
+
+.go-button.btn:hover
+{
+	color:#86CED5;
+	cursor:pointer;
 }
 
 .save-button
@@ -122,35 +133,38 @@ margin-bottom: 55px;
   color: black;
 }
 
-	.button-left {
-		float: left;
-	}
+.button-left {float: left;}
 
-	.arrow {
-    float: right;
-	}
+.arrow {float: right;}
 
-	.col-xs-offset-2 {
-    margin-left: 5%;
-	}
+.col-xs-offset-2 {margin-left: 5%;}
 
-	.col-xs-6 {
-    	width: 47%;
-	}
+.col-xs-6 {width: 47%;}
 
-	#reflection-model-open
-  {
-    display: none;
-	}
+#reflection-model-open{display: none;}
 
-	.title{
-		font-weight: bold;
-		font-weight: 400;
-	}
+.title{font-weight: bold;font-weight: 400;}
+.subtitle{font-weight: italic !important; font-size:14px !important;}
 
-	.date {
-		float: right;
-	}
+.date {float: right;}
+
+// @media screen and(max-width: $break-phone)
+// {
+// 	.fa-plus-circle
+// 	{
+// 		margin-bottom: 55px;
+// 	}
+// }
+
+// .fa-plus-circle
+// {
+// 	position: fixed;
+// 	right: 20px;
+// 	bottom: 20px;
+// 	font-size: 50px;
+// 	color: $green;
+// 	background-color:#fff;
+// }
 
 body
 {
@@ -159,4 +173,36 @@ body
   line-height: 1.42857143;
   color: #333333;
   background-color: #fff;
+}
+
+.alert
+{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 300px;
+    z-index: 1000;
+
+    @include animation(1s);
+    @include animation-delay(3s);
+
+}
+
+@-webkit-keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+#backbutton
+{
+  height: 50px;
 }

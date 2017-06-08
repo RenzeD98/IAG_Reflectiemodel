@@ -1,39 +1,78 @@
 .feedback
 {
-		.navigation{
+	.emptyState img
+	{
+    max-width:400px;
+  }
+
+
+
+  .emptyState .title
+  {
+    font-size:22px;
+    color:#333;
+    font-weight: normal;
+    display: block;
+    margin-top:30px;
+    margin-bottom:20px;
+  }
+  .emptyState .title strong
+  {
+    font-weight: bold;
+  }
+
+	  @media screen and(max-width: $break-tablet)
+	  {
+			.emptyState img
+			{
+				max-width:auto;
+				width: 60vw;
+				height: 60vw;
+				margin:auto;
+				//margin: 3vw auto 0 auto;
+			}
+	  	.date
+	  	{
+				float:none !important;
+				display: block;
+				margin-top: 5px;
+				text-align:left !important;
+	  	}
+
+	  	.btn.save-button
+	  	{
+	  		width:100%;
+	  		margin-top:15px;
+	  	}
+	  }
+
+	  .date{font-weight: normal; font-style:italic;text-align: right;}
+		.navigation
+		{
 		  padding:10px;
 		  margin-top: -10px;
 		  margin-bottom:10px;
 		}
 
-		.navigation .button{
-
+		.panel-heading 
+		{
+	    line-height: 20px;
+	    vertical-align: middle;
+	    min-height: 40px;
 		}
 
-		.button.feedback.sort{
-		  line-height:10px;
-		  height:22px;
-		  font-size:14px;
-		}
-
-		.head{
+		.head
+		{
 			height: 59px;
 			border-bottom: 1px #ddd solid;
 			line-height: 59px;
 			vertical-align: middle;
 		}
 
-		.title{
-			font-weight: bold;
-		}
-
-		.date {
-    	float: right;
-		}
+		.title{font-weight:bold;color:#23527c;}
 
 		.time
-		{
-			float:right;
+		{	
 			font-style:italic;
 			vertical-align: middle;
 			line-height: 59px;
@@ -49,37 +88,31 @@
 			margin-right:10px;
 	  }
 
-	    .feedback{
-	      float: right;
-	    }
-
   .recentFeedback
   {
-  	.sorting
-  	{
-		height: 40px;
-		width: 100%;
-		text-align: right;
-		margin-bottom:10px;
-  	}
+  // 	.sorting
+  // 	{
+		// height: 40px;
+		// width: 100%;
+		// text-align: right;
+		// margin-bottom:10px;
+  // 	}
 
   	.commentItem
   	{
   		border:1px solid #ddd;
   		margin-bottom:20px;
 
-	    .content
-	    {
- 			padding:20px;
-	    }
+	    .content{padding-top: 10px;}
+
     	.rating
     	{
-			min-height:100px;
-			vertical-align: middle;
-			text-align: center;
-			line-height: 100px;
-			font-size:20px;
-			border-right:1px solid #ddd;
+				min-height:100px;
+				vertical-align: middle;
+				text-align: center;
+				line-height: 100px;
+				font-size:20px;
+				border-right:1px solid #ddd;
     	}
     	.title
     	{
@@ -87,13 +120,12 @@
     		font-weight: bold;
     	}
 
-		.date
-		{
-		  position:absolute;
-		  right:20px;
-		  top:10px;
-		  text-style:italic;
-		}
+			.date
+			{
+			  text-style:italic;
+			  
+			  text-align: right;
+			}
 
 		.description
 		{

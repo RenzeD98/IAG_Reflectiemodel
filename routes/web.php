@@ -26,7 +26,8 @@ Route::get('/profile/agenda', 'AgendaController@index');
 Route::get('/profile/contacts', 'ContactsController@index');
 
 //Archive routes
-Route::get('archief', 'ArchiveController@index');
+Route::get('archive', 'ArchiveController@index');
+Route::get('archive/search', 'ArchiveController@search');
 
 //Reflection routes
 Route::get('reflecties', 'ReflectionController@list');
@@ -45,7 +46,8 @@ Route::post('feedback/update', 'FeedbackController@storeFeedback');
 
 //reflectionmodel routes
 Route::get('reflectionmodel', 'ReflectionModelController@getModel');
-Route::get('reflectionmodel/{id}', 'ReflectionModelController@radar');
+Route::get('reflectionmodel/{id}/radar', 'ReflectionModelController@radar');
+Route::get('reflectionmodel/{id}/position', 'ReflectionModelController@position');
 
 //Notifications routes
 Route::get('/notifications', 'NotificationController@index');

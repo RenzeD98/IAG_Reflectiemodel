@@ -11,7 +11,8 @@
         $this->middleware('auth');
     }
 
-    public function list(){
+    public function list()
+    {
       $id = Auth::id();
       $reflections = Reflection::where('user_id', $id)
         ->orderBy('created_at', 'desc')
@@ -25,12 +26,14 @@
     }
 
     // New reflection form
-    public function newReflection(){
+    public function newReflection()
+    {
       return view('reflection.create');
     }
 
     //Store the new reflection
-    public function storeReflection(Request $request){
+    public function storeReflection(Request $request)
+    {
 
       $this->validate($request, [
         'title' => 'required:max:255',
@@ -39,7 +42,8 @@
         //'user_id' => 'required'
       ]);
 
-      if(!isset($request->id)){
+      if(!isset($request->id))
+      {
         $reflection = new Reflection;
         $reflection->title = $request->title;
         $reflection->message = $request->message;
@@ -60,18 +64,22 @@
     }
 
     //Specific reflection form
-    public function getReflection($id){
+    public function getReflection($id)
+    {
       $reflection = Reflection::where('id', $id)->first();
       $reflection->tags = explode(',',$test = $reflection->tags);
 
       return view('reflection.view', compact('reflection'));
     }
     //Update reflection View
-    public function updateReflection($id){
+    public function updateReflection($id)
+    {
       $reflection = Reflection::where('id', $id)->first();
       return view('reflection.update', compact('reflection'));
     }
-    public function deleteReflection($id){
+
+    public function deleteReflection($id)
+    {
       echo 'Working on this ';
     }
 }
