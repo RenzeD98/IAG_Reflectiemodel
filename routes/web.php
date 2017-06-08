@@ -46,7 +46,8 @@ Route::post('feedback/update', 'FeedbackController@storeFeedback');
 
 //reflectionmodel routes
 Route::get('reflectionmodel', 'ReflectionModelController@getModel');
-Route::get('reflectionmodel/{id}', 'ReflectionModelController@radar');
+Route::get('reflectionmodel/{id}/radar', 'ReflectionModelController@radar');
+Route::get('reflectionmodel/{id}/position', 'ReflectionModelController@position');
 
 //Notifications routes
 Route::get('/notifications', 'NotificationController@index');

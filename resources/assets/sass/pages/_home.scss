@@ -1,6 +1,14 @@
 //--------------home---------------//
 .home
 {
+  @media screen and(max-width: $break-tablet)
+  {
+    .panel {
+    border: 1px solid #ddd;
+    width: 45em;
+    margin: auto;
+    }
+  }
   .header
   {
     background-color: $lightblue;

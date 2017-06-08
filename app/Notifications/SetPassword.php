@@ -44,7 +44,7 @@ class SetPassword extends Notification
         return (new MailMessage)
                     ->subject('Maak een wachtwoord aan')
                     ->line('In deze mail wordt u verzoekt een wachtwoord aan te maken voor het account op IAG Direct')
-                    ->action('Maak een wachtwoord', url('/'))
+                    ->action('Maak een wachtwoord', url('/password/reset'))
                     ->line('Bedankt voor het gebruiken van IAG Direct!');
     }
 
