@@ -45,7 +45,7 @@
       </div>
 
       <div class="radarinfo">
-        <h2><i class="fa fa-info-circle" aria-hidden="true"></i> Klik op de radar of positie voor meer informatie</h2>
+        <h2><i class="fa fa-info-circle" aria-hidden="true"></i> Klik op een radar of positie voor meer informatie</h2>
       </div>
 
     </div>
