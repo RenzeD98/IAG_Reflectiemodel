@@ -1,52 +1,68 @@
 //-----------------------reflecteren-------------//
 .reflection
 {
-  .row
+  @media screen and(max-width: $break-phone)
   {
-    border: 1px #ccc solid;
-    margin-bottom: 25px;
-    padding: 0 4px 0 4px;
-
-    .head
+    .button
     {
-      height: 59px;
-      border-bottom: 1px #ddd solid;
-      padding-top: 4px;
-      padding-bottomg: 4px;
-
-      p
-      {
-        float: left;
-        margin: 14px;
-        font-weight: bold;
-      }
-
-      p.time
-      {
-        float: right;
-      }
+      float:none;
+      width:100%;
+      margin-top:10px;
+      text-align: center;
     }
 
-    .message p
+    .tags
     {
-      clear: both;
-      margin-top: 10px
-    }
+      padding:0px;
 
-    .tag
-    {
-      float: left;
-      background-color: #666;
-      color: white;
-      font-size: 11px;
-      margin: 0px 10px 10px 0px;
-      padding: 0 5px 0 5px;
+      .tag{ margin-bottom:10px;}
     }
+  }
 
-    .feedback
-    {
-      float: right;
+  .navigation
+  {
+    padding:7px;
+    border-radius:3px;
+    @include border-radius(4px);
+    margin-bottom:20px;
+    background-color: $lightblue;
+     min-height:40px;
+    line-height: 20px;
+    vertical-align: middle;
+   a
+   {
+    display: inline-block;
+    margin-right:20px;
+    color:#fff;
+    font-size:15px;
+    padding:5px;
     }
+    a:hover{text-decoration: none;color: #333;}
+    i{margin-right:5px;}
+    .edit{float:right;}
+    .del{float:right;}
+  }
+
+  .title{font-weight:bold;color:#23527c;}
+  .date{font-style:italic;}
+  .tags{padding:0;}
+  .tag
+  {
+    float: left;
+    background-color: #666;
+    color: #fff;
+    padding: 2px 12px 2px 12px;
+    font-size: 13px;
+    margin-right: 10px;
+  }
+
+  .button{float:right;}
+  .head
+  {
+    height: 59px;
+    border-bottom: 1px #ddd solid;
+    padding-top: 4px;
+    padding-bottomg: 4px;
   }
 
   .add-reflection-button
