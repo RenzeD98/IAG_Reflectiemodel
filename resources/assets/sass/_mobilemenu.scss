@@ -2,7 +2,7 @@
 img.menu-icon {
     max-height: 50px;
 }
-div#mobile-menu {
+#mobile-menu {
     height: 60px;
     padding: 5px 0px;
     background-color: #87CDD3;
@@ -10,7 +10,7 @@ div#mobile-menu {
     position: fixed;
     bottom: 0;
     margin-top: 50px;
-    @media screen and (min-width: $break-phone) {
+    @media screen and (min-width: $break-tablet) {
       display: none;
     }
 }
@@ -41,7 +41,7 @@ div#content {
 @media screen and(max-width: $break-phone)
 {
   #header{
-    display: none;
+    display: none !important;
   }
   #content {
     padding-bottom: 50px;
