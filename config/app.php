@@ -163,7 +163,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Illuminate\Notifications\NotificationServiceProvider::class,
-        NotificationChannels\WebPush\WebPushServiceProvider::class,
+        // NotificationChannels\WebPush\WebPushServiceProvider::class,
 
         /*
          * Package Service Providers...
