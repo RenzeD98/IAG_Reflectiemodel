@@ -11,7 +11,7 @@
 
         <!-- Branding Image -->
         <a class="navbar-brand" href="{{ url('/') }}">
-            <img src="{{ URL::asset('images/IAG_direct_Logo.svg') }}" alt="" class="header-logo">
+            <img src="{{ URL::asset('images/IAG direct liggend outline-01.svg') }}" alt="" class="header-logo">
         </a>
     </div>
 
