@@ -8560,22 +8560,16 @@ a.notificationIcon:hover {
 @media screen and (max-width: 768px) {
   .save-button {
     width: 100%;
-    padding: 8px !important;
-    font-size: 18px !important;
     font-weight: 500 !important;
   }
 
   .general-button {
     width: 100%;
-    padding: 8px !important;
-    font-size: 18px !important;
     font-weight: 500 !important;
   }
 
   .button {
     width: 100%;
-    padding: 8px !important;
-    font-size: 18px !important;
     font-weight: 500 !important;
   }
 }
@@ -8657,6 +8651,29 @@ a.notificationIcon:hover {
   /* padding-top: 15px; */
   /* padding-bottom: 15px; */
   line-height: 45px;
+}
+
+.panel.panel-default > .panel-heading {
+  color: #fff;
+  background-color: #8ED1D8;
+  border-color: #ddd;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/*** TAGS ***/
+
+.tags {
+  padding: 0;
+}
+
+.tag {
+  float: left;
+  background-color: #666;
+  color: #fff;
+  padding: 2px 12px 2px 12px;
+  font-size: 13px;
+  margin-right: 10px;
 }
 
 .home .header {
@@ -8855,14 +8872,6 @@ a.notificationIcon:hover {
     margin-top: 10px;
     text-align: center;
   }
-
-  .reflection .tags {
-    padding: 0px;
-  }
-
-  .reflection .tags .tag {
-    margin-bottom: 10px;
-  }
 }
 
 .reflection .navigation {
@@ -8901,26 +8910,17 @@ a.notificationIcon:hover {
   float: right;
 }
 
-.reflection .title {
-  font-weight: bold;
-  color: #23527c;
+.reflection .panel-heading .col-md-8 {
+  padding: 0px;
+}
+
+.reflection .panel-heading.title a {
+  color: #fff;
 }
 
 .reflection .date {
   font-style: italic;
-}
-
-.reflection .tags {
-  padding: 0;
-}
-
-.reflection .tag {
-  float: left;
-  background-color: #666;
-  color: #fff;
-  padding: 2px 12px 2px 12px;
-  font-size: 13px;
-  margin-right: 10px;
+  font-size: 15px;
 }
 
 .reflection .button {
@@ -9003,6 +9003,7 @@ a.notificationIcon:hover {
   font-weight: normal;
   font-style: italic;
   text-align: right;
+  font-size: 15px;
 }
 
 .feedback .navigation {
@@ -9024,24 +9025,18 @@ a.notificationIcon:hover {
   vertical-align: middle;
 }
 
-.feedback .title {
-  font-weight: bold;
-  color: #23527c;
+.feedback .panel-heading .col-md-8 {
+  padding: 0px;
+}
+
+.feedback .panel-heading .title a {
+  color: #fff;
 }
 
 .feedback .time {
   font-style: italic;
   vertical-align: middle;
   line-height: 59px;
-}
-
-.feedback .tag {
-  float: left;
-  background-color: #666;
-  color: #fff;
-  padding: 2px 12px 2px 12px;
-  font-size: 13px;
-  margin-right: 10px;
 }
 
 .feedback .recentFeedback .commentItem {
@@ -9096,6 +9091,16 @@ a.notificationIcon:hover {
 
 .archive .reflection .message {
   text-align: justify;
+}
+
+.archive #searchbar .title {
+  font-size: 15px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.archive #searchbar .col-xs-8 {
+  padding: 0px;
 }
 
 @media screen and (max-width: 768px) {
