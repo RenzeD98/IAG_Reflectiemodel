@@ -4,7 +4,6 @@
 <div class="container home">
     <div class="panel panel-default">
         <div class="header">
-            <a href="{{ url('profile') }}">
                 @if(Auth::check())
                 <span class="name">Welkom: {{ Auth::user()->firstname }} {{ Auth::user()->lastname }}</span>
                 @endif
