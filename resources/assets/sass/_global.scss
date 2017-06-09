@@ -10,7 +10,7 @@
 {
 	#header
 	{
-		display: none !important;
+		display: block !important;
 	}
 }
 
@@ -241,4 +241,13 @@ a.notificationIcon:hover{text-decoration: none;}
   padding: 2px 12px 2px 12px;
   font-size: 13px;
   margin-right: 10px;
+}
+a.active
+{
+  color: $lightblue !important;
+}
+
+.logout-menu
+{
+  margin-right: 40px !important;
 }
