@@ -14,6 +14,8 @@
 	}
 }
 
+.row-centered{text-align: center;padding: 5px 20px;}
+
 a.notificationIcon:hover{text-decoration: none;}
 
 .notificationCount{
@@ -59,11 +61,7 @@ a.notificationIcon:hover{text-decoration: none;}
 	background-color: white;
 }
 
-.row-centered
-{
-  text-align: center;
-	padding: 5px 20px;
-}
+.button-left {float: left;}
 
 .button
 {
@@ -83,7 +81,6 @@ a.notificationIcon:hover{text-decoration: none;}
   background-color:#666666;
   text-decoration:none;
 }
-//Home and feedback
 .go-button.btn
 {
 	font-family: 'Quicksand', sans-serif;
@@ -115,7 +112,8 @@ a.notificationIcon:hover{text-decoration: none;}
   color: white;
 }
 
-.general-button{
+.general-button
+{
 	background-color: #e8e8e8;
   padding: 5px 20px;
   border-radius: 5px;
@@ -124,8 +122,32 @@ a.notificationIcon:hover{text-decoration: none;}
   border-width: thin;
   color: black;
 }
+//Full width responsive buttons
+@media screen and(max-width: $break-tablet)
+{
+  .save-button
+  {
+    width:100%;
+    padding:8px !important;
+    font-size:18px !important;
+    font-weight: 500 !important; 
+  }
+  .general-button
+  {
+    width:100%;
+    padding:8px !important;
+    font-size:18px !important;
+    font-weight: 500 !important; 
+  }
+  .button
+  {
+    width:100%;
+    padding:8px !important;
+    font-size:18px !important;
+    font-weight: 500 !important; 
+  }
 
-.button-left {float: left;}
+}
 
 .arrow {float: right;}
 
@@ -140,53 +162,4 @@ a.notificationIcon:hover{text-decoration: none;}
 
 .date {float: right;}
 
-
 .form-group.has-error input{border:1px solid red !important;}
-
-.alert
-{
-    // position: absolute;
-    // top: 10px;
-    // left: 0;
-    // right: 0;
-    // margin-left: auto;
-    // margin-right: auto;
-    // text-align: center;
-    // width: 300px;
-    // z-index: 1000;
-
-    @include animation(1s);
-    @include animation-delay(3s);
-
-}
-
-@-webkit-keyframes fadeOut {
-    from {opacity: 1;}
-    to {opacity: 0;}
-}
-
-@keyframes fadeOut {
-    from {opacity: 1;}
-    to {opacity: 0;}
-}
-
-
-// @media screen and(max-width: $break-phone)
-// {
-// 	.fa-plus-circle
-// 	{
-// 		margin-bottom: 55px;
-// 	}
-// }
-
-// .fa-plus-circle
-// {
-// 	position: fixed;
-// 	right: 20px;
-// 	bottom: 20px;
-// 	font-size: 50px;
-// 	color: $green;
-// 	background-color:#fff;
-// }
-
-

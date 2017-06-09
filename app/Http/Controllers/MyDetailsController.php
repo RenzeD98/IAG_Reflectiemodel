@@ -19,8 +19,6 @@ class MyDetailsController extends Controller
   {
       $user = Auth::user();
       return view('profile/mydetails', compact('user'));
-
-      //Omzetten met models, user informatie ophalen. 
   }
 
   public function update(Request $request)
@@ -31,7 +29,7 @@ class MyDetailsController extends Controller
       'function'    => 'max:255',
       'experience'  => 'max:255',
       'function'    => 'max:255',
-      'phone'       => 'max:255|numeric',
+      'phone'       => 'max:255',
     ]);
 
     $user = Auth::user();
