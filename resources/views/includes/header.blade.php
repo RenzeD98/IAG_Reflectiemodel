@@ -6,6 +6,7 @@
 
     <div class="collapse navbar-collapse">
         <!-- Left Side Of Navbar -->
+
         @if (Auth::guest())
         <!-- show nothing -->
         @else
@@ -24,7 +25,7 @@
             <!-- show nothing -->
             @else
             <li>
-                <a href="{{ route('logout') }}"
+                <a class="logout-menu" href="{{ route('logout') }}"
                   onclick="event.preventDefault();
                            document.getElementById('logout-form').submit();">
                   Uitloggen

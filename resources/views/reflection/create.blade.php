@@ -63,7 +63,7 @@
           <label for="tags">Tags, gescheiden met komma's</label>
           <input type="text" class="form-control" id="tags" placeholder="Tag1, tag2, tag3" name="tags" value="{{ old('tags') }}">
         </div>
-
+        <i><i class="fa fa-info-circle" aria-hidden="true"></i> Een "tag" is een zoekwoord die aan uw reflectie wordt gekoppeld.</i>
         <button type="submit" class="btn button save-button" style="float:right;"><i class="fa fa-floppy-o" aria-hidden="true"></i> Verstuur</button>
       </form>
     </div>

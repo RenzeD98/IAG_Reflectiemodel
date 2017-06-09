@@ -18,12 +18,9 @@ Auth::routes();
 Route::get('/home', 'Homecontroller@index');
 
 //profile routes
-Route::get('/profile', 'ProfileController@index');
-Route::get('/profile/settings', 'SettingsController@index');
+//Route::get('/profile', 'ProfileController@index');
 Route::get('/profile/mydetails', 'MyDetailsController@index');
 Route::post('/profile/mydetails', 'MyDetailsController@update');
-Route::get('/profile/agenda', 'AgendaController@index');
-Route::get('/profile/contacts', 'ContactsController@index');
 
 //Archive routes
 Route::get('archive', 'ArchiveController@index');
