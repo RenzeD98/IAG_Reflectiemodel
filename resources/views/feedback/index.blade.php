@@ -35,7 +35,10 @@
           </p>
         </div>
 
-        <span class="tag">Moet nog worden geautomatiseerd!!</span>
+        <span class="tag">
+          <i class="fa fa-tag" aria-hidden="true" style="margin-right:3px;"></i>
+Moet nog worden geautomatiseerd!!
+</span>
 
         <a href="{{ url('/feedback/' . $reflection->id .'/view') }}" class="btn save-button" style="float:right">
         <i class="fa fa-pencil" aria-hidden="true"></i> Schrijf Feedback
