@@ -156,3 +156,13 @@ a.notificationIcon:hover{text-decoration: none;}
     /* padding-bottom: 15px; */
     line-height: 45px;
 }
+
+a.active
+{
+  color: $lightblue !important;
+}
+
+.logout-menu
+{
+  margin-right: 40px !important;
+}

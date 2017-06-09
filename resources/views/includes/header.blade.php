@@ -18,10 +18,10 @@
     <div class="collapse navbar-collapse" id="app-navbar-collapse">
         <!-- Left Side Of Navbar -->
         <ul class="nav navbar-nav">
-          <li><a href="/reflecties">Mijn reflectie</a></li>
-          <li><a href="/feedback">Feedback geven</a></li>
-          <li><a href="/profile">Profiel</a></li>
-          <li><a href="/archive">Archief</a></li>
+          <li><a href="/reflecties" class="{{{ (Request::is('reflecties') ? 'active' : '') }}}">Mijn reflectie</a></li>
+          <li><a href="/feedback" class="{{{ (Request::is('feedback') ? 'active' : '') }}}">Feedback geven</a></li>
+          <li><a href="/profile/mydetails" class="{{{ (Request::is('profile/mydetails') ? 'active' : '') }}}">Profiel</a></li>
+          <li><a href="/archive" class="{{{ (Request::is('archive') ? 'active' : '') }}}">Archief</a></li>
         </ul>
 
         <!-- Right Side Of Navbar -->
@@ -31,7 +31,7 @@
             <!-- show nothing -->
             @else
             <li>
-                <a href="{{ route('logout') }}"
+                <a class="logout-menu" href="{{ route('logout') }}"
                   onclick="event.preventDefault();
                            document.getElementById('logout-form').submit();">
                   Uitloggen
