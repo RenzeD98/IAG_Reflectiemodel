@@ -39,6 +39,18 @@
                 </div>
             </a>
         </div>
+        <div class="row row-centered">
+            <div class="col-xs-12 col-centerd column logout">
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+              {{ csrf_field() }}
+                </form>
+                <a class="logout-menu" href="{{ route('logout') }}"onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();">
+                <i class="fa fa-sign-out" aria-hidden="true"></i>
+Uitloggen
+                </a>
+            </div>
+        </div>
     </div>
 </div>
 @endsection

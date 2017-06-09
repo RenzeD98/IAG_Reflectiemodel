@@ -41,12 +41,12 @@
             </div>
 
             <div class="form-group {{ $errors->has('function') ? ' has-error' : '' }}">
-                <label for="function">IAG Functie</label>
+                <label for="function">Functie</label>
                 <input  type="text" name="function" id="function" class="form-control" value="{{$user->function}}">
             </div>
 
             <div class="form-group {{ $errors->has('experience') ? ' has-error' : '' }}">
-                <label for="experience">Jaren ervaring met IAG Reflectiemodel</label>
+                <label for="experience">IAG werkervaring in jaren</label>
                 <input  type="text" name="experience" id="experience" class="form-control" value="{{$user->experience}}">
             </div>
 
