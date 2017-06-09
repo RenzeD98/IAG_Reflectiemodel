@@ -21,6 +21,17 @@
     height: 75vw;
   }
 
+  .radar
+  {
+    transition: 0.2s;
+  }
+
+  .radar:hover
+  {
+    transform: scale(1.2, 1.2);
+
+  }
+
   .topleft
   {
     float: left;
