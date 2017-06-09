@@ -6,14 +6,17 @@
 	    <div class="panel-heading">Archief overzicht</div>
 	    <div class="panel-body">
 	    	<div id="searchbar">
-		    	<div id="title">Zoek met behulp van tags</div>
+		    	<span class="title">Zoek met behulp van tags</span>
 		    	<form method="GET" action="archive/search" class="form-inline">
-						  <div class="form-group">
-						    <div class="input-group">
-						      <input type="text" class="form-control" name="search" placeholder="Search..." id="searchValue">
-						    </div>
-						  </div>
-						  <button type="submit" class="btn save-button" id="search-button">Zoek een reflectie</button>
+		    		<div class="col-xs-8">
+						  <input type="text" class="form-control" name="search" placeholder="Search..." id="searchValue" style="width:100%;">
+						</div>
+						<div class="col-xs-4">
+						  <button type="submit" class="btn save-button" id="search-button">
+						  	<i class="fa fa-search" aria-hidden="true"></i>Zoek een reflectie
+							</button>
+						</div>
+
 						</form>
 	        <div id="result"></div>
 	        <div id="error"><span class="error"></span></div>

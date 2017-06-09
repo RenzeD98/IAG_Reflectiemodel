@@ -29,7 +29,9 @@
 
         <div class="col-md-8 tags">
           @foreach($reflection->tags as $tag)
-            <span class="tag">{{ $tag }}</span>
+            <span class="tag">
+              <i class="fa fa-tag" aria-hidden="true" style="margin-right:3px;"></i>{{ $tag }}
+            </span>
           @endforeach
         </div>
 
@@ -39,8 +41,8 @@
       </div>
     </div>
   @endforeach
- {{--  <a href="{{ url('reflectie/create') }}" class="add-reflection">
+  <a href="{{ url('reflectie/create') }}" class="add-reflection">
     <i class="fa fa-plus-circle" aria-hidden="true"></i>
-  </a> --}}
+  </a>
 </div>
 @endsection

@@ -147,22 +147,16 @@ a.notificationIcon:hover{text-decoration: none;}
   .save-button
   {
     width:100%;
-    padding:8px !important;
-    font-size:18px !important;
     font-weight: 500 !important; 
   }
   .general-button
   {
     width:100%;
-    padding:8px !important;
-    font-size:18px !important;
     font-weight: 500 !important; 
   }
   .button
   {
     width:100%;
-    padding:8px !important;
-    font-size:18px !important;
     font-weight: 500 !important; 
   }
 
@@ -227,6 +221,27 @@ a.notificationIcon:hover{text-decoration: none;}
 }
 
 
+.panel.panel-default > .panel-heading 
+{
+    color: #fff;
+    background-color: #8ED1D8;
+    border-color: #ddd;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/*** TAGS ***/
+
+.tags{padding:0;}
+.tag
+{
+  float: left;
+  background-color: #666;
+  color: #fff;
+  padding: 2px 12px 2px 12px;
+  font-size: 13px;
+  margin-right: 10px;
+}
 a.active
 {
   color: $lightblue !important;
@@ -236,4 +251,3 @@ a.active
 {
   margin-right: 40px !important;
 }
-

@@ -19,7 +19,7 @@
         ->get();
 
       foreach($reflections as $reflection){
-        $reflection->tags = explode(',',$test = $reflection->tags);
+        $reflection->tags = explode(',',$reflection->tags);
       }
 
       return view('reflection.list', compact('reflections'));
@@ -42,12 +42,17 @@
         //'user_id' => 'required'
       ]);
 
+      $tags = explode(',', $request->tags);
+      foreach ($tags as $key => $tag) {
+        if (empty($tag) || $tag="") unset($tags[$key]);  
+      }
+
       if(!isset($request->id))
       {
         $reflection = new Reflection;
         $reflection->title = $request->title;
         $reflection->message = $request->message;
-        $reflection->tags = $request->tags;
+        $reflection->tags = $tags;
         $reflection->user_id = Auth::id();
         $reflection->save();
         $message = 'Reflectie succesvol toegevoegd';
@@ -55,7 +60,7 @@
         $reflection = Reflection::find($request->id);
         $reflection->title = $request->title;
         $reflection->message = $request->message;
-        $reflection->tags = $request->tags;
+        $reflection->tags = $tags;
         $reflection->save();
         $message = 'Reflectie succesvol gewijzigd';
       }
