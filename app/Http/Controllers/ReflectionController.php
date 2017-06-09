@@ -41,18 +41,21 @@
         'tags' => 'max:255',
         //'user_id' => 'required'
       ]);
-
+      /*
+      $correct_tags = [];
       $tags = explode(',', $request->tags);
       foreach ($tags as $key => $tag) {
-        if (empty($tag) || $tag="") unset($tags[$key]);  
+        if (!empty($tag)){
+          $correct_tags[] = $tag;
+        }
       }
-
+      */
       if(!isset($request->id))
       {
         $reflection = new Reflection;
         $reflection->title = $request->title;
         $reflection->message = $request->message;
-        $reflection->tags = $tags;
+        $reflection->tags = $request->tags;
         $reflection->user_id = Auth::id();
         $reflection->save();
         $message = 'Reflectie succesvol toegevoegd';
@@ -60,7 +63,7 @@
         $reflection = Reflection::find($request->id);
         $reflection->title = $request->title;
         $reflection->message = $request->message;
-        $reflection->tags = $tags;
+        $reflection->tags = $request->tags;
         $reflection->save();
         $message = 'Reflectie succesvol gewijzigd';
       }

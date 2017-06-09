@@ -8,20 +8,19 @@
 	    	<div id="searchbar">
 		    	<span class="title">Zoek met behulp van tags</span>
 		    	<form method="GET" action="archive/search" class="form-inline">
-		    		<div class="col-xs-8">
+		    		<div class="col-md-8">
 						  <input type="text" class="form-control" name="search" placeholder="Search..." id="searchValue" style="width:100%;">
 						</div>
-						<div class="col-xs-4">
+						<div class="col-md-4">
 						  <button type="submit" class="btn save-button" id="search-button">
-						  	<i class="fa fa-search" aria-hidden="true"></i>Zoek een reflectie
+						  	<i class="fa fa-search" aria-hidden="true" style="margin-right:3px;"></i>Zoek een reflectie
 							</button>
 						</div>
-
 						</form>
-	        <div id="result"></div>
-	        <div id="error"><span class="error"></span></div>
-	       </div>
+	       </div>   
 	    </div>
+	    <div id="result"></div>
+	       <div id="error"><span class="error"></span></div>
 	</div>
 </div>
 

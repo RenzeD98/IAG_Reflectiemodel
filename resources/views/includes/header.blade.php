@@ -1,6 +1,6 @@
 <div class="container">
         <!-- Branding Image -->
-        <a class="navbar-brand" href="{{ url('/') }}">
+        <a class="navbar-brand" href="{{ url('/home') }}">
             <img src="{{ URL::asset('images/IAG direct liggend outline-01.svg') }}" alt="" class="header-logo">
         </a>
 
