@@ -66,14 +66,5 @@
     </div>
   </div>
 </div>
-
-<div class="container archive">
-  <div class="panel panel-default">
-    <div class="panel-heading">Beheer accounts</div>
-    <div class="panel-body">
-      <h1>accounts</h1>
-    </div>
-  </div>
-</div>
 @endsection
 

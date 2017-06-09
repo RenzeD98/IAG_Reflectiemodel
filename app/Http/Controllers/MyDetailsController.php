@@ -17,39 +17,31 @@ class MyDetailsController extends Controller
 
   public function index()
   {
-      $id = Auth::id();
-      $user = DB::table('users')->where('id', $id)->first();
+      $user = Auth::user();
       return view('profile/mydetails', compact('user'));
-
-      //Omzetten met models, user informatie ophalen. 
   }
 
   public function update(Request $request)
   { 
-    /*$this->validate($request, [
-      'firstname'   => 'required|min:1|max:255',
-      'lastname'    => 'required|min:1|max:255',
-      'function'    => 'required|min:1|max:255',
-      'experience'  => 'max:255',
-      'email'       => 'max:255',
+    
+    //dd($input = $request->all());
+    $this->validate($request, [
       'function'    => 'max:255',
-    ]);*/
-		
-    var_dump($request->firstname);
+      'experience'  => 'max:255',
+      'function'    => 'max:255',
+      'phone'       => 'max:255',
+    ]);
 
-    $id = Auth::id();
-    $user = User::find($id);
+    $user = Auth::user();
 
-    $user->firstname = $request->firstname;
-    $user->lastname = $request->lastname;
-    /*$user->experience = $request->experience;
-    $user->email = $request->email;
-    $user->function = $request->function;*/
+    $user->experience = $request->experience;
+    $user->function = $request->function;
+    $user->phone = $request->phone;
     $user->save();
 
     $message = 'Profiel succesvol gewijzigd';
     Session::flash('message', $message);
-    //return back();
+    return back();
     
   }
 }

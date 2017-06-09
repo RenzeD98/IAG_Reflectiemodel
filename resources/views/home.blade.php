@@ -4,14 +4,13 @@
 <div class="container home">
     <div class="panel panel-default">
         <div class="header">
-            <a href="{{ url('profile') }}">
                 @if(Auth::check())
                 <span class="name">Welkom: {{ Auth::user()->firstname }} {{ Auth::user()->lastname }}</span>
                 @endif
             </a>
         </div>
 
-        <div class="row row-centered">
+        <div class="row row-centered upperrow">
             <a href="{{ url('reflecties') }}">
                 <div class="col-xs-6 col-centerd column">
                      <img src="icons/GiveFeedbackIcon.svg" alt="Reflectie icoon">
@@ -26,7 +25,7 @@
             </a>
         </div>
 
-        <div class="row row-centered">
+        <div class="row row-centered lowerrow">
              <a href="{{ url('feedback') }}">
                 <div class="col-xs-6 col-centerd column">
                      <img src="icons/FeedbackIconQuestion.svg" alt="Reflectie icoon">
