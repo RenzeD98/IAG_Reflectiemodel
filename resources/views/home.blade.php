@@ -11,7 +11,7 @@
             </a>
         </div>
 
-        <div class="row row-centered">
+        <div class="row row-centered upperrow">
             <a href="{{ url('reflecties') }}">
                 <div class="col-xs-6 col-centerd column">
                      <img src="icons/GiveFeedbackIcon.svg" alt="Reflectie icoon">
@@ -26,7 +26,7 @@
             </a>
         </div>
 
-        <div class="row row-centered">
+        <div class="row row-centered lowerrow">
              <a href="{{ url('feedback') }}">
                 <div class="col-xs-6 col-centerd column">
                      <img src="icons/FeedbackIconQuestion.svg" alt="Reflectie icoon">
