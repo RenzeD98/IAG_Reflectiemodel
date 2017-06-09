@@ -27,7 +27,7 @@ a.notificationIcon:hover{text-decoration: none;}
   padding:0px 6px 0px 6px;
   border-radius:20px;
   position: relative;
-  left:35px;
+  left:50px;
   top:-50px;
 
 }
@@ -39,7 +39,7 @@ a.notificationIcon:hover{text-decoration: none;}
 	width: 100%;
 }
 
-.ajax-header 
+.ajax-header
 {
   height: 50px;
   background: #f5f5f5;
@@ -59,6 +59,25 @@ a.notificationIcon:hover{text-decoration: none;}
   border-radius: 5px;
   border-width: thin;
 	background-color: white;
+}
+
+
+@media screen and(max-width: $break-phone)
+{
+ .fa-plus-circle
+ {
+   margin-bottom: 55px;
+ }
+}
+
+.fa-plus-circle
+{
+ position: fixed;
+ right: 20px;
+ bottom: 20px;
+ font-size: 50px;
+ color: $green;
+ background-color:#fff;
 }
 
 .button-left {float: left;}
@@ -163,3 +182,48 @@ a.notificationIcon:hover{text-decoration: none;}
 .date {float: right;}
 
 .form-group.has-error input{border:1px solid red !important;}
+
+.alert
+{
+    // position: absolute;
+    // top: 10px;
+    // left: 0;
+    // right: 0;
+    // margin-left: auto;
+    // margin-right: auto;
+    // text-align: center;
+    // width: 300px;
+    // z-index: 1000;
+
+    @include animation(1s);
+    @include animation-delay(3s);
+
+}
+
+@-webkit-keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+.header-logo {
+	height: 90px;
+	margin: -20px 0px;
+}
+.navbar-default {
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+    height: 75px;
+	  font-weight: 700;
+}
+.navbar-nav > li > a {
+    /* padding-top: 15px; */
+    /* padding-bottom: 15px; */
+    line-height: 45px;
+}
+
+

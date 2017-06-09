@@ -9,8 +9,6 @@ use Auth;
 use App\User;
 use Session;
 use App\Notifications\MessageReceived;
-use App\Notifications\FeedbackPushNotify;
-use NotificationChannels\WebPush\HasPushSubscriptions;
 use Notifiable;
 /*
 use Illuminate\Notifications\Notifiable;
@@ -19,7 +17,6 @@ use Notifiable;
 */
 class FeedbackController extends Controller
 {
-    use HasPushSubscriptions;
 
     public function __construct()
     {
@@ -72,4 +69,3 @@ class FeedbackController extends Controller
       return redirect('/feedback/'. $request->id . '/view/');
     }
 }
-
