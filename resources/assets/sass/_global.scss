@@ -236,11 +236,13 @@ a.notificationIcon:hover{text-decoration: none;}
 .tag
 {
   float: left;
-  background-color: #666;
+  background-color: #888;
   color: #fff;
   padding: 2px 12px 2px 12px;
   font-size: 13px;
   margin-right: 10px;
+  border-radius:3px;
+  margin-bottom:10px;
 }
 a.active
 {
