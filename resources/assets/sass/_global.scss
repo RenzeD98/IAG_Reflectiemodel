@@ -180,19 +180,8 @@ a.notificationIcon:hover{text-decoration: none;}
 
 .alert
 {
-    // position: absolute;
-    // top: 10px;
-    // left: 0;
-    // right: 0;
-    // margin-left: auto;
-    // margin-right: auto;
-    // text-align: center;
-    // width: 300px;
-    // z-index: 1000;
-
     @include animation(1s);
     @include animation-delay(3s);
-
 }
 
 @-webkit-keyframes fadeOut {
