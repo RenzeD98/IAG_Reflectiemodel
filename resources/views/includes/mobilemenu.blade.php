@@ -1,7 +1,7 @@
 <div class="mobile-menu">
 	<div class="footer">
 		    <div class="col-xs-4 column">
-					<a onclick="goBack()">
+					<a onclick="javascript:history.back()">
 	    			<img class="menu-icon" id="backbutton" src="{{ URL::asset('icons/BackIcon.svg') }}" alt="">
 	    		</a>
 		    </div>

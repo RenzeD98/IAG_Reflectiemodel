@@ -10,7 +10,7 @@
 {
 	#header
 	{
-		display: block !important;
+		display: none !important;
 	}
 }
 
@@ -129,6 +129,7 @@ a.notificationIcon:hover{text-decoration: none;}
   border-style: solid;
   border-width: thin;
   color: white;
+	margin-top: 15px;
 }
 
 .general-button
@@ -147,17 +148,17 @@ a.notificationIcon:hover{text-decoration: none;}
   .save-button
   {
     width:100%;
-    font-weight: 500 !important; 
+    font-weight: 500 !important;
   }
   .general-button
   {
     width:100%;
-    font-weight: 500 !important; 
+    font-weight: 500 !important;
   }
   .button
   {
     width:100%;
-    font-weight: 500 !important; 
+    font-weight: 500 !important;
   }
 
 }
@@ -221,7 +222,7 @@ a.notificationIcon:hover{text-decoration: none;}
 }
 
 
-.panel.panel-default > .panel-heading 
+.panel.panel-default > .panel-heading
 {
     color: #fff;
     background-color: #8ED1D8;
