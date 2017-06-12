@@ -19,7 +19,7 @@
         ->get();
 
       foreach($reflections as $reflection){
-        $reflection->tags = explode(',',$test = $reflection->tags);
+        $reflection->tags = explode(',',$reflection->tags);
       }
 
       return view('reflection.list', compact('reflections'));
@@ -41,7 +41,15 @@
         'tags' => 'max:255',
         //'user_id' => 'required'
       ]);
-
+      /*
+      $correct_tags = [];
+      $tags = explode(',', $request->tags);
+      foreach ($tags as $key => $tag) {
+        if (!empty($tag)){
+          $correct_tags[] = $tag;
+        }
+      }
+      */
       if(!isset($request->id))
       {
         $reflection = new Reflection;

@@ -24,4 +24,43 @@
 	{
 	  text-align: justify;
 	}
+
+	#searchbar .title
+	{
+	  font-size:15px;
+	  display: block;
+	  margin-bottom:20px;
+	}
+
+	#searchbar .col-xs-8
+	{
+	  padding:0px;
+	}
+
+	.reflection
+	{
+		border: 1px solid #ddd;
+		margin-top: 20px !important;
+		padding: 10px;
+		margin: 15px !important;
+	}
+	.reflection .title
+	{
+	  border-bottom:1px solid #ddd;
+	  padding-bottom:10px;
+	}
+	.reflection .title{
+		display: block;
+		width:100%;
+		border-radius: 3px 3px 0px 0px;
+    padding: 5px;
+    color: #fff;
+    background-color:#8ED1D8;
+	}
+
+	.reflection .date{
+		position: relative;
+		top:-78px;
+	}
+
 }

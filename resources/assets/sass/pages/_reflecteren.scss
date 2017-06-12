@@ -38,13 +38,10 @@
       margin-top:10px;
       text-align: center;
     }
-
-    .tags
-    {
+    .col-md-4{
       padding:0px;
-
-      .tag{ margin-bottom:10px;}
     }
+
   }
 
   .navigation
@@ -71,20 +68,18 @@
     .del{float:right;}
   }
 
-  .title{font-weight:bold;color:#23527c;}
-  .date{font-style:italic;}
-  .tags{padding:0;}
-  .tag
-  {
-    float: left;
-    background-color: #666;
-    color: #fff;
-    padding: 2px 12px 2px 12px;
-    font-size: 13px;
-    margin-right: 10px;
-  }
+  .panel-heading .col-md-8{padding:0px;}
+  .panel-heading.title a{color:#fff;}
 
-  .button{float:right;}
+  .date
+  {
+    font-style:italic;
+    font-size:15px;
+  }
+  .button
+  {
+    float:right;
+  }
   .head
   {
     height: 59px;

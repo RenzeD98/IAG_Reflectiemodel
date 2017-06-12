@@ -10,7 +10,14 @@
 {
 	#header
 	{
-		display: block !important;
+		display: none !important;
+	}
+}
+
+@media screen and(min-width: $break-tablet)
+{
+	.home .logout {
+    display: none;
 	}
 }
 
@@ -129,6 +136,7 @@ a.notificationIcon:hover{text-decoration: none;}
   border-style: solid;
   border-width: thin;
   color: white;
+	margin-top: 15px;
 }
 
 .general-button
@@ -147,23 +155,17 @@ a.notificationIcon:hover{text-decoration: none;}
   .save-button
   {
     width:100%;
-    padding:8px !important;
-    font-size:18px !important;
-    font-weight: 500 !important; 
+    font-weight: 500 !important;
   }
   .general-button
   {
     width:100%;
-    padding:8px !important;
-    font-size:18px !important;
-    font-weight: 500 !important; 
+    font-weight: 500 !important;
   }
   .button
   {
     width:100%;
-    padding:8px !important;
-    font-size:18px !important;
-    font-weight: 500 !important; 
+    font-weight: 500 !important;
   }
 
 }
@@ -185,19 +187,8 @@ a.notificationIcon:hover{text-decoration: none;}
 
 .alert
 {
-    // position: absolute;
-    // top: 10px;
-    // left: 0;
-    // right: 0;
-    // margin-left: auto;
-    // margin-right: auto;
-    // text-align: center;
-    // width: 300px;
-    // z-index: 1000;
-
     @include animation(1s);
     @include animation-delay(3s);
-
 }
 
 @-webkit-keyframes fadeOut {
@@ -227,6 +218,29 @@ a.notificationIcon:hover{text-decoration: none;}
 }
 
 
+.panel.panel-default > .panel-heading
+{
+    color: #fff;
+    background-color: #8ED1D8;
+    border-color: #ddd;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/*** TAGS ***/
+
+.tags{padding:0;}
+.tag
+{
+  float: left;
+  background-color: #888;
+  color: #fff;
+  padding: 2px 12px 2px 12px;
+  font-size: 13px;
+  margin-right: 10px;
+  border-radius:3px;
+  margin-bottom:10px;
+}
 a.active
 {
   color: $lightblue !important;
@@ -236,4 +250,3 @@ a.active
 {
   margin-right: 40px !important;
 }
-

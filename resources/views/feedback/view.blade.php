@@ -16,7 +16,9 @@
           <p>{{ $reflection->message }}</p>
         </div>
           @foreach($reflection->tags as $tag)
-            <span class="tag">{{ $tag }}</span>
+            <span class="tag">
+              <i class="fa fa-tag" aria-hidden="true" style="margin-right:3px;"></i>{{ $tag }}
+            </span>
           @endforeach
     </div>
   </div>

@@ -1,11 +1,6 @@
 .feedback
 {
-	.emptyState img
-	{
-    max-width:400px;
-  }
-
-
+	.emptyState img{ max-width:400px;}
 
   .emptyState .title
   {
@@ -17,9 +12,16 @@
     margin-bottom:20px;
   }
   .emptyState .title strong
-  {
-    font-weight: bold;
-  }
+	{
+		font-weight: bold;
+	}
+
+	.date{
+		font-weight: normal;
+		font-style:italic;
+		text-align: right;
+		font-size:15px;
+	}
 
 	  @media screen and(max-width: $break-tablet)
 	  {
@@ -31,22 +33,15 @@
 				margin:auto;
 				//margin: 3vw auto 0 auto;
 			}
-	  	.date
-	  	{
-				float:none !important;
-				display: block;
-				margin-top: 5px;
-				text-align:left !important;
-	  	}
 
-	  	.btn.save-button
-	  	{
-	  		width:100%;
-	  		margin-top:15px;
+	  	.col{
+	  		padding:0px !important;
 	  	}
+	  	.col-md-4{
+      	padding:0px;
+   	 	}
 	  }
 
-	  .date{font-weight: normal; font-style:italic;text-align: right;}
 		.navigation
 		{
 		  padding:10px;
@@ -54,7 +49,7 @@
 		  margin-bottom:10px;
 		}
 
-		.panel-heading 
+		.panel-heading
 		{
 	    line-height: 20px;
 	    vertical-align: middle;
@@ -69,41 +64,27 @@
 			vertical-align: middle;
 		}
 
-		.title{font-weight:bold;color:#23527c;}
-
+		.panel-heading .col-md-8{padding:0px;}
+		.panel-heading .title a{color:#fff;}
 		.time
-		{	
+		{
 			font-style:italic;
 			vertical-align: middle;
 			line-height: 59px;
 		}
 
-	  .tag
-	  {
-			float: left;
-			background-color: #666;
-			color: #fff;
-			padding: 2px 12px 2px 12px;
-			font-size: 13px;
-			margin-right:10px;
-	  }
 
   .recentFeedback
   {
-  // 	.sorting
-  // 	{
-		// height: 40px;
-		// width: 100%;
-		// text-align: right;
-		// margin-bottom:10px;
-  // 	}
-
   	.commentItem
   	{
   		border:1px solid #ddd;
   		margin-bottom:20px;
 
-	    .content{padding-top: 10px;}
+	    .content
+			{
+				padding-top: 10px;
+			}
 
     	.rating
     	{
@@ -123,7 +104,7 @@
 			.date
 			{
 			  text-style:italic;
-			  
+
 			  text-align: right;
 			}
 

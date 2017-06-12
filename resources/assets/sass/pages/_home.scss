@@ -1,6 +1,18 @@
 //--------------home---------------//
 .home
 {
+  .logout
+  {
+    font-size:20px;
+    font-weight: bold;
+  }
+
+  .logout:hover a
+  {
+    color:#574D3C !important;
+    text-decoration: none !important;
+  }
+
   .header
   {
     background-color: $lightblue;
