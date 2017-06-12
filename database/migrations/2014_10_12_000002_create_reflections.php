@@ -16,7 +16,7 @@ class CreateReflections extends Migration
       Schema::create('reflections', function (Blueprint $table) {
           $table->increments('id')->unsigned();
           $table->integer('user_id')->unsigned();
-          $table->tinyint('status');
+          $table->integer('status');
           $table->string('title');
           $table->string('tags')->nullable();
           $table->text('message');
