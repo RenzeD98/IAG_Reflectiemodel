@@ -11,18 +11,18 @@
         </div>
 
         <div class="row row-centered upperrow">
-            <a href="{{ url('reflecties') }}">
                 <div class="col-xs-6 col-centerd column">
+                  <a href="{{ url('reflecties') }}">
                      <img src="icons/GiveFeedbackIcon.svg" alt="Reflectie icoon">
                      <span class="subtitle">Mijn Reflecties</span>
+                  </a>
                 </div>
-            </a>
-            <a href="{{ url('reflectionmodel') }}">
                 <div class="col-xs-6 col-centerd column col-xs-offset-2">
+                  <a href="{{ url('reflectionmodel') }}">
                     <img src="icons/IAGModelIcon.svg" alt="Reflectie icoon">
                     <span class="subtitle">Reflectiemodel</span>
+                  </a>
                 </div>
-            </a>
         </div>
 
         <div class="row row-centered lowerrow">

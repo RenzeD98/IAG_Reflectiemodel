@@ -116,8 +116,15 @@
   }
 
   .reflection-model {
-    /* background-color: #5cb85c; */
-    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border: #3e3e3e;
+    border-style: solid;
+    padding: 0px 8px;
+    border-width: thin;
+    padding-top: 5px;
+    color: white;
+    background-color: #8a8a8a;
+    border-radius: 5px;
   }
 
 }
