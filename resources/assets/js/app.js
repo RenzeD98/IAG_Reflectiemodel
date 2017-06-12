@@ -23,7 +23,7 @@ $(document).ready(function(){
 
   window.setTimeout(function() {
       $(".alert").fadeTo(500, 0).slideUp(500, function(){
-          $(this).fadeOut(500); 
+          $(this).fadeOut(500);
       });
   }, 4000);
 
@@ -32,7 +32,7 @@ $(document).ready(function(){
       $(".ajax-content").css("display", "block");
       //$(".page-loader-content").html('<img class="loader_icon" src="{{ URL::asset('icons/LoadingIcon.svg') }}">');
       $(".page-loader-content").html('<img class="loader_icon" src="/icons/LoadingIcon.svg")">');
-      $(".page-loader-content").load(GetUrl + ".reflectiemodel");
+      $(".page-loader-content").load(GetUrl);
   });
 
   $("#reflection-model").click(function(){
@@ -51,9 +51,8 @@ $(document).ready(function(){
 	function goBack()
 	{
 		if(window.location.pathname !== '/home'){
-			window.history.back(); 
-		}  
+			window.history.back();
+		}
 	}
 
 });
-
