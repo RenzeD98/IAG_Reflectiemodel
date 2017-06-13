@@ -23,7 +23,7 @@
         <div class="col-md-8 title">
           <a href="{{ url('/feedback/' . $reflection->id .'/view') }}">
          Reflectie door 
-          {{ $user->firstname }} - {{ $reflection->title }}</a>
+         {{ $reflection->title }}</a>
         </div>
         <div class="col-md-4 date">
           Geplaats op: {{ $reflection->created_at->format('d m Y')}}
@@ -35,10 +35,13 @@
           </p>
         </div>
 
-        <span class="tag">
-          <i class="fa fa-tag" aria-hidden="true" style="margin-right:3px;"></i>
-Moet nog worden geautomatiseerd!!
-</span>
+        <div class="col-md-8 tags">
+          @foreach($reflection->tags as $tag)
+            <span class="tag">
+              <i class="fa fa-tag" aria-hidden="true" style="margin-right:3px;"></i>{{ $tag }}
+            </span>
+          @endforeach
+        </div>
 
         <a href="{{ url('/feedback/' . $reflection->id .'/view') }}" class="btn save-button" style="float:right">
         <i class="fa fa-pencil" aria-hidden="true"></i> Schrijf Feedback

@@ -32,7 +32,13 @@ class FeedbackController extends Controller
         ->orWhereNull('user_id')
         ->orderBy('created_at', 'desc')
         ->get();
-      return view('feedback.index', compact('reflections','user'));
+
+      foreach($reflections as $reflection){
+        $reflection->tags = explode(',',$reflection->tags);
+      }
+
+        //dd($reflections);
+      return view('feedback.index', compact('reflections'));
     }
 
     public function getReflectionWithFeedback($id)
