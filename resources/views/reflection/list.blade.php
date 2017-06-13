@@ -28,11 +28,15 @@
         </div>
 
         <div class="col-md-8 tags">
-          @foreach($reflection->tags as $tag)
-            <span class="tag">
-              <i class="fa fa-tag" aria-hidden="true" style="margin-right:3px;"></i>{{ $tag }}
-            </span>
-          @endforeach
+          @if(count($reflection->tags) > 0)
+          <!-- Niets Laten Zien -->
+          @else
+            @foreach($reflection->tags as $tag)
+              <span class="tag">
+                <i class="fa fa-tag" aria-hidden="true" style="margin-right:3px;"></i>{{ $tag }}
+              </span>
+            @endforeach
+          @endif
         </div>
 
         <div class="col-md-4">
