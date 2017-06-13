@@ -208,6 +208,8 @@ a.notificationIcon:hover{text-decoration: none;}
 
 /*** TAGS ***/
 
+.date{font-weight: 400;font-style:italic;font-size:14px;}
+
 .tags{padding:0;}
 .tag
 {
@@ -223,6 +225,19 @@ a.notificationIcon:hover{text-decoration: none;}
 a.active{color: $lightblue !important;}
 
 .logout-menu{margin-right: 40px !important;}
+
+.row .col-md-12,
+.row .col-md-8,
+.row .col-md-6,
+.row .col-md-5,
+.row .col-md-4
+{
+  padding:0px;
+}
+
+.row{
+  margin-top:10px;
+}
 
 
 // .alert

@@ -6,22 +6,31 @@
 	    <div class="panel-heading">Archief overzicht</div>
 	    <div class="panel-body">
 	    	<div id="searchbar">
-		    	<span class="title">Zoek met behulp van tags</span>
+		    	<span class="title" style="font-weight: bold;">Zoek met behulp van tags</span>
 		    	<form method="GET" action="archive/search" class="form-inline">
-		    		<div class="col-md-8">
-						  <input type="text" class="form-control" name="search" placeholder="Search..." id="searchValue" style="width:100%;">
+		    		<div class="row">
+			    		<div class="col-md-12">
+							  <input type="text" class="form-control" name="search" placeholder="Search..." id="searchValue" style="width:100%;">
+							</div>
 						</div>
-						<div class="col-md-4">
-							<i><i class="fa fa-info-circle" aria-hidden="true"></i> Een "tag" is een zoekwoord die aan een reflectie gekoppeld is.</i>
-						  <button type="submit" class="btn save-button" id="search-button">
-						  	<i class="fa fa-search" aria-hidden="true" style="margin-right:3px;"></i>Zoek een reflectie
-							</button>
+						<div class="row">
+							<div class="col-md-12">
+								<i><i class="fa fa-info-circle" aria-hidden="true"></i> Een "tag" is een zoekwoord die aan een reflectie gekoppeld is.</i>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								 <button type="submit" class="btn save-button" id="search-button">
+							  	<i class="fa fa-search" aria-hidden="true" style="margin-right:3px;"></i>Zoek een reflectie
+								</button>
+							</div>
+						</div>
 						</div>
 						</form>
 	       </div>
 	    </div>
 	    <div id="result"></div>
-	       <div id="error"><span class="error"></span></div>
+	    <div id="error"><span class="error"></span></div>
 	</div>
 </div>
 
