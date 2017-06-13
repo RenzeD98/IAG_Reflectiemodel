@@ -40,13 +40,16 @@
         </div>
 
         <div class="col-md-4">
-          <a href="/reflectie/{{$reflection->id}}/view" class="button" style="">Bekijken</a>
+          <a href="/reflectie/{{$reflection->id}}/view" class="button">
+            <i class="fa fa-paper-plane" aria-hidden="true" style="margin-right:3px;"></i>
+          Bekijken</a>
         </div>
       </div>
     </div>
   @endforeach
-  <a href="{{ url('reflectie/create') }}" class="add-reflection">
-    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+  <a href="{{ url('reflectie/create') }}" class="add-button">
+    <img src="/images/add-iconv2.png" alt="Add reflection button">
+    {{-- <i class="fa fa-plus-circle" aria-hidden="true"></i> --}}
   </a>
 </div>
 @endsection
