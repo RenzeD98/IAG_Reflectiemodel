@@ -1,31 +1,22 @@
-@media screen and(max-width: $break-phone)
+@media screen and(max-width: $break-tablet)
 {
-	#header
-	{
-		display: none !important;
-	}
+	#header{display: none !important;}
+  .home .logout {display: block !important;}
 }
 
 @media screen and(max-width: $break-tablet)
 {
-	#header
-	{
-		display: none !important;
-	}
+	#header{display: none !important;}
+  .add-button{margin-bottom: 55px;}
+  
 }
-
-@media screen and(min-width: $break-tablet)
-{
-	.home .logout {
-    display: none;
-	}
-}
-
+.home .logout {display: none;}
 .row-centered{text-align: center;padding: 5px 20px;}
 
 a.notificationIcon:hover{text-decoration: none;}
 
-.notificationCount{
+.notificationCount
+{
   color: #fff;
 	background: #EB6A6B;
   font-weight: bold;
@@ -69,23 +60,28 @@ a.notificationIcon:hover{text-decoration: none;}
 }
 
 
-@media screen and(max-width: $break-phone)
+.add-button
 {
- .fa-plus-circle
- {
-   margin-bottom: 55px;
- }
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index:9999;
+  width:50px;
+  height:50px;
 }
+.add-button:hover img{opacity:0.9;}
+.add-button img{ width:50px;height:50px;}
 
-.fa-plus-circle
-{
- position: fixed;
- right: 20px;
- bottom: 20px;
- font-size: 50px;
- color: $green;
- background-color:#fff;
-}
+// .fa-plus-circle
+// {
+//   background-image: url('add-icon.png');
+//  position: fixed;
+//  right: 20px;
+//  bottom: 20px;
+//  font-size: 50px;
+//  color: $green;
+//  background-color:#fff;
+// }
 
 .button-left {float: left;}
 
@@ -181,42 +177,20 @@ a.notificationIcon:hover{text-decoration: none;}
 .title{font-weight: bold;font-weight: 400;}
 .subtitle{font-weight: italic !important; font-size:14px !important;}
 
-.date {float: right;}
+// .date {float: right;}
 
 .form-group.has-error input{border:1px solid red !important;}
 
-.alert
+/*** Header ***/
+.header-logo {height: 90px;margin: -20px 0px;}
+.navbar-default 
 {
-    @include animation(1s);
-    @include animation-delay(3s);
-}
-
-@-webkit-keyframes fadeOut {
-    from {opacity: 1;}
-    to {opacity: 0;}
-}
-
-@keyframes fadeOut {
-    from {opacity: 1;}
-    to {opacity: 0;}
-}
-
-.header-logo {
-	height: 90px;
-	margin: -20px 0px;
-}
-.navbar-default {
     background-color: #f8f8f8;
     border-color: #e7e7e7;
     height: 75px;
 	  font-weight: 700;
 }
-.navbar-nav > li > a {
-    /* padding-top: 15px; */
-    /* padding-bottom: 15px; */
-    line-height: 45px;
-}
-
+.navbar-nav > li > a {line-height: 45px;}
 
 .panel.panel-default > .panel-heading
 {
@@ -228,6 +202,8 @@ a.notificationIcon:hover{text-decoration: none;}
 }
 
 /*** TAGS ***/
+
+.date{font-weight: 400;font-style:italic;font-size:14px;}
 
 .tags{padding:0;}
 .tag
@@ -241,12 +217,36 @@ a.notificationIcon:hover{text-decoration: none;}
   border-radius:3px;
   margin-bottom:10px;
 }
-a.active
+a.active{color: $lightblue !important;}
+
+.logout-menu{margin-right: 40px !important;}
+
+.row .col-md-12,
+.row .col-md-8,
+.row .col-md-6,
+.row .col-md-5,
+.row .col-md-4
 {
-  color: $lightblue !important;
+  padding:0px;
 }
 
-.logout-menu
-{
-  margin-right: 40px !important;
+.row{
+  margin-top:10px;
 }
+
+
+// .alert
+// {
+//     @include animation(1s);
+//     @include animation-delay(3s);
+// }
+
+// @-webkit-keyframes fadeOut {
+//     from {opacity: 1;}
+//     to {opacity: 0;}
+// }
+
+// @keyframes fadeOut {
+//     from {opacity: 1;}
+//     to {opacity: 0;}
+// }
