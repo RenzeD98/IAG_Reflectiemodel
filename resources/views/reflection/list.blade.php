@@ -45,8 +45,9 @@
       </div>
     </div>
   @endforeach
-  <a href="{{ url('reflectie/create') }}" class="add-reflection">
-    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+  <a href="{{ url('reflectie/create') }}" class="add-button">
+    <img src="/images/add-iconv2.png" alt="Add reflection button">
+    {{-- <i class="fa fa-plus-circle" aria-hidden="true"></i> --}}
   </a>
 </div>
 @endsection
