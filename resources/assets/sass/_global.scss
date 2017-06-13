@@ -1,21 +1,16 @@
-@media screen and(max-width: $break-phone)
+@media screen and(max-width: $break-tablet)
 {
-	#header
-	{
-		display: none !important;
-	}
+	#header{display: none !important;}
+  .home .logout {display: block !important;}
 }
 
 @media screen and(max-width: $break-tablet)
 {
-	#header
-	{
-		display: none !important;
-	}
+	#header{display: none !important;}
   .add-button{margin-bottom: 55px;}
-  .home .logout {display: none;}
+  
 }
-
+.home .logout {display: none;}
 .row-centered{text-align: center;padding: 5px 20px;}
 
 a.notificationIcon:hover{text-decoration: none;}
