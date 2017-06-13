@@ -107,18 +107,18 @@ a.notificationIcon:hover{text-decoration: none;}
   background-color:#666666;
   text-decoration:none;
 }
-.go-button.btn
-{
-	font-family: 'Quicksand', sans-serif;
-	border-color: #6d6d6d;
-	color: #6d6d6d;
-	font-size: 24px;
-	background-color: white;
-	border-style: solid;
-	border-width: medium;
-	border-radius: 10px;
-	padding: 5px 40px;
-	font-weight: bold;
+
+.go-button.btn {
+    font-family: 'Quicksand', sans-serif;
+    border-color: #6d6d6d;
+    color: #6d6d6d;
+    font-size: 20px;
+    background-color: white;
+    border-style: solid;
+    border-width: medium;
+    border-radius: 10px;
+    padding: 2px 20px;
+    font-weight: bold;
 }
 
 .go-button.btn:hover

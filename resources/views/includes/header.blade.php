@@ -32,7 +32,7 @@
         <ul class="nav navbar-nav navbar-right">
           <li><a href="/reflecties">Mijn reflectie</a></li>
           <li><a href="/feedback">Feedback geven</a></li>
-          <li><a href="/profile">Profiel</a></li>
+          <li><a href="/profile/mydetails">Profiel</a></li>
           <li><a href="/archive">Archief</a></li>
         </ul>
         @endif

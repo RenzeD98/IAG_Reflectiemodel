@@ -11249,7 +11249,7 @@ $(document).ready(function () {
     $(".ajax-content").css("display", "block");
     //$(".page-loader-content").html('<img class="loader_icon" src="{{ URL::asset('icons/LoadingIcon.svg') }}">');
     $(".page-loader-content").html('<img class="loader_icon" src="/icons/LoadingIcon.svg")">');
-    $(".page-loader-content").load(GetUrl + ".reflectiemodel");
+    $(".page-loader-content").load(GetUrl);
   });
 
   $("#reflection-model").click(function () {
