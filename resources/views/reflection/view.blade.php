@@ -2,14 +2,15 @@
 
 @section('content')
 <div class="container reflection">
-  <div class="navigation">
+
+{{--   <div class="navigation">
     <a href="/reflectie/{{ $reflection->id }}/update" class="edit">
       <i class="fa fa-pencil-square-o" aria-hidden="true"></i>Wijzigen</a>
     <a href="/reflectie/{{ $reflection->id }}/delete" class="del">
       <i class="fa fa-trash-o" aria-hidden="true"></i>Verwijderen
     </a>
-  </div>
-
+  </div> --}}
+  
   <div class="panel panel-default">
     <div class="panel-heading">
       <span class="title">{{ $reflection->title }}</span>

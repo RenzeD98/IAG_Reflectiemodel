@@ -25,13 +25,11 @@
       return view('reflection.list', compact('reflections'));
     }
 
-    // New reflection form
     public function newReflection()
     {
       return view('reflection.create');
     }
 
-    //Store the new reflection
     public function storeReflection(Request $request)
     {
 
@@ -71,7 +69,6 @@
       return back();
     }
 
-    //Specific reflection form
     public function getReflection($id)
     {
       $reflection = Reflection::where('id', $id)->first();
@@ -84,10 +81,5 @@
     {
       $reflection = Reflection::where('id', $id)->first();
       return view('reflection.update', compact('reflection'));
-    }
-
-    public function deleteReflection($id)
-    {
-      echo 'Working on this ';
     }
 }

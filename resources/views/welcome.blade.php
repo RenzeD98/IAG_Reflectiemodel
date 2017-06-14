@@ -59,6 +59,10 @@
                         @endif
                     </div>
                 @endif
+
+                <div class="nhl-logo">
+                  <img src="{{ URL::asset('images/logo-nhl.svg') }}" style="width:100px; margin-top:40px;">
+                </div>
             </div>
         </div>
     </body>
