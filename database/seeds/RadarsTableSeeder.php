@@ -22,7 +22,7 @@ class RadarsTableSeeder extends Seeder
 
         [
             'name' => 'Gerichtheid',
-            'description' => 'Welke gerichttheid heb ik?',
+            'description' => 'Welke gerichtheid heb ik?',
             'color' => '#EB6A6B',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
@@ -70,7 +70,7 @@ class RadarsTableSeeder extends Seeder
 
         [
             'name' => '...',
-            'description' => 'En wat nog meer...',
+            'description' => 'Wat zou nog meer nuttig zij? En wat nog meer...',
             'color' => '#2A3A89',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),

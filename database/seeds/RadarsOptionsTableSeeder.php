@@ -18,6 +18,8 @@ class RadarsOptionsTableSeeder extends Seeder
             'info' => 'Contextueel:<br>
                        Definitie en doel: “De contextuele therapie richt haar doel op interventies die zijn gebaseerd op het begrip van de fundamentele verbindingen tussen vroegste en alle latere relaties”.<br><br>
 
+                       <i>Bron: Boszormenyi-Nagy et. Al 1994.</i><br><br>
+
                        Narratief:<br>
                        <ul>
                         <li>Vanuit de narratieve stroming, wordt ervan uitgegaan dat cliënten veel vaardigheden, competenties, overtuigingen, waarden en verbindingen hebben die hen in staat stellen de relatie met hun problemen te veranderen.</li>
@@ -32,6 +34,8 @@ class RadarsOptionsTableSeeder extends Seeder
             'radar_id' => '1',
             'name' => 'Oplossingsgerichte benadering',
             'info' => '
+              Bij de oplossingsgerichte benadering
+           gaat men uit van een aantal vertuigingen.<br><br>
             <ul>
               <li>Elk mens vormt zijn/haar eigen wereldmodel.</li>
               <li>De kaart is niet het gebied.</li>
@@ -48,7 +52,9 @@ class RadarsOptionsTableSeeder extends Seeder
               <li>Doeltreffend, wat werkt?</li>
               <li>Erkennen, niet-wetend en niet-oordelend.</li>
               <li>Geduldig en stap voor stap</li>
-            </ul>',
+            </ul>
+            <i>Bron: Gwenda L.Schlundt Bodien en Coert Visser,
+                Oplossingsgericht aan de  slag, 2008</i>',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
           ],
@@ -96,7 +102,8 @@ class RadarsOptionsTableSeeder extends Seeder
               (in plaats van de eigen-goede-bedoelingen)<br><br>
 
               Betekenis.<br>
-              De ander is minstens bij één in tel <br>(erkenning en relatie weegt het zwaarst)
+              De ander is minstens bij één in tel <br>(erkenning en relatie weegt het zwaarst)<br><br>
+              <i>Bron: Introductie in de presentietheorie</i>
             ',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
@@ -106,6 +113,7 @@ class RadarsOptionsTableSeeder extends Seeder
             'radar_id' => '2',
             'name' => 'Professionally centered',
             'info' => '
+              Professional = expert <br><br>
               De professional als expert;<br> schrijft voor wat er nodig is en hoe het ingezet gaat worden.
             ',
             'created_at' => date('Y-m-d H:i:s'),
@@ -116,6 +124,8 @@ class RadarsOptionsTableSeeder extends Seeder
             'radar_id' => '2',
             'name' => 'Family allied',
             'info' => '
+              Professional > regie<br>
+              Gezin voert uit<br><br>
               De professional ziet het gezin als uitvoerder van de interventie, maar de professional blijft bepalen wat er nodig is. <br>
               Het gezin als verlengstuk van de professional.
             ',
@@ -127,6 +137,8 @@ class RadarsOptionsTableSeeder extends Seeder
             'radar_id' => '2',
             'name' => 'Family focused',
             'info' => '
+              Professional < regie<br>
+              Gezin kiest <br><br>
               De professionals dragen ideeën aan, helpen het gezin keuzes te maken uit diverse beschikbare opties. <br>
               De professional ziet het gezin als consument.
             ',
@@ -136,10 +148,10 @@ class RadarsOptionsTableSeeder extends Seeder
 
           [
             'radar_id' => '2',
-            'name' => 'Family allied',
+            'name' => 'Family centered',
             'info' => '
-              De professional ziet het gezin als uitvoerder van de interventie, maar de professional blijft bepalen wat er nodig is.<br>
-              Het gezin als verlengstuk van de professional.
+              Gezin = expert<br><br>
+              De professional ziet het gezin  als gelijkwaardige partner. In dialoog wordt afgestemd op individuele en gezamelijke behoeftes ten aanzien van de hulpvraag. Het gezin kiest en besluit.
             ',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
@@ -196,8 +208,7 @@ class RadarsOptionsTableSeeder extends Seeder
                 <li>Voorstel ponerend</li>
                 <li>Leiding nemen</li>
                 <li>Eén slag voor</li>
-                <li>Stelt zich op als</li>
-                <li>meerdere van de ander</li>
+                <li>Stelt zich op als meerdere van de ander</li>
               </ul>
               Down<br>
               <ul>
@@ -231,7 +242,9 @@ class RadarsOptionsTableSeeder extends Seeder
           [
             'radar_id' => '4',
             'name' => 'Compenseren / activeren',
-            'info' => '',
+            'info' => '
+
+            ',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
           ],
@@ -313,7 +326,7 @@ class RadarsOptionsTableSeeder extends Seeder
               De reden van aanmelding wordt beschreven in het hulpverleningsplan. <br><br>
 
               Door wie is het gezin aangemeld en waarom? <br>
-              Wat was volgens hen het voornaamste doel? <br>
+              Wat was volgens de aanmelder het voornaamste doel? <br>
               Wat willen gezinsleden zelf bereiken met de hulp?
             ',
             'created_at' => date('Y-m-d H:i:s'),
@@ -329,14 +342,14 @@ class RadarsOptionsTableSeeder extends Seeder
                 <li>duur vier tot zes weken. </li>
                 <li>twee keer per week een bezoek van gemiddeld anderhalf tot twee uur.</li>
               </ul>
-              In de startfase van IAG wordt duidelijk welke problemen er spelen in de omstandigheden van het gezin en wat de wensen van het gezin zijn op dit gebied.
+              In de startfase van IAG wordt duidelijk welke problemen er spelen in het gezin en wat de wensen van het gezin zijn op dit gebied.
               <ul>
                 <li>opbouwen werkrelatie.</li>
                 <li>vergroten van de motivatie. </li>
                 <li>uitleg over de werkwijze en de opbouw van IAG.</li>
                 <li>analyse van de situatie en de problemen in het gezin. </li>
                 <li>formuleren van de doelen voor de hulp. </li>
-                <li>begin gemaakt met het aanpakken van problemen. </li>
+                <li>begin maken met het aanpakken van problemen. </li>
               </ul>
             ',
             'created_at' => date('Y-m-d H:i:s'),
@@ -349,17 +362,19 @@ class RadarsOptionsTableSeeder extends Seeder
             'info' => '
               Veranderfase<br><br>
 
-              Werken: aan de opgestelde doelen. <br>
-              Duur: zo’n tien tot veertien weken. <br>
-              Gemiddeld: drie tot vier uren per week verdeeld over twee bezoeken. <br><br>
-
-              De opgestelde doelen uitwerken;<br>
-              concrete werkpunten opstellen;<br>
-              acties inzetten;<br>
-              prioriteiten stellen.<br><br>
+              De opgestelde doelen uitwerken:
+              <ul>
+                <li>concrete werkpunten opstellen;</li>
+                <li>acties inzetten;</li>
+                <li>prioriteiten stellen.</li>
+              </ul>
 
               motivatie en wensen van het gezin  uitgangspunt verschillende middelen, technieken en tools in. <br>
-              Evalueren op voortgang.<br>
+              Evalueren op voortgang.<br><br>
+
+              Werken: aan de opgestelde doelen. <br>
+              Duur: zo’n tien tot veertien weken. <br>
+              Gemiddeld: drie tot vier uren per week verdeeld over twee bezoeken.
             ',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
@@ -372,7 +387,11 @@ class RadarsOptionsTableSeeder extends Seeder
               Afbouw en afscheid<br><br>
 
               Duur:  zes tot acht weken <br>
-              Frequentie;  afbouwen;   anderhalf uur per week <br><br>
+              Frequentie:
+                <ul>
+                  <li>afbouwen</li>
+                  <li>anderhalf uur per week</li>
+                </ul>
 
               begeleider op afstand<br>
               sturend waar nodig<br>
